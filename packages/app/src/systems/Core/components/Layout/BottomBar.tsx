@@ -22,7 +22,7 @@ export function BottomBar({ children }: BottomBarProps) {
 const styles = {
   root: (count: number) =>
     cssObj({
-      width: '100%',
+      width: '80%',
       px: '$3',
       py: '$4',
       boxSizing: 'border-box',
