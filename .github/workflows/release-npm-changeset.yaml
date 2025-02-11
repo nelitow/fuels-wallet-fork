@@ -102,11 +102,9 @@ jobs:
         with:
           npm-token: ${{ secrets.NPM_TOKEN_WALLET }}
 
-      - name: Bump and Collect Version
+      - name: Collect Version
         run: |
-          pnpm changeset version
           echo "BUILD_VERSION=$(pnpm -s packages:version)" >> $GITHUB_ENV
-          git reset --hard
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
