@@ -1,5 +1,21 @@
 # fuels-wallet
 
+## 2.0.0
+
+### Major Changes
+
+- [`c8344e3b`](https://github.com/FuelLabs/fuels-wallet/commit/c8344e3bf0ad98bbd1454a9b602445b72757178f) Thanks [@nelitow](https://github.com/nelitow)! - Bacon Wallet name change.
+
+### Minor Changes
+
+- [`5b753d91`](https://github.com/FuelLabs/fuels-wallet/commit/5b753d918ac47abc3e4f41d2fa60ce34c86394df) Thanks [@nelitow](https://github.com/nelitow)! - Back from bacon
+
+### Patch Changes
+
+- Updated dependencies [[`c8344e3b`](https://github.com/FuelLabs/fuels-wallet/commit/c8344e3bf0ad98bbd1454a9b602445b72757178f)]:
+  - @fuel-wallet/connections@2.0.0
+  - @fuels/playwright-utils@2.0.0
+
 ## 1.0.0
 
 ### Major Changes
