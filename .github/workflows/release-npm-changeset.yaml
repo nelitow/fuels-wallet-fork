@@ -138,6 +138,25 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Preview Release Description
+        run: |
+          echo "📝 Previewing what will be in the release description:"
+          echo "=============================================="
+          echo "🏷️ Release version: ${BUILD_VERSION}"
+          echo "📄 Changesets to be included:"
+          for file in .changeset/*.md; do
+            if [ -f "$file" ] && [ "$(basename "$file")" != "README.md" ]; then
+              echo "-------------------------------------------"
+              echo "📌 Changeset: $(basename "$file" .md)"
+              # Extract the header (package names and bump types)
+              sed -n '/^---$/,/^---$/p' "$file" | grep -v "^---$"
+              echo ""
+              # Extract the content (description)
+              sed -n '/^---$/,/^---$/!p' "$file" | sed '1,2d'
+            fi
+          done
+          echo "=============================================="
+
       - name: Build packages
         run: |
           echo "🔨 Building library packages..."
