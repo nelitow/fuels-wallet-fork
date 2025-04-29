@@ -1,5 +1,17 @@
 # fuels-wallet
 
+## 3.0.0
+
+### Major Changes
+
+- [`cdf2f26b`](https://github.com/FuelLabs/fuels-wallet/commit/cdf2f26b6607b10e5e18225e02e096e13f425334) Thanks [@nelitow](https://github.com/nelitow)! - Jason wallet!!!!!!
+
+### Patch Changes
+
+- Updated dependencies [[`cdf2f26b`](https://github.com/FuelLabs/fuels-wallet/commit/cdf2f26b6607b10e5e18225e02e096e13f425334)]:
+  - @fuel-wallet/connections@3.0.0
+  - @fuels/playwright-utils@3.0.0
+
 ## 2.0.0
 
 ### Major Changes
