@@ -1,6 +1,6 @@
 import { fireEvent, screen, waitFor } from '@fuel-ui/test-utils';
 import type { Connection } from '@fuel-wallet/types';
-import { ConnectionService } from '~/systems/DApp/services';
+import { ConnectionService } from '~/systems/Degen/services';
 
 export async function waitShowingConnections(...conns: Connection[]) {
   await waitFor(() => {

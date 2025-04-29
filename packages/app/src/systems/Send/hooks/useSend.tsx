@@ -8,8 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
 import type { AccountsMachineState } from '~/systems/Account';
 import { Pages } from '~/systems/Core';
-import { useTransactionRequest } from '~/systems/DApp';
-import { TxRequestStatus } from '~/systems/DApp/machines/transactionRequestMachine';
+import { useTransactionRequest } from '~/systems/Degen';
+import { TxRequestStatus } from '~/systems/Degen/machines/transactionRequestMachine';
 import type { TxInputs } from '~/systems/Transaction/services';
 
 import { Services } from '~/store';

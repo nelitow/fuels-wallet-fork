@@ -12,7 +12,7 @@ async function loader() {
 
 export default {
   component: SelectNetworkRequest,
-  title: 'DApp/Pages/SelectNetworkRequest',
+  title: 'Degen/Pages/SelectNetworkRequest',
   loaders: [loader],
   parameters: {
     layout: 'fullscreen',

@@ -82,7 +82,7 @@ dropdown
 onboarding
 Utils
 js
-DApp
+Degen
 async
 customizable
 npm

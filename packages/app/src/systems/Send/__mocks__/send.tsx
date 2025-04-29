@@ -1,6 +1,6 @@
 import { Signer } from 'fuels';
 import { createMockAccount } from '~/systems/Account';
-import { getMockedTransaction } from '~/systems/DApp/__mocks__/dapp-transaction';
+import { getMockedTransaction } from '~/systems/Degen/__mocks__/dapp-transaction';
 import { NetworkService } from '~/systems/Network';
 
 export function sendLoader() {

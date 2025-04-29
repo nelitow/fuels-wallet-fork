@@ -11,9 +11,9 @@ import {
 } from '@fuel-ui/react';
 import { useMemo, useState } from 'react';
 import { useCurrentTab } from '~/systems/CRX/hooks/useCurrentTab';
-import { useConnection } from '~/systems/DApp/hooks/useConnection';
-import { useOrigin } from '~/systems/DApp/hooks/useOrigin';
-import { ConnectionService } from '~/systems/DApp/services';
+import { useConnection } from '~/systems/Degen/hooks/useConnection';
+import { useOrigin } from '~/systems/Degen/hooks/useOrigin';
+import { ConnectionService } from '~/systems/Degen/services';
 import { useCurrentAccount } from '../../hooks/useCurrentAccount';
 
 enum ConnectionStatus {

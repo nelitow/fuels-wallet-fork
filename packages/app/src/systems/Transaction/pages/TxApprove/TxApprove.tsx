@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAssets } from '~/systems/Asset';
 import { Layout, Pages } from '~/systems/Core';
 import { coreStyles } from '~/systems/Core/styles';
-import { TxRequestStatus, useTransactionRequest } from '~/systems/DApp';
+import { TxRequestStatus, useTransactionRequest } from '~/systems/Degen';
 import { TxContent } from '../../components/TxContent/TxContent';
 import { TxReviewAlert } from '../../components/TxReviewAlert/TxReviewAlert';
 

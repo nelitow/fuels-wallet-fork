@@ -9,7 +9,7 @@ import type {
   MessageRequestMachine,
   SelectNetworkRequestMachine,
   TransactionRequestMachine,
-} from '../DApp';
+} from '../Degen';
 import type { ReportErrorMachine } from '../Error';
 import type { NetworksMachine } from '../Network';
 import type { OverlayMachine } from '../Overlay';

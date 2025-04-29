@@ -5,8 +5,8 @@ import { assign, createMachine } from 'xstate';
 import { AccountService } from '~/systems/Account';
 import type { Maybe } from '~/systems/Core';
 import { FetchMachine } from '~/systems/Core';
-import type { ConnectInputs } from '~/systems/DApp/services';
-import { ConnectionService } from '~/systems/DApp/services';
+import type { ConnectInputs } from '~/systems/Degen/services';
+import { ConnectionService } from '~/systems/Degen/services';
 
 export enum ConnectionScreen {
   list = 'list',
