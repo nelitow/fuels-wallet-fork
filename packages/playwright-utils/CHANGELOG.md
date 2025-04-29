@@ -1,5 +1,7 @@
 # @fuels/playwright-utils
 
+## 1.0.0
+
 ## 0.55.0
 
 ## 0.54.0
