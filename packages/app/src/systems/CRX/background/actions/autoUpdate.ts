@@ -34,21 +34,21 @@ async function runVersionCheck() {
   if (compareVersions(APP_VERSION, version) > -1) return;
   if (await isOpen()) return;
   // Request update check and reload if available
-  console.debug('[FUEL WALLET] Checking for updates...');
+  console.debug('[Bacon Wallet] Checking for updates...');
   chrome.runtime.requestUpdateCheck((details) => {
     if (details === 'update_available') {
-      console.log('[FUEL WALLET] Update available reload application...');
+      console.log('[Bacon Wallet] Update available reload application...');
       // Remove the alarm to check for updates until next reload
       chrome.alarms.clear('autoUpdate');
       return;
     }
-    console.debug('[FUEL WALLET] No update available', details);
+    console.debug('[Bacon Wallet] No update available', details);
   });
 }
 
 async function reloadWallet() {
   if (await isOpen()) {
-    console.debug('[FUEL WALLET] Wallet is open, waiting 5 minutes...');
+    console.debug('[Bacon Wallet] Wallet is open, waiting 5 minutes...');
     // If the wallet is open, wait 5 minutes and try again
     chrome.alarms.create('reloadWallet', { delayInMinutes: 1 });
     return;

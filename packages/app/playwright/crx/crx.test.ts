@@ -284,7 +284,7 @@ test.describe('FuelWallet Extension', () => {
           });
         }
         // needs to select the connector after refresh
-        await window.fuel.selectConnector('Fuel Wallet Development');
+        await window.fuel.selectConnector('Bacon Wallet Development');
         await window.fuel.hasConnector();
         await waitForConnection();
       });
@@ -292,7 +292,7 @@ test.describe('FuelWallet Extension', () => {
         const isConnected = await window.fuel.connect();
         if (!isConnected) {
           // throw this error to avoid needing to wait for `fuel.connect` timeout
-          throw new Error('Connecting to Fuel Wallet did not work');
+          throw new Error('Connecting to Bacon Wallet did not work');
         }
 
         return true;

@@ -52,7 +52,7 @@ export enum Environment {
 }
 
 export const ENV_TITLES: Record<Environment, string> = {
-  [Environment.PRODUCTION]: 'Fuel Wallet',
-  [Environment.NEXT]: 'Fuel Wallet Next',
-  [Environment.STAGING]: 'Fuel Wallet Development',
+  [Environment.PRODUCTION]: 'Bacon Wallet',
+  [Environment.NEXT]: 'Bacon Wallet Next',
+  [Environment.STAGING]: 'Bacon Wallet Development',
 };

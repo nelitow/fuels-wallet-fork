@@ -38,7 +38,7 @@ export function ViewActivity() {
           {selectedNetwork?.bridgeUrl && (
             <Alert status="info" hideIcon>
               <Text css={styles.bridgeAlertText}>
-                Bridge transactions are not shown in Fuel Wallet.{' '}
+                Bridge transactions are not shown in Bacon Wallet.{' '}
                 <Link
                   href={(IS_CRX && href) || undefined}
                   onClick={openBridge}

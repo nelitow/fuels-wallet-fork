@@ -11,14 +11,14 @@ const connectors = [];
 
 // Do not change this. This fixes e2e flakyness triggered by different env variables.
 switch (VITE_CRX_NAME) {
-  case 'Fuel Wallet Development':
+  case 'Bacon Wallet Development':
     connectors.push(new FuelWalletDevelopmentConnector());
     break;
-  case 'Fuel Wallet':
+  case 'Bacon Wallet':
     connectors.push(new FuelWalletConnector());
     break;
   default:
-    throw new Error('Bacon4 is not set to a valid value');
+    throw new Error('VITE_CRX_NAME is not set to a valid value');
 }
 
 window.fuel = new Fuel({
