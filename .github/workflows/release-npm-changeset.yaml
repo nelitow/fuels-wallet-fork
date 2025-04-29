@@ -30,18 +30,25 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "✨ Checking commit message to determine workflow path..."
           COMMIT_MSG=$(git log -1 --pretty=%B)
           FIRST_LINE=$(echo "$COMMIT_MSG" | head -n1)
+          echo "👀 Commit first line: $FIRST_LINE"
           if [[ "$FIRST_LINE" == "ci(changesets): versioning packages"* ]]; then
+            echo "🔍 Found changeset versioning pattern, checking PR number..."
             PR_NUMBER=$(echo "$FIRST_LINE" | grep -o '#[0-9]\+' | head -n1 | tr -d '#')
             if [ -n "$PR_NUMBER" ]; then
+              echo "🔄 Found PR number: $PR_NUMBER, checking PR title..."
               PR_TITLE=$(gh pr view "$PR_NUMBER" --json title -q .title)
+              echo "📝 PR title: $PR_TITLE"
               if [[ "$PR_TITLE" == "ci(changesets): versioning packages" ]]; then
+                echo "✅ This is a changeset PR merge, will proceed with publishing"
                 echo "is_changeset_pr=true" >> "$GITHUB_OUTPUT"
                 exit 0
               fi
             fi
           fi
+          echo "ℹ️ This is a regular commit, will create/update changeset PR"
           echo "is_changeset_pr=false" >> "$GITHUB_OUTPUT"
 
   create-pr:
@@ -60,7 +67,9 @@ jobs:
       - name: Extract pnpm version from .tool-versions
         id: get_pnpm
         run: |
+          echo "🔍 Extracting pnpm version from .tool-versions..."
           PNPM_VERSION=$(grep '^pnpm' .tool-versions | awk '{print $2}')
+          echo "📦 Found pnpm version: ${PNPM_VERSION}"
           echo "PNPM_VERSION=${PNPM_VERSION}" >> $GITHUB_ENV
       - uses: FuelLabs/github-actions/setups/node@master
         with:
@@ -69,6 +78,7 @@ jobs:
 
       - name: Setup git user (for changelog step)
         run: |
+          echo "🛠️ Setting up git user for changelog generation..."
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
@@ -95,7 +105,9 @@ jobs:
       - name: Extract pnpm version from .tool-versions
         id: get_pnpm
         run: |
+          echo "🔍 Extracting pnpm version from .tool-versions..."
           PNPM_VERSION=$(grep '^pnpm' .tool-versions | awk '{print $2}')
+          echo "📦 Found pnpm version: ${PNPM_VERSION}"
           echo "PNPM_VERSION=${PNPM_VERSION}" >> $GITHUB_ENV
       - uses: FuelLabs/github-actions/setups/node@master
         with:
@@ -107,19 +119,30 @@ jobs:
 
       - name: Bump and Collect Version
         run: |
+          echo "📋 Starting version bump process..."
           # Backup changesets for release descriptions
+          echo "💾 Backing up changesets folder..."
           cp -r .changeset changesets-backup
+          echo "🔢 Running changeset version command..."
           pnpm changeset version
-          echo "BUILD_VERSION=$(pnpm -s packages:version)" >> $GITHUB_ENV
+          echo "🏷️ Collecting build version..."
+          BUILD_VERSION=$(pnpm -s packages:version)
+          echo "📌 Build version: ${BUILD_VERSION}"
+          echo "BUILD_VERSION=${BUILD_VERSION}" >> $GITHUB_ENV
+          echo "♻️ Resetting changes to prepare for publishing..."
           git reset --hard
           # Restore changesets for release notes generation
+          echo "🔄 Restoring changesets for release notes generation..."
           mkdir -p .changeset
           cp -r changesets-backup/* .changeset/ || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build packages
-        run: pnpm build:libs
+        run: |
+          echo "🔨 Building library packages..."
+          pnpm build:libs
+          echo "✅ Library packages built successfully!"
 
       - name: Publish to NPM
         id: changesets
@@ -134,7 +157,10 @@ jobs:
 
       - name: Build Fuel Wallet
         if: steps.changesets.outputs.published == 'true'
-        run: pnpm build:crx
+        run: |
+          echo "🔨 Building Fuel Wallet production version..."
+          pnpm build:crx
+          echo "✅ Fuel Wallet built successfully!"
         env:
           ## increase node.js m memory limit for building
           ## with sourcemaps
@@ -142,7 +168,10 @@ jobs:
 
       - name: Build Fuel Wallet Development
         if: steps.changesets.outputs.published == 'true'
-        run: pnpm build:crx
+        run: |
+          echo "🔨 Building Fuel Wallet development version..."
+          pnpm build:crx
+          echo "✅ Fuel Wallet development version built successfully!"
         env:
           VITE_CRX_RELEASE: false
           VITE_CRX_NAME: "Fuel Wallet Development"
@@ -153,8 +182,10 @@ jobs:
       - name: Upload Production artifacts to Sentry
         if: steps.changesets.outputs.published == 'true'
         run: |
+          echo "📤 Uploading production sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
           pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx
           pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx
+          echo "✅ Production sourcemaps uploaded to Sentry!"
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ vars.SENTRY_ORG }}
@@ -164,8 +195,10 @@ jobs:
       - name: Upload Development artifacts to Sentry
         if: steps.changesets.outputs.published == 'true'
         run: |
+          echo "📤 Uploading development sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
           pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
           pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
+          echo "✅ Development sourcemaps uploaded to Sentry!"
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ vars.SENTRY_ORG }}
