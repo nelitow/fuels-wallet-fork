@@ -9,7 +9,7 @@ import {
   SearchInput,
   animations,
 } from '~/systems/Core';
-import { NOT_ALLOWED_LIST, PERMISSION_LIST } from '~/systems/Degen';
+import { NOT_ALLOWED_LIST, PERMISSION_LIST } from '~/systems/DApp';
 
 import type { useConnections } from '../../hooks';
 import { ConnectionItem } from '../ConnectionItem';
