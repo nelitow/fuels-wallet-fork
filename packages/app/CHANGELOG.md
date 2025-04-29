@@ -4,7 +4,7 @@
 
 ### Major Changes
 
-- [`c8344e3b`](https://github.com/FuelLabs/fuels-wallet/commit/c8344e3bf0ad98bbd1454a9b602445b72757178f) Thanks [@nelitow](https://github.com/nelitow)! - Bacon Wallet name change.
+- [`c8344e3b`](https://github.com/FuelLabs/fuels-wallet/commit/c8344e3bf0ad98bbd1454a9b602445b72757178f) Thanks [@nelitow](https://github.com/nelitow)! - Jason Wallet name change.
 
 ### Minor Changes
 
@@ -32,7 +32,7 @@
 
 ### Minor Changes
 
-- [`5175ed38`](https://github.com/FuelLabs/fuels-wallet/commit/5175ed387831f8e71bc0114c32ba990d6f7308ef) Thanks [@nelitow](https://github.com/nelitow)! - Bacon Wallet!
+- [`5175ed38`](https://github.com/FuelLabs/fuels-wallet/commit/5175ed387831f8e71bc0114c32ba990d6f7308ef) Thanks [@nelitow](https://github.com/nelitow)! - Jason Wallet!
 
 - [`750fef74`](https://github.com/FuelLabs/fuels-wallet/commit/750fef74ad29b7034963c3673bdeb9e079c62e0f) Thanks [@nelitow](https://github.com/nelitow)! - bacon
 
@@ -356,7 +356,7 @@
 
 - [#1680](https://github.com/FuelLabs/fuels-wallet/pull/1680) [`21eb5cd8`](https://github.com/FuelLabs/fuels-wallet/commit/21eb5cd8699002d7d46c57432f6c9e3cfa89ea03) Thanks [@helciofranco](https://github.com/helciofranco)! - Fixed amount display for large values when reviewing a transaction request.
 
-- [#1684](https://github.com/FuelLabs/fuels-wallet/pull/1684) [`882f3ea3`](https://github.com/FuelLabs/fuels-wallet/commit/882f3ea36ae4167e4b8c563e2c3734b01dbf0c17) Thanks [@helciofranco](https://github.com/helciofranco)! - Fire event to dApps when editing connections on the Bacon Wallet.
+- [#1684](https://github.com/FuelLabs/fuels-wallet/pull/1684) [`882f3ea3`](https://github.com/FuelLabs/fuels-wallet/commit/882f3ea36ae4167e4b8c563e2c3734b01dbf0c17) Thanks [@helciofranco](https://github.com/helciofranco)! - Fire event to dApps when editing connections on the Jason Wallet.
 
 - [#1683](https://github.com/FuelLabs/fuels-wallet/pull/1683) [`a7e6e48b`](https://github.com/FuelLabs/fuels-wallet/commit/a7e6e48bb0eec410b38a262486a3f2860466a738) Thanks [@helciofranco](https://github.com/helciofranco)! - Fix feedback when user has insufficient ETH to cover fees.
 
@@ -1250,7 +1250,7 @@
 
 ### Patch Changes
 
-- [#978](https://github.com/FuelLabs/fuels-wallet/pull/978) [`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197) Thanks [@luizstacio](https://github.com/luizstacio)! - chore: fix icons on Bacon Wallet development attachment
+- [#978](https://github.com/FuelLabs/fuels-wallet/pull/978) [`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197) Thanks [@luizstacio](https://github.com/luizstacio)! - chore: fix icons on Jason Wallet development attachment
 
 - Updated dependencies [[`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197)]:
   - @fuel-wallet/sdk@0.13.10

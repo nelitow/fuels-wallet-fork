@@ -14,7 +14,7 @@ export function WelcomeScreen() {
           <FuelLogo size={50} />
         </Box>
         <Header
-          title="Let's set up your Bacon Wallet"
+          title="Let's set up your Jason Wallet"
           subtitle="Pick an option below to get started"
         />
         <Box css={styles.footer}>

@@ -52,7 +52,7 @@ export function NetworkExample() {
               <Code> {JSON.stringify(currentNetwork)} </Code>
               <Text>
                 <em>
-                  Change the account in your Bacon Wallet to see the event
+                  Change the account in your Jason Wallet to see the event
                   triggered.
                 </em>
               </Text>

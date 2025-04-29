@@ -13,5 +13,5 @@ export const logout = async (page: Page) => {
   await page.locator(`[data-key="settings"]`).click();
   await page.locator(`[data-key="logout"]`).click();
   await getButtonByText(page, /Logout/).click();
-  await hasText(page, "Let's set up your Bacon Wallet");
+  await hasText(page, "Let's set up your Jason Wallet");
 };

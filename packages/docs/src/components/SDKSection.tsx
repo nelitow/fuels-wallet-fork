@@ -20,8 +20,8 @@ export function SDKSection() {
       <Image height={300} src={connectorsPreviewImg.src} />
       <Box css={styles.action}>
         <Text css={styles.text}>
-          If you are a developer and want to integrate Bacon Wallet into your
-          DApp, you can do so by following the Bacon Wallet SDK.
+          If you are a developer and want to integrate Jason Wallet into your
+          DApp, you can do so by following the Jason Wallet SDK.
         </Text>
         <Box>
           <Button

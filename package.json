@@ -2,7 +2,7 @@
   "name": "fuel-wallet-repo",
   "version": "0.0.1",
   "private": true,
-  "description": "Bacon Wallet",
+  "description": "Jason Wallet",
   "author": "Fuel Labs <contact@fuel.sh> (https://fuel.network/)",
   "engines": {
     "node": "20.x",
