@@ -144,18 +144,7 @@ jobs:
           pnpm build:libs
           echo "✅ Library packages built successfully!"
 
-      - name: Publish to NPM
-        id: changesets
-        uses: FuelLabs/changesets-action@v2.0.0
-        with:
-          publish: pnpm changeset publish --tag next
-          createGithubReleases: aggregate
-          version: pnpm changeset version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN_WALLET }}
-
-      - name: Build Jason Wallet
+      - name: Build Bacon Wallet
         if: steps.changesets.outputs.published == 'true'
         run: |
           echo "🔨 Building Fuel Wallet production version..."
@@ -166,7 +155,7 @@ jobs:
           ## with sourcemaps
           NODE_OPTIONS: "--max-old-space-size=4096"
 
-      - name: Build Jason Wallet Development
+      - name: Build Bacon Wallet Development
         if: steps.changesets.outputs.published == 'true'
         run: |
           echo "🔨 Building Fuel Wallet development version..."
@@ -174,38 +163,12 @@ jobs:
           echo "✅ Fuel Wallet development version built successfully!"
         env:
           VITE_CRX_RELEASE: false
-          VITE_CRX_NAME: "Jason Wallet Development"
+          VITE_CRX_NAME: "Bacon Wallet Development"
           CRX_OUT: "dist-crx-dev"
           APP_VERSION_POSTFIX: "-development"
           NODE_OPTIONS: "--max-old-space-size=4096"
 
-      - name: Upload Production artifacts to Sentry
-        if: steps.changesets.outputs.published == 'true'
-        run: |
-          echo "📤 Uploading production sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
-          pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx
-          pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx
-          echo "✅ Production sourcemaps uploaded to Sentry!"
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
-        working-directory: ./packages/app
-
-      - name: Upload Development artifacts to Sentry
-        if: steps.changesets.outputs.published == 'true'
-        run: |
-          echo "📤 Uploading development sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
-          pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
-          pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
-          echo "✅ Development sourcemaps uploaded to Sentry!"
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
-        working-directory: ./packages/app
-
-      - name: Attach Jason Wallet to release
+      - name: Attach Bacon Wallet to release
         if: steps.changesets.outputs.published == 'true'
         uses: softprops/action-gh-release@v1
         with:
