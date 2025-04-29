@@ -18,7 +18,7 @@ switch (VITE_CRX_NAME) {
     connectors.push(new FuelWalletConnector());
     break;
   default:
-    throw new Error('Bacon4 is not set to a valid value');
+    throw new Error('VITE_CRX_NAME is not set to a valid value');
 }
 
 window.fuel = new Fuel({
