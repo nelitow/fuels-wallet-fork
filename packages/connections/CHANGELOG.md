@@ -1,5 +1,11 @@
 # @fuel-wallet/connections
 
+## 2.0.0
+
+### Major Changes
+
+- [`c8344e3b`](https://github.com/FuelLabs/fuels-wallet/commit/c8344e3bf0ad98bbd1454a9b602445b72757178f) Thanks [@nelitow](https://github.com/nelitow)! - Bacon Wallet name change.
+
 ## 1.0.0
 
 ## 0.55.0
