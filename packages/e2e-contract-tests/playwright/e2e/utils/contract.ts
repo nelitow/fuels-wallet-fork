@@ -10,7 +10,7 @@ import type { Page } from '@playwright/test';
 export const connect = async (
   page: Page,
   fuelWalletTestHelper: FuelWalletTestHelper,
-  walletName = 'Fuel Wallet Development'
+  walletName = 'Bacon Wallet Development'
 ) => {
   const connectButton = getButtonByText(page, 'Connect');
   await connectButton.click();

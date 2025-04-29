@@ -375,12 +375,12 @@ export class NetworkService {
       nodeInfo = await provider.fetchNode();
     } catch (_err) {
       throw new Error(
-        `Network not compatible with Fuel Wallet. Required version is >=${MIN_NODE_VERSION}`
+        `Network not compatible with Bacon Wallet. Required version is >=${MIN_NODE_VERSION}`
       );
     }
     if (compare(nodeInfo.nodeVersion, MIN_NODE_VERSION, '<')) {
       throw new Error(
-        `Network not compatible with Fuel Wallet. Required version is >=${MIN_NODE_VERSION}`
+        `Network not compatible with Bacon Wallet. Required version is >=${MIN_NODE_VERSION}`
       );
     }
   }

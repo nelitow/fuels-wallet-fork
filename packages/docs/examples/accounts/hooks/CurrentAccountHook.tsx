@@ -24,7 +24,7 @@ export function CurrentAccountHook() {
               </Tag>
               <Text>
                 <em>
-                  Change the account in your Fuel wallet to test the event
+                  Change the account in your Bacon Wallet to test the event
                 </em>
               </Text>
             </Box.Stack>

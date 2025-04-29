@@ -321,7 +321,7 @@
 
 ### Patch Changes
 
-- [#978](https://github.com/FuelLabs/fuels-wallet/pull/978) [`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197) Thanks [@luizstacio](https://github.com/luizstacio)! - chore: fix icons on fuel wallet development attachment
+- [#978](https://github.com/FuelLabs/fuels-wallet/pull/978) [`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197) Thanks [@luizstacio](https://github.com/luizstacio)! - chore: fix icons on Bacon Wallet development attachment
 
 ## 0.13.9
 
@@ -425,7 +425,7 @@
 
 ### Minor Changes
 
-- [#729](https://github.com/FuelLabs/fuels-wallet/pull/729) [`c9cd111`](https://github.com/FuelLabs/fuels-wallet/commit/c9cd1110a26e56f9f7e1fbf3a0db0873cdd043d0) Thanks [@luizstacio](https://github.com/luizstacio)! - Enable other Wallets to being exposed as Connectors using the Fuel Wallet Connectors feature.
+- [#729](https://github.com/FuelLabs/fuels-wallet/pull/729) [`c9cd111`](https://github.com/FuelLabs/fuels-wallet/commit/c9cd1110a26e56f9f7e1fbf3a0db0873cdd043d0) Thanks [@luizstacio](https://github.com/luizstacio)! - Enable other Wallets to being exposed as Connectors using the Bacon Wallet Connectors feature.
 
 ## 0.9.5
 
@@ -534,7 +534,7 @@
 
 ### Minor Changes
 
-- [#368](https://github.com/FuelLabs/fuels-wallet/pull/368) [`c58e230`](https://github.com/FuelLabs/fuels-wallet/commit/c58e2300bea26d4668a08dc066d7e0426d2a8d39) Thanks [@luizstacio](https://github.com/luizstacio)! - Add support for using Fuel Wallet SDK to import types
+- [#368](https://github.com/FuelLabs/fuels-wallet/pull/368) [`c58e230`](https://github.com/FuelLabs/fuels-wallet/commit/c58e2300bea26d4668a08dc066d7e0426d2a8d39) Thanks [@luizstacio](https://github.com/luizstacio)! - Add support for using Bacon Wallet SDK to import types
 
 ### Patch Changes
 
