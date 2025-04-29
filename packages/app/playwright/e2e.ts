@@ -11,10 +11,10 @@ const connectors = [];
 
 // Do not change this. This fixes e2e flakyness triggered by different env variables.
 switch (VITE_CRX_NAME) {
-  case 'Bacon Wallet Development':
+  case 'Jason Wallet Development':
     connectors.push(new FuelWalletDevelopmentConnector());
     break;
-  case 'Bacon Wallet':
+  case 'Jason Wallet':
     connectors.push(new FuelWalletConnector());
     break;
   default:

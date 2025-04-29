@@ -155,7 +155,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_WALLET }}
 
-      - name: Build Bacon Wallet
+      - name: Build Jason Wallet
         if: steps.changesets.outputs.published == 'true'
         run: |
           echo "🔨 Building Fuel Wallet production version..."
@@ -166,7 +166,7 @@ jobs:
           ## with sourcemaps
           NODE_OPTIONS: "--max-old-space-size=4096"
 
-      - name: Build Bacon Wallet Development
+      - name: Build Jason Wallet Development
         if: steps.changesets.outputs.published == 'true'
         run: |
           echo "🔨 Building Fuel Wallet development version..."
@@ -174,7 +174,7 @@ jobs:
           echo "✅ Fuel Wallet development version built successfully!"
         env:
           VITE_CRX_RELEASE: false
-          VITE_CRX_NAME: "Bacon Wallet Development"
+          VITE_CRX_NAME: "Jason Wallet Development"
           CRX_OUT: "dist-crx-dev"
           APP_VERSION_POSTFIX: "-development"
           NODE_OPTIONS: "--max-old-space-size=4096"
@@ -205,7 +205,7 @@ jobs:
           SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
         working-directory: ./packages/app
 
-      - name: Attach Bacon Wallet to release
+      - name: Attach Jason Wallet to release
         if: steps.changesets.outputs.published == 'true'
         uses: softprops/action-gh-release@v1
         with:

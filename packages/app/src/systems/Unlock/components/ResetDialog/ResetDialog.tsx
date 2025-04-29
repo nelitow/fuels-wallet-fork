@@ -29,7 +29,7 @@ export function ResetDialog() {
         <Box.Stack gap="$4">
           <Text>
             If you've lost your password, the only way to recover your wallet is
-            to reset the Bacon Wallet extension, select "I already have a
+            to reset the Jason Wallet extension, select "I already have a
             wallet", and enter your seed phrase.
           </Text>
           <Text>

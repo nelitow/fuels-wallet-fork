@@ -1,5 +1,5 @@
 name: 🐛 Bug Report
-description: Something is wrong with Bacon Wallet.
+description: Something is wrong with Jason Wallet.
 labels: ['bug', 'triage']
 body:
   - type: markdown
