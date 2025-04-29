@@ -5,13 +5,13 @@ category: For Developers
 
 # Getting Started
 
-The Jason Wallet SDK serves as a connection manager between your Degen and other wallets compatible with the Fuel Network. This package ensures that you can connect to the Jason Wallet as well as any other wallet using a unified API.
+The Fuel Wallet SDK serves as a connection manager between your DApp and other wallets compatible with the Fuel Network. This package ensures that you can connect to the Fuel Wallet as well as any other wallet using a unified API.
 
 If you are using **React** jump to the [React section](./#using-react).
 
 ## Installation
 
-To begin integrating the Jason Wallet SDK into your Degen, you first need to install the packages `@fuels/connectors` and `fuels`.
+To begin integrating the Fuel Wallet SDK into your DApp, you first need to install the packages `@fuels/connectors` and `fuels`.
 
 ```bash
 npm install fuels @fuels/connectors
@@ -32,7 +32,7 @@ const fuel = new Fuel({
   connectors: defaultConnectors({ devMode: true }),
 });
 
-await fuel.selectConnector('Jason Wallet');
+await fuel.selectConnector('Fuel Wallet');
 await fuel.connect();
 ```
 
@@ -45,7 +45,7 @@ const fuel = new Fuel({
   connectors: [new FuelWalletConnector()],
 });
 
-await fuel.selectConnector('Jason Wallet');
+await fuel.selectConnector('Fuel Wallet');
 await fuel.connect();
 ```
 
@@ -60,7 +60,7 @@ npm install fuels @fuels/connectors @fuels/react @tanstack/react-query
 ```
 
 - [fuels](https://github.com/FuelLabs/fuels-ts) is the SDK that provides a set of utilities for interacting with the Fuel Network.
-- [@fuels/connectors](https://github.com/FuelLabs/fuel-connectors) is the collection of connectors that allow you to connect to the Jason Wallet.
+- [@fuels/connectors](https://github.com/FuelLabs/fuel-connectors) is the collection of connectors that allow you to connect to the Fuel Wallet.
 - [@fuels/react](https://github.com/FuelLabs/fuel-connectors/tree/main/packages/react) is a set of React hooks and a UI for seamless interaction with connectors.
 - [@tanstack/react-query](https://github.com/tanstack/query) is a library for managing and caching data in React applications.
 
