@@ -23,8 +23,8 @@ export function InstallSection() {
               Jason Wallet
             </Heading>
             <Text fontSize="lg">
-              With the Jason Wallet, <br /> you can explore Degens on Fuel{' '}
-              <br /> and manage your crypto assets, <br /> all in one place.
+              With the Jason Wallet, <br /> you can explore DApps on Fuel <br />{' '}
+              and manage your crypto assets, <br /> all in one place.
             </Text>
           </Box.Stack>
           <Box.Stack css={styles.action} justify={'end'}>
