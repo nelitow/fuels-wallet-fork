@@ -14,7 +14,7 @@ Jason Wallet is a crypto wallet used to interact with the Fuel Network. This pro
 
 For latest updates, download the [Jason Wallet Development](https://next-wallet.fuel.network/docs/install/). This version is made for developers, so note that it can be unstable or buggy.
 
-Integrate your **DApp** using the [Wallet SDK](https://wallet.fuel.network/docs/dev/getting-started/)
+Integrate your **Degen** using the [Wallet SDK](https://wallet.fuel.network/docs/dev/getting-started/)
 
 ## 📗 Table of contents
 
@@ -35,7 +35,7 @@ Integrate your **DApp** using the [Wallet SDK](https://wallet.fuel.network/docs/
 
 - [x] Create a new mnemonic phrase account
 - [x] Recover an account using mnemonic phrase
-- [x] DApps integration
+- [x] Degens integration
   - [x] Request connection
   - [x] List accounts
   - [x] Sign messages

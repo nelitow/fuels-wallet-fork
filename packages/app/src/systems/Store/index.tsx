@@ -9,8 +9,8 @@ import {
   messageRequestMachine,
   selectNetworkRequestMachine,
   transactionRequestMachine,
-} from '../DApp';
-import { requestEvents } from '../DApp/events';
+} from '../Degen';
+import { requestEvents } from '../Degen/events';
 import { reportErrorMachine } from '../Error';
 import { networkEvents } from '../Network/events';
 import { networksMachine } from '../Network/machines';

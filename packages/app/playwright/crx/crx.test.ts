@@ -322,9 +322,9 @@ test.describe('FuelWallet Extension', () => {
         'true'
       );
 
-      // Add Account 3 to the DApp connection
+      // Add Account 3 to the Degen connection
       await getByAriaLabel(connectPage, 'Toggle Account 3').click();
-      // Add Account 4 to the DApp connection
+      // Add Account 4 to the Degen connection
       await getByAriaLabel(connectPage, 'Toggle Account 4').click();
 
       // Account 5 (Hidden) should not be shown to connect

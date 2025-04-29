@@ -21,7 +21,7 @@ export function SDKSection() {
       <Box css={styles.action}>
         <Text css={styles.text}>
           If you are a developer and want to integrate Jason Wallet into your
-          DApp, you can do so by following the Jason Wallet SDK.
+          Degen, you can do so by following the Jason Wallet SDK.
         </Text>
         <Box>
           <Button

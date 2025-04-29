@@ -7,7 +7,7 @@ import { ConnectInfo } from './ConnectInfo';
 
 export default {
   component: ConnectInfo,
-  title: 'DApp/Components/ConnectInfo',
+  title: 'Degen/Components/ConnectInfo',
 };
 
 const URL = 'fuellabs.github.io/swayswap';

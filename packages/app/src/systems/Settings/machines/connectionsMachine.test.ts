@@ -2,7 +2,7 @@ import type { Account, Connection } from '@fuel-wallet/types';
 import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import type { Maybe } from '~/systems/Core';
-import { ConnectionService } from '~/systems/DApp/services';
+import { ConnectionService } from '~/systems/Degen/services';
 
 import { mockConnections } from '../__mocks__/connection';
 
