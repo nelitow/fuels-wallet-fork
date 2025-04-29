@@ -10,9 +10,9 @@ import {
 import { HeaderFuelBranding } from './HeaderFuelBranding';
 
 const environmentsTitles: Record<Environment, string> = {
-  [Environment.PRODUCTION]: 'Fuel Wallet',
-  [Environment.NEXT]: 'Fuel Wallet Next',
-  [Environment.STAGING]: 'Fuel Wallet Development',
+  [Environment.PRODUCTION]: 'Bacon Wallet',
+  [Environment.NEXT]: 'Bacon Wallet Next',
+  [Environment.STAGING]: 'Bacon Wallet Development',
 };
 
 const environments: Array<Environment> = Object.values(Environment);

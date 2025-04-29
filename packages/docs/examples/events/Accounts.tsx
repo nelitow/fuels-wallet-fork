@@ -57,7 +57,7 @@ export function Accounts() {
               ))}
               <Text>
                 <em>
-                  Connect / Disconnect accounts in your Fuel wallet to test the
+                  Connect / Disconnect accounts in your Bacon Wallet to test the
                   event.
                 </em>
               </Text>
