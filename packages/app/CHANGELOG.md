@@ -1,5 +1,17 @@
 # fuels-wallet
 
+## 1.0.0
+
+### Major Changes
+
+- [`7bfe7276`](https://github.com/FuelLabs/fuels-wallet/commit/7bfe72760a5a75a752d54288c31819fa70aae84f) Thanks [@nelitow](https://github.com/nelitow)! - bacon4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @fuel-wallet/connections@1.0.0
+  - @fuels/playwright-utils@1.0.0
+
 ## 0.55.0
 
 ### Minor Changes
