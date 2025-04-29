@@ -25,7 +25,7 @@ async function loader() {
 
 export default {
   component: TransactionRequest,
-  title: 'Degen/Pages/TransactionRequest',
+  title: 'DApp/Pages/TransactionRequest',
   loaders: [loader],
   decorators: [(Story) => <Story />],
   parameters: {

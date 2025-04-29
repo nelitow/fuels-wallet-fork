@@ -1,0 +1,5 @@
+---
+"fuels-wallet": major
+---
+
+asd

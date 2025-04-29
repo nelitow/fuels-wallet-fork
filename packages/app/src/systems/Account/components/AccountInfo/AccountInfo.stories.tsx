@@ -6,7 +6,7 @@ import { AccountInfo } from './AccountInfo';
 
 export default {
   component: AccountInfo,
-  title: 'Degen/Components/AccountInfo',
+  title: 'DApp/Components/AccountInfo',
 } as Meta;
 
 const Template: StoryFn<typeof AccountInfo> = (args) => (

@@ -1,18 +1,18 @@
 [![discord](https://img.shields.io/badge/chat%20on-discord-orange?&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/xfpK4Pe)
 ![twitter](https://img.shields.io/twitter/follow/SwayLang?style=social)
 
-## ⚡️ Jason Wallet
+## ⚡️ Fuel Wallet
 
 > **Warning**
 > This project is under active development, some features are not implemented or can present bugs/issues. Do not treat it as a production-ready wallet.
 
 The official wallet of the fastest modular execution layer: [Fuel](https://fuel.network).
 
-Jason Wallet is a crypto wallet used to interact with the Fuel Network. This project enables users to access their assets and interact with decentralized applications through a browser extension.
+Fuel Wallet is a crypto wallet used to interact with the Fuel Network. This project enables users to access their assets and interact with decentralized applications through a browser extension.
 
 [![Install Wallet](packages/docs/public/install-button.png)](https://wallet.fuel.network/docs/install/)
 
-For latest updates, download the [Jason Wallet Development](https://next-wallet.fuel.network/docs/install/). This version is made for developers, so note that it can be unstable or buggy.
+For latest updates, download the [Fuel Wallet Development](https://next-wallet.fuel.network/docs/install/). This version is made for developers, so note that it can be unstable or buggy.
 
 Integrate your **Degen** using the [Wallet SDK](https://wallet.fuel.network/docs/dev/getting-started/)
 
@@ -20,7 +20,7 @@ Integrate your **Degen** using the [Wallet SDK](https://wallet.fuel.network/docs
 
 - [📗 Documentation](https://wallet.fuel.network/)
 - [📦 Install Wallet](https://wallet.fuel.network/docs/install/)
-- [🧰 Jason Wallet SDK](https://wallet.fuel.network/docs/dev/getting-started/)
+- [🧰 Fuel Wallet SDK](https://wallet.fuel.network/docs/dev/getting-started/)
   - [👨‍💻 - Quickstart](https://wallet.fuel.network/docs/dev/getting-started/)
   - [🔗 - Request connection](https://wallet.fuel.network/docs/dev/connecting/)
   - [📒 - List user accounts](https://wallet.fuel.network/docs/dev/accounts/)
