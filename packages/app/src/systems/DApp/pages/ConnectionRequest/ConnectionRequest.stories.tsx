@@ -6,7 +6,7 @@ import { ConnectionRequest } from './ConnectionRequest';
 
 export default {
   component: ConnectionRequest,
-  title: 'Degen/Pages/ConnectionRequest',
+  title: 'DApp/Pages/ConnectionRequest',
   parameters: {
     layout: 'fullscreen',
     viewport: {

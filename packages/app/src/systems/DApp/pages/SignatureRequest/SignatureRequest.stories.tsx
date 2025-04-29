@@ -12,7 +12,7 @@ async function loader() {
 
 export default {
   component: SignatureRequest,
-  title: 'Degen/Pages/SignatureRequest',
+  title: 'DApp/Pages/SignatureRequest',
   loaders: [loader],
   parameters: {
     layout: 'fullscreen',
