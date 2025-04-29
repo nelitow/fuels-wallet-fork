@@ -26,7 +26,7 @@ export default defineManifest({
     '512': `icons/fuel-logo${imageNameColor}-512.png`,
   },
   action: {
-    default_title: 'Fuel Wallet',
+    default_title: 'Bacon!',
     default_popup: 'popup.html',
   },
   background: {
