@@ -2,7 +2,7 @@
   "name": "@fuel-wallet/connections",
   "private": true,
   "description": "Jason Wallet Connections for CRX.",
-  "version": "4.1.6",
+  "version": "4.1.7",
   "license": "Apache-2.0",
   "main": "src/index.ts",
   "publishConfig": {
