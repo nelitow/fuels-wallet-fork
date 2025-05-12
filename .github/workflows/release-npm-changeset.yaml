@@ -210,6 +210,7 @@ jobs:
 
       - name: Upload Production artifacts to Sentry
         if: steps.set_published.outputs.published == 'true'
+        continue-on-error: true
         run: |
           echo "📤 Uploading production sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
           pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx
@@ -223,6 +224,7 @@ jobs:
 
       - name: Upload Development artifacts to Sentry
         if: steps.set_published.outputs.published == 'true'
+        continue-on-error: true
         run: |
           echo "📤 Uploading development sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
           pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
