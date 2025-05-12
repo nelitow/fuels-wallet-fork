@@ -1,5 +1,15 @@
 # fuels-wallet
 
+## 4.1.9
+
+### Patch Changes
+
+- [`9513e5b6`](https://github.com/FuelLabs/fuels-wallet/commit/9513e5b6851ce0745c3e035e2cc1f9cf221b1669) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
+
+- Updated dependencies []:
+  - @fuel-wallet/connections@4.1.9
+  - @fuels/playwright-utils@4.1.9
+
 ## 4.1.8
 
 ### Patch Changes
