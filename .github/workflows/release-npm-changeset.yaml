@@ -179,6 +179,11 @@ jobs:
             fi
           done
           echo "=============================================="
+          # Add debug output for the FuelLabs/changesets-action logic
+          echo "📊 Debug: Content of .changeset directory:"
+          ls -la .changeset/
+          echo "📄 Debug: Content of a sample changeset file (if exists):"
+          head -n 20 .changeset/*.md 2>/dev/null || echo "No changeset files found"
 
       - name: Build packages
         run: |
@@ -206,6 +211,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_WALLET }}
           DEBUG: "changesets:*"
+          
+      - name: Debug Published Outputs
+        run: |
+          echo "🔍 Debugging published packages output:"
+          echo "✅ Published flag: ${{ steps.changesets.outputs.published }}"
+          echo "📦 Published packages: ${{ steps.changesets.outputs.publishedPackages }}"
+          
+          echo "🔎 Checking for published success messages in logs"
+          # Look for successful publish messages in the build logs
+          grep "success packages published successfully" /home/runner/.npm/_logs/*.log || echo "No success message found in npm logs"
 
       - name: Build Bacon Wallet
         # Only use our forced flag since it's guaranteed to be set
@@ -268,3 +283,53 @@ jobs:
           tag_name: v${{ env.BUILD_VERSION }}
           files: |
             ./packages/app/dist/*.zip
+            
+      - name: Generate and Publish Enhanced Release Notes
+        if: steps.set_published.outputs.published == 'true'
+        run: |
+          echo "📝 Generating enhanced release notes..."
+          
+          # Create a release body from the changesets and CHANGELOG files
+          RELEASE_BODY="## Bacon Wallet v${{ env.BUILD_VERSION }}\n\n"
+          
+          # Add summary from changesets
+          RELEASE_BODY+="### What's Changed\n\n"
+          for file in .changeset/*.md; do
+            if [ -f "$file" ] && [ "$(basename "$file")" != "README.md" ]; then
+              # Extract the content (description) from changeset
+              CONTENT=$(sed -n '/^---$/,/^---$/!p' "$file" | sed '1,2d')
+              if [ -n "$CONTENT" ]; then
+                RELEASE_BODY+="- $CONTENT\n"
+              fi
+            fi
+          done
+          
+          # Add package details from CHANGELOGs
+          RELEASE_BODY+="\n### Packages Updated\n\n"
+          find . -name "CHANGELOG.md" -type f | while read changelog; do
+            PKG_NAME=$(basename $(dirname "$changelog"))
+            RELEASE_BODY+="- **$PKG_NAME**\n"
+            # Get the most recent entry from the changelog
+            RECENT_ENTRY=$(awk 'BEGIN{inEntry=0} /^## / {if(inEntry) exit; inEntry=1} inEntry {print}' "$changelog" | head -n 20)
+            if [ -n "$RECENT_ENTRY" ]; then
+              RELEASE_BODY+="  $RECENT_ENTRY\n\n"
+            fi
+          done
+          
+          # Create or update the release
+          RELEASE_FILE=$(mktemp)
+          echo "$RELEASE_BODY" > $RELEASE_FILE
+          
+          echo "📤 Publishing enhanced release notes to GitHub..."
+          gh release view v${{ env.BUILD_VERSION }} > /dev/null 2>&1
+          if [ $? -eq 0 ]; then
+            # Update existing release
+            gh release edit v${{ env.BUILD_VERSION }} --notes-file $RELEASE_FILE
+          else
+            # Create new release
+            gh release create v${{ env.BUILD_VERSION }} --notes-file $RELEASE_FILE
+          fi
+          
+          echo "✅ Enhanced release notes published successfully!"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
