@@ -355,11 +355,14 @@ jobs:
           # Get the parsed package information
           PUBLISHED_PACKAGES='${{ steps.parse_published.outputs.published_packages || '[]' }}'
           
-          # Create a release body from the CHANGELOGs
-          RELEASE_BODY="## Bacon Wallet v${{ env.BUILD_VERSION }}\n\n"
-          
-          # Add package details
-          RELEASE_BODY+="### Packages Published\n\n"
+          # Create a release body with proper newlines (using actual newlines, not \n escape sequences)
+          # This is the key fix - use actual newlines in the heredoc instead of \n escape sequences
+          cat > release_notes.md << 'EOL'
+          ## Bacon Wallet v${{ env.BUILD_VERSION }}
+
+          ### Packages Published
+
+          EOL
           
           # Use jq to parse the published packages JSON if it exists
           if [ -n "$PUBLISHED_PACKAGES" ] && [ "$PUBLISHED_PACKAGES" != "[]" ]; then
@@ -374,7 +377,7 @@ jobs:
               PKG_NAME=$(echo $PUBLISHED_PACKAGES | jq -r ".[$i].name")
               PKG_VERSION=$(echo $PUBLISHED_PACKAGES | jq -r ".[$i].version")
               
-              RELEASE_BODY+="- **$PKG_NAME@$PKG_VERSION**\n"
+              echo "- **${PKG_NAME}@${PKG_VERSION}**" >> release_notes.md
               
               # Try to find the CHANGELOG for this package
               CHANGELOG=""
@@ -395,12 +398,15 @@ jobs:
                 echo "Found CHANGELOG for $PKG_NAME at $CHANGELOG"
                 RECENT_ENTRY=$(awk 'BEGIN{inEntry=0} /^## / {if(inEntry) exit; inEntry=1} inEntry {print}' "$CHANGELOG" | head -n 20)
                 if [ -n "$RECENT_ENTRY" ]; then
-                  RELEASE_BODY+="  $RECENT_ENTRY\n\n"
+                  echo "  $RECENT_ENTRY" >> release_notes.md
+                  echo "" >> release_notes.md
                 else
-                  RELEASE_BODY+="  No recent entries found in CHANGELOG.\n\n"
+                  echo "  No recent entries found in CHANGELOG." >> release_notes.md
+                  echo "" >> release_notes.md
                 fi
               else
-                RELEASE_BODY+="  *(No CHANGELOG found)*\n\n"
+                echo "  *(No CHANGELOG found)*" >> release_notes.md
+                echo "" >> release_notes.md
               fi
             done
           else
@@ -408,29 +414,33 @@ jobs:
             echo "No parsed package information found, falling back to CHANGELOG scan"
             find ./packages -name "CHANGELOG.md" -type f | while read changelog; do
               PKG_NAME=$(basename $(dirname "$changelog"))
-              RELEASE_BODY+="- **$PKG_NAME**\n"
+              echo "- **$PKG_NAME**" >> release_notes.md
               # Get the most recent entry from the changelog
               RECENT_ENTRY=$(awk 'BEGIN{inEntry=0} /^## / {if(inEntry) exit; inEntry=1} inEntry {print}' "$changelog" | head -n 20)
               if [ -n "$RECENT_ENTRY" ]; then
-                RELEASE_BODY+="  $RECENT_ENTRY\n\n"
+                echo "  $RECENT_ENTRY" >> release_notes.md
+                echo "" >> release_notes.md
               else
-                RELEASE_BODY+="  No recent entries found in CHANGELOG.\n\n"
+                echo "  No recent entries found in CHANGELOG." >> release_notes.md
+                echo "" >> release_notes.md
               fi
             done
           fi
           
-          # Create or update the release
-          RELEASE_FILE=$(mktemp)
-          echo -e "$RELEASE_BODY" > $RELEASE_FILE
-          
           echo "📤 Publishing enhanced release notes to GitHub..."
+          
+          # Display the content we're about to publish (for debugging)
+          echo "Release notes content:"
+          cat release_notes.md
+          
+          # Use the release notes file directly with gh CLI
           gh release view v${{ env.BUILD_VERSION }} > /dev/null 2>&1
           if [ $? -eq 0 ]; then
             # Update existing release
-            gh release edit v${{ env.BUILD_VERSION }} --notes-file $RELEASE_FILE
+            gh release edit v${{ env.BUILD_VERSION }} --notes-file release_notes.md
           else
             # Create new release
-            gh release create v${{ env.BUILD_VERSION }} --notes-file $RELEASE_FILE --title "Bacon Wallet v${{ env.BUILD_VERSION }}"
+            gh release create v${{ env.BUILD_VERSION }} --notes-file release_notes.md --title "Bacon Wallet v${{ env.BUILD_VERSION }}"
           fi
           
           echo "✅ Enhanced release notes published successfully!"
