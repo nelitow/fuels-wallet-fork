@@ -155,7 +155,9 @@ jobs:
           # Restore changesets for release notes generation
           echo "🔄 Restoring changesets for release notes generation..."
           mkdir -p .changeset
+          echo "📁 Created .changeset directory"
           cp -r changesets-backup/* .changeset/ || true
+          echo "📋 Copied changeset files from backup"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
