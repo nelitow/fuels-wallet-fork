@@ -1,5 +1,24 @@
 # @fuel-wallet/types
 
+## 4.2.0
+
+### Patch Changes
+
+- [`2cb629a3`](https://github.com/FuelLabs/fuels-wallet/commit/2cb629a3a5f13fe86d1c35aabe5aecbf6c7f9466) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`2cb629a3`](https://github.com/FuelLabs/fuels-wallet/commit/2cb629a3a5f13fe86d1c35aabe5aecbf6c7f9466) Thanks [@nelitow](https://github.com/nelitow)! - ### Types Package Updates
+
+  - Added new transaction type definitions
+  - Fixed type compatibility with latest Fuel SDK
+  - Improved documentation for complex types
+
 ## 4.1.10
 
 ## 4.1.9
