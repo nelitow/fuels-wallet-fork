@@ -123,8 +123,29 @@ jobs:
           # Backup changesets for release descriptions
           echo "💾 Backing up changesets folder..."
           cp -r .changeset changesets-backup
+          
+          # Debug: Show changeset content
+          echo "📄 Changeset content:"
+          for file in .changeset/*.md; do
+            if [ -f "$file" ] && [ "$(basename "$file")" != "README.md" ]; then
+              echo "=== $(basename "$file") ==="
+              cat "$file"
+              echo ""
+            fi
+          done
+          
           echo "🔢 Running changeset version command..."
           pnpm changeset version
+          
+          # Debug: Check if CHANGELOG files were created/updated
+          echo "📝 Checking for CHANGELOG.md files:"
+          find . -name "CHANGELOG.md" -type f | while read changelog; do
+            echo "Found CHANGELOG: $changelog"
+            echo "--- Recent entries ---"
+            head -n 20 "$changelog"
+            echo "---------------------"
+          done
+          
           echo "🏷️ Collecting build version..."
           BUILD_VERSION=$(pnpm -s packages:version)
           echo "📌 Build version: ${BUILD_VERSION}"
@@ -182,6 +203,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_WALLET }}
+          DEBUG: "changesets:*"
 
       - name: Build Bacon Wallet
         # Only use our forced flag since it's guaranteed to be set
