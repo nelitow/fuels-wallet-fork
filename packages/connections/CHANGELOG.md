@@ -1,5 +1,26 @@
 # @fuel-wallet/connections
 
+## 4.4.0
+
+### Patch Changes
+
+- [`6179b009`](https://github.com/FuelLabs/fuels-wallet/commit/6179b0097ffacade707a28ed65210e5c41047a5b) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`6179b009`](https://github.com/FuelLabs/fuels-wallet/commit/6179b0097ffacade707a28ed65210e5c41047a5b) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
 ## 4.3.0
 
 ### Patch Changes
