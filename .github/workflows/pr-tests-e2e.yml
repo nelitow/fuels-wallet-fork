@@ -13,7 +13,7 @@ jobs:
   tests-e2e:
     name: Test (Chrome Stable)
     timeout-minutes: 15
-    runs-on: buildjet-8vcpu-ubuntu-2204
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Extract pnpm version from .tool-versions
@@ -57,7 +57,7 @@ jobs:
   tests-e2e-beta:
     name: Test (Chrome Beta)
     timeout-minutes: 15
-    runs-on: buildjet-8vcpu-ubuntu-2204
+    runs-on: ubuntu-latest
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
