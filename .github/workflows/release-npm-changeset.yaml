@@ -11,11 +11,12 @@ concurrency:
 
 env:
   BUILD_VERSION: ""
+  DEBUG: "changesets:*"
 
 jobs:
   check-commit:
     name: Decide if releases or create PR
-    runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204
     permissions:
       contents: read
       pull-requests: read
@@ -30,32 +31,25 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "✨ Checking commit message to determine workflow path..."
           COMMIT_MSG=$(git log -1 --pretty=%B)
           FIRST_LINE=$(echo "$COMMIT_MSG" | head -n1)
-          echo "👀 Commit first line: $FIRST_LINE"
           if [[ "$FIRST_LINE" == "ci(changesets): versioning packages"* ]]; then
-            echo "🔍 Found changeset versioning pattern, checking PR number..."
             PR_NUMBER=$(echo "$FIRST_LINE" | grep -o '#[0-9]\+' | head -n1 | tr -d '#')
             if [ -n "$PR_NUMBER" ]; then
-              echo "🔄 Found PR number: $PR_NUMBER, checking PR title..."
               PR_TITLE=$(gh pr view "$PR_NUMBER" --json title -q .title)
-              echo "📝 PR title: $PR_TITLE"
               if [[ "$PR_TITLE" == "ci(changesets): versioning packages" ]]; then
-                echo "✅ This is a changeset PR merge, will proceed with publishing"
                 echo "is_changeset_pr=true" >> "$GITHUB_OUTPUT"
                 exit 0
               fi
             fi
           fi
-          echo "ℹ️ This is a regular commit, will create/update changeset PR"
           echo "is_changeset_pr=false" >> "$GITHUB_OUTPUT"
 
   create-pr:
     name: Push changes to Changeset PR
     needs: check-commit
     if: needs.check-commit.outputs.is_changeset_pr == 'false'
-    runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204
     permissions:
       contents: write
       pull-requests: write
@@ -67,9 +61,7 @@ jobs:
       - name: Extract pnpm version from .tool-versions
         id: get_pnpm
         run: |
-          echo "🔍 Extracting pnpm version from .tool-versions..."
           PNPM_VERSION=$(grep '^pnpm' .tool-versions | awk '{print $2}')
-          echo "📦 Found pnpm version: ${PNPM_VERSION}"
           echo "PNPM_VERSION=${PNPM_VERSION}" >> $GITHUB_ENV
       - uses: FuelLabs/github-actions/setups/node@master
         with:
@@ -78,7 +70,6 @@ jobs:
 
       - name: Setup git user (for changelog step)
         run: |
-          echo "🛠️ Setting up git user for changelog generation..."
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
@@ -91,12 +82,21 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Prettify changeset PR
+        run: pnpm changeset:update-changelog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REF_NAME: master
+          PUBLISHED: "false"
+
   publish-npm:
     name: Release to NPM
     needs: check-commit
     if: needs.check-commit.outputs.is_changeset_pr == 'true'
     runs-on: ubuntu-latest
     environment: npm-deploy
+    outputs:
+      has_published_packages: ${{ steps.debug-published.outputs.has_published_packages }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -105,9 +105,7 @@ jobs:
       - name: Extract pnpm version from .tool-versions
         id: get_pnpm
         run: |
-          echo "🔍 Extracting pnpm version from .tool-versions..."
           PNPM_VERSION=$(grep '^pnpm' .tool-versions | awk '{print $2}')
-          echo "📦 Found pnpm version: ${PNPM_VERSION}"
           echo "PNPM_VERSION=${PNPM_VERSION}" >> $GITHUB_ENV
       - uses: FuelLabs/github-actions/setups/node@master
         with:
@@ -118,109 +116,80 @@ jobs:
           npm-token: ${{ secrets.NPM_TOKEN_WALLET }}
 
       - name: Bump and Collect Version
+        id: bump-version
         run: |
-          echo "📋 Starting version bump process..."
-          # Backup changesets for release descriptions
-          echo "💾 Backing up changesets folder..."
-          cp -r .changeset changesets-backup
-          
-          # Debug: Show changeset content
-          echo "📄 Changeset content:"
-          for file in .changeset/*.md; do
-            if [ -f "$file" ] && [ "$(basename "$file")" != "README.md" ]; then
-              echo "=== $(basename "$file") ==="
-              cat "$file"
-              echo ""
-            fi
+          echo "::group::Changeset Info Before Bump"
+          ls -la .changeset/ || echo "No changesets found"
+          find .changeset -type f -name "*.md" -not -name "README.md" -not -name "config.json" | while read -r file; do
+            echo "Content of changeset $file:"
+            cat "$file"
+            echo "-----------------------"
           done
+          echo "::endgroup::"
           
-          echo "🔢 Running changeset version command..."
+          echo "::group::Backing up changesets"
+          mkdir -p .changeset-backup
+          cp -r .changeset/* .changeset-backup/ || echo "No changesets to backup"
+          echo "::endgroup::"
+          
+          echo "::group::Running changeset version"
           pnpm changeset version
+          echo "::endgroup::"
           
-          # Debug: Check if CHANGELOG files were created/updated
-          echo "📝 Checking for CHANGELOG.md files:"
-          find . -name "CHANGELOG.md" -type f | while read changelog; do
-            echo "Found CHANGELOG: $changelog"
-            echo "--- Recent entries ---"
-            head -n 20 "$changelog"
-            echo "---------------------"
+          echo "BUILD_VERSION=$(pnpm -s packages:version)" >> $GITHUB_ENV
+          echo "build_version=$(pnpm -s packages:version)" >> $GITHUB_OUTPUT
+          
+          echo "::group::Checking CHANGELOG.md files"
+          find . -name "CHANGELOG.md" -type f | while read -r file; do
+            echo "CHANGELOG found: $file"
+            head -n 20 "$file"
+            echo "-----------------------"
           done
+          echo "::endgroup::"
           
-          echo "🏷️ Collecting build version..."
-          BUILD_VERSION=$(pnpm -s packages:version)
-          echo "📌 Build version: ${BUILD_VERSION}"
-          echo "BUILD_VERSION=${BUILD_VERSION}" >> $GITHUB_ENV
-          echo "♻️ Resetting changes to prepare for publishing..."
-          git reset --hard
-          # Restore changesets for release notes generation
-          echo "🔄 Restoring changesets for release notes generation..."
+          echo "::group::Restoring changesets for future runs"
+          rm -rf .changeset
           mkdir -p .changeset
-          echo "📁 Created .changeset directory"
-          cp -r changesets-backup/* .changeset/ || true
-          echo "📋 Copied changeset files from backup"
+          cp -r .changeset-backup/* .changeset/ || echo "No changesets to restore"
+          echo "::endgroup::"
+          
+          git reset --hard
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEBUG: ${{ env.DEBUG }}
 
       - name: Preview Release Description
         run: |
-          echo "📝 Previewing what will be in the release description:"
-          echo "=============================================="
-          echo "🏷️ Release version: ${BUILD_VERSION}"
-          echo "📄 Changesets to be included:"
-          for file in .changeset/*.md; do
-            if [ -f "$file" ] && [ "$(basename "$file")" != "README.md" ]; then
-              echo "-------------------------------------------"
-              echo "📌 Changeset: $(basename "$file" .md)"
-              # Extract the header (package names and bump types)
-              sed -n '/^---$/,/^---$/p' "$file" | grep -v "^---$"
-              echo ""
-              # Extract the content (description)
-              sed -n '/^---$/,/^---$/!p' "$file" | sed '1,2d'
+          echo "::group::Previewing Release Description"
+          echo "Upcoming version: ${{ env.BUILD_VERSION }}"
+          echo "Packages that will be published:"
+          pnpm changeset status
+          find . -name "CHANGELOG.md" -type f | xargs grep -l "## ${{ env.BUILD_VERSION }}" | while read -r file; do
+            echo "Recent changes in $file:"
+            VERSION_LINE=$(grep -n "## ${{ env.BUILD_VERSION }}" "$file" | cut -d':' -f1)
+            NEXT_VERSION_LINE=$(grep -n "## " "$file" | awk -F: '$1 > '"$VERSION_LINE"' {print $1}' | head -n 1)
+            if [ -z "$NEXT_VERSION_LINE" ]; then
+              awk "NR > $VERSION_LINE" "$file"
+            else
+              awk "NR > $VERSION_LINE && NR < $NEXT_VERSION_LINE" "$file"
             fi
+            echo "-----------------------"
           done
-          echo "=============================================="
-          # Add debug output for the FuelLabs/changesets-action logic
-          echo "📊 Debug: Content of .changeset directory:"
-          ls -la .changeset/
-          echo "📄 Debug: Content of a sample changeset file (if exists):"
-          head -n 20 .changeset/*.md 2>/dev/null || echo "No changeset files found"
+          echo "::endgroup::"
 
       - name: Build packages
-        run: |
-          echo "🔨 Building library packages..."
-          pnpm build:libs
-          echo "✅ Library packages built successfully!"
+        run: pnpm build:libs
 
-      # Always set the published flag before attempting NPM publish
-      - name: Set published flag for testing
-        id: set_published
+      - name: Get latest release
         run: |
-          # Use the manually parsed published status if available, otherwise default to true
-          PUBLISHED="${{ steps.parse_published.outputs.has_published_packages || 'true' }}"
-          echo "Setting published flag to $PUBLISHED for testing purposes..."
-          echo "published=$PUBLISHED" >> $GITHUB_OUTPUT
+          LATEST_RELEASE=$(pnpm run --silent changeset:get-latest-release)
+          echo "LATEST_RELEASE=$LATEST_RELEASE" >> $GITHUB_ENV
 
-      # Install tools needed for release notes generation
-      - name: Install Release Notes Dependencies
-        if: steps.set_published.outputs.published == 'true'
-        run: |
-          echo "📦 Installing dependencies for release notes generation..."
-          sudo apt-get update -y
-          sudo apt-get install -y jq
-          
-          # Install GitHub CLI if not already installed
-          if ! command -v gh &> /dev/null; then
-            echo "Installing GitHub CLI..."
-            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-            echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-            sudo apt-get update -y
-            sudo apt-get install -y gh
-          fi
-          
-          # Authenticate GitHub CLI
-          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+          pnpm add --global semver
+          echo "RELEASE_VERSION_HIGHER_THAN_LATEST=$(semver $LATEST_RELEASE v${{ env.BUILD_VERSION }} | tail -n1 | grep ${{ env.BUILD_VERSION }} --silent && echo true || echo false)" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Continue-on-error ensures this doesn't stop our workflow if it fails
       - name: Publish to NPM
         id: changesets
         uses: FuelLabs/changesets-action@v2.0.0
@@ -228,96 +197,81 @@ jobs:
         with:
           publish: pnpm changeset publish --tag next
           createGithubReleases: aggregate
+          githubReleaseName: v${{ env.BUILD_VERSION }}
+          githubTagName: v${{ env.BUILD_VERSION }}
           version: pnpm changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_WALLET }}
-          DEBUG: "changesets:*"
-          
+          DEBUG: ${{ env.DEBUG }}
+
       - name: Debug Published Outputs
-        id: parse_published
+        id: debug-published
         run: |
-          echo "🔍 Debugging published packages output:"
-          echo "✅ Published flag: ${{ steps.changesets.outputs.published }}"
-          echo "📦 Published packages: ${{ steps.changesets.outputs.publishedPackages }}"
+          echo "::group::Analyzing publish results"
+          echo "Raw changesets output published: ${{ steps.changesets.outputs.published }}"
+          echo "Run output:"
+          echo "${{ toJSON(steps.changesets.outputs) }}"
           
-          echo "🔎 Checking for published success messages in logs"
-          # Extract the actual published packages from the logs using the "New tag:" pattern
-          STEP_OUTPUT="${{ toJSON(steps.changesets.outputs) }}"
-          OUTPUT_LOG="${{ runner.temp }}/changesets-output.log"
+          # Create a file to store published packages
+          echo "[]" > published_packages.json
           
-          echo "$STEP_OUTPUT" > $OUTPUT_LOG
+          # Parse the run output to detect published packages
+          PUBLISHED_LOGS=$(echo "${{ toJSON(steps.changesets.outputs._processedStdout) }}" | sed 's/\\n/\n/g')
+          PACKAGES_PUBLISHED=false
           
-          # Create a file with all the logs
-          GITHUB_STEP_SUMMARY="${{ runner.temp }}/workflow-logs.txt"
-          env | grep "GITHUB_STEP_SUMMARY" || true > $GITHUB_STEP_SUMMARY
-          
-          # Check if there are any packages published at all
-          if grep -q "New tag:" $GITHUB_STEP_SUMMARY; then
-            echo "✅ Found packages with 'New tag:' markers in the logs"
-            echo "has_published_packages=true" >> $GITHUB_OUTPUT
+          if echo "$PUBLISHED_LOGS" | grep -q "New tag:"; then
+            PACKAGES_PUBLISHED=true
+            echo "Found published packages!"
             
-            # Extract package information
-            PACKAGES_JSON="["
-            FIRST=true
-            while IFS= read -r line; do
-              if [[ $line =~ New\ tag:\ \ ([^@]+)@([0-9]+\.[0-9]+\.[0-9]+) ]]; then
-                PACKAGE="${BASH_REMATCH[1]}"
-                VERSION="${BASH_REMATCH[2]}"
-                if [ "$FIRST" = true ]; then
-                  FIRST=false
-                else
-                  PACKAGES_JSON+=","
-                fi
-                PACKAGES_JSON+="{\"name\":\"$PACKAGE\",\"version\":\"$VERSION\"}"
+            # Extract published packages from logs
+            echo "$PUBLISHED_LOGS" | grep -E "Publishing|New tag:" | while read -r line; do
+              if [[ "$line" == *"Publishing"* ]]; then
+                PACKAGE=$(echo "$line" | sed -E 's/.*Publishing ([^ ]+).*/\1/')
+                echo "Detected published package: $PACKAGE"
               fi
-            done < <(grep "New tag:" $GITHUB_STEP_SUMMARY)
-            PACKAGES_JSON+="]"
-            
-            echo "published_packages=$PACKAGES_JSON" >> $GITHUB_OUTPUT
-            echo "📦 Parsed published packages: $PACKAGES_JSON"
+            done
           else
-            echo "❌ No 'New tag:' markers found in the logs"
-            echo "has_published_packages=false" >> $GITHUB_OUTPUT
-            echo "published_packages=[]" >> $GITHUB_OUTPUT
+            echo "No packages were published in this run"
           fi
           
-          # Look for successful publish messages in npm logs
-          grep "success packages published successfully" /home/runner/.npm/_logs/*.log 2>/dev/null || echo "No success message found in npm logs"
+          echo "has_published_packages=$PACKAGES_PUBLISHED" >> "$GITHUB_OUTPUT"
+          echo "::endgroup::"
 
-      - name: Build Bacon Wallet
-        # Only use our forced flag since it's guaranteed to be set
-        if: steps.set_published.outputs.published == 'true'
-        run: |
-          echo "🔨 Building Fuel Wallet production version..."
-          pnpm build:crx
-          echo "✅ Fuel Wallet built successfully!"
+      - name: Prettify changelog
+        if: steps.debug-published.outputs.has_published_packages == 'true'
+        run: pnpm changeset:update-changelog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: v${{ env.BUILD_VERSION }}
+          PUBLISHED: "true"
+          REF_NAME: master
+          LATEST_RELEASE: ${{ env.LATEST_RELEASE }}
+          RELEASE_VERSION_HIGHER_THAN_LATEST: ${{ env.RELEASE_VERSION_HIGHER_THAN_LATEST }}
+
+      - name: Build Fuel Wallet
+        if: steps.debug-published.outputs.has_published_packages == 'true'
+        run: pnpm build:crx
         env:
           ## increase node.js m memory limit for building
           ## with sourcemaps
           NODE_OPTIONS: "--max-old-space-size=4096"
 
-      - name: Build Bacon Wallet Development
-        if: steps.set_published.outputs.published == 'true'
-        run: |
-          echo "🔨 Building Fuel Wallet development version..."
-          pnpm build:crx
-          echo "✅ Fuel Wallet development version built successfully!"
+      - name: Build Fuel Wallet Development
+        if: steps.debug-published.outputs.has_published_packages == 'true'
+        run: pnpm build:crx
         env:
           VITE_CRX_RELEASE: false
-          VITE_CRX_NAME: "Bacon Wallet Development"
+          VITE_CRX_NAME: "Fuel Wallet Development"
           CRX_OUT: "dist-crx-dev"
           APP_VERSION_POSTFIX: "-development"
           NODE_OPTIONS: "--max-old-space-size=4096"
 
       - name: Upload Production artifacts to Sentry
-        if: steps.set_published.outputs.published == 'true'
-        continue-on-error: true
+        if: steps.debug-published.outputs.has_published_packages == 'true'
         run: |
-          echo "📤 Uploading production sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
           pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx
           pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx
-          echo "✅ Production sourcemaps uploaded to Sentry!"
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ vars.SENTRY_ORG }}
@@ -325,124 +279,21 @@ jobs:
         working-directory: ./packages/app
 
       - name: Upload Development artifacts to Sentry
-        if: steps.set_published.outputs.published == 'true'
-        continue-on-error: true
+        if: steps.debug-published.outputs.has_published_packages == 'true'
         run: |
-          echo "📤 Uploading development sourcemaps to Sentry for version ${{ env.BUILD_VERSION }}..."
           pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
           pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
-          echo "✅ Development sourcemaps uploaded to Sentry!"
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ vars.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
         working-directory: ./packages/app
 
-      - name: Attach Bacon Wallet to release
-        if: steps.set_published.outputs.published == 'true'
+      - name: Attach Fuel Wallet to release
+        if: steps.debug-published.outputs.has_published_packages == 'true'
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: v${{ env.BUILD_VERSION }}
           files: |
             ./packages/app/dist/*.zip
-            
-      - name: Generate and Publish Enhanced Release Notes
-        if: steps.set_published.outputs.published == 'true'
-        run: |
-          echo "📝 Generating enhanced release notes..."
-          
-          # Get the parsed package information
-          PUBLISHED_PACKAGES='${{ steps.parse_published.outputs.published_packages || '[]' }}'
-          
-          # Create a release body with proper newlines (using actual newlines, not \n escape sequences)
-          # This is the key fix - use actual newlines in the heredoc instead of \n escape sequences
-          cat > release_notes.md << 'EOL'
-          ## Bacon Wallet v${{ env.BUILD_VERSION }}
-
-          ### Packages Published
-
-          EOL
-          
-          # Use jq to parse the published packages JSON if it exists
-          if [ -n "$PUBLISHED_PACKAGES" ] && [ "$PUBLISHED_PACKAGES" != "[]" ]; then
-            echo "Using parsed package information from logs"
-            
-            # Get the number of packages
-            NUM_PACKAGES=$(echo $PUBLISHED_PACKAGES | jq length)
-            echo "Found $NUM_PACKAGES published packages"
-            
-            # Process each package
-            for i in $(seq 0 $(($NUM_PACKAGES - 1))); do
-              PKG_NAME=$(echo $PUBLISHED_PACKAGES | jq -r ".[$i].name")
-              PKG_VERSION=$(echo $PUBLISHED_PACKAGES | jq -r ".[$i].version")
-              
-              echo "- **${PKG_NAME}@${PKG_VERSION}**" >> release_notes.md
-              
-              # Try to find the CHANGELOG for this package
-              CHANGELOG=""
-              
-              # First try to find it by package name
-              if [ -f "./packages/$PKG_NAME/CHANGELOG.md" ]; then
-                CHANGELOG="./packages/$PKG_NAME/CHANGELOG.md"
-              else
-                # Search in all packages directories
-                FOUND_CHANGELOG=$(find ./packages -name "CHANGELOG.md" -type f | grep -i "$PKG_NAME" | head -n 1)
-                if [ -n "$FOUND_CHANGELOG" ]; then
-                  CHANGELOG="$FOUND_CHANGELOG"
-                fi
-              fi
-              
-              # Extract recent entries from CHANGELOG if found
-              if [ -n "$CHANGELOG" ] && [ -f "$CHANGELOG" ]; then
-                echo "Found CHANGELOG for $PKG_NAME at $CHANGELOG"
-                RECENT_ENTRY=$(awk 'BEGIN{inEntry=0} /^## / {if(inEntry) exit; inEntry=1} inEntry {print}' "$CHANGELOG" | head -n 20)
-                if [ -n "$RECENT_ENTRY" ]; then
-                  echo "  $RECENT_ENTRY" >> release_notes.md
-                  echo "" >> release_notes.md
-                else
-                  echo "  No recent entries found in CHANGELOG." >> release_notes.md
-                  echo "" >> release_notes.md
-                fi
-              else
-                echo "  *(No CHANGELOG found)*" >> release_notes.md
-                echo "" >> release_notes.md
-              fi
-            done
-          else
-            # Fallback to scanning all CHANGELOGs
-            echo "No parsed package information found, falling back to CHANGELOG scan"
-            find ./packages -name "CHANGELOG.md" -type f | while read changelog; do
-              PKG_NAME=$(basename $(dirname "$changelog"))
-              echo "- **$PKG_NAME**" >> release_notes.md
-              # Get the most recent entry from the changelog
-              RECENT_ENTRY=$(awk 'BEGIN{inEntry=0} /^## / {if(inEntry) exit; inEntry=1} inEntry {print}' "$changelog" | head -n 20)
-              if [ -n "$RECENT_ENTRY" ]; then
-                echo "  $RECENT_ENTRY" >> release_notes.md
-                echo "" >> release_notes.md
-              else
-                echo "  No recent entries found in CHANGELOG." >> release_notes.md
-                echo "" >> release_notes.md
-              fi
-            done
-          fi
-          
-          echo "📤 Publishing enhanced release notes to GitHub..."
-          
-          # Display the content we're about to publish (for debugging)
-          echo "Release notes content:"
-          cat release_notes.md
-          
-          # Use the release notes file directly with gh CLI
-          gh release view v${{ env.BUILD_VERSION }} > /dev/null 2>&1
-          if [ $? -eq 0 ]; then
-            # Update existing release
-            gh release edit v${{ env.BUILD_VERSION }} --notes-file release_notes.md
-          else
-            # Create new release
-            gh release create v${{ env.BUILD_VERSION }} --notes-file release_notes.md --title "Bacon Wallet v${{ env.BUILD_VERSION }}"
-          fi
-          
-          echo "✅ Enhanced release notes published successfully!"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
