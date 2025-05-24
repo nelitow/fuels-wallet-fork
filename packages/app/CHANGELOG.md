@@ -1,5 +1,30 @@
 # fuels-wallet
 
+## 4.7.0
+
+### Minor Changes
+
+- [`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+### Patch Changes
+
+- [`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- Updated dependencies [[`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf), [`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf)]:
+  - @fuel-wallet/connections@4.7.0
+  - @fuels/playwright-utils@4.7.0
+
 ## 4.6.0
 
 ### Minor Changes
