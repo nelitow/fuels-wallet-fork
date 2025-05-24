@@ -1,5 +1,145 @@
 # @fuel-wallet/connections
 
+## 4.6.0
+
+### Patch Changes
+
+- [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86) Thanks [@nelitow](https://github.com/nelitow)! - ## Connection Handling Improvements
+
+  - Fixed connection timeout issues
+  - Added better error handling for failed connections
+  - Improved connection security with additional verification steps
+
+  This update improves the overall stability of wallet connections.
+
+- [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
 ## 4.5.0
 
 ### Patch Changes

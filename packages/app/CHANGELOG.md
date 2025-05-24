@@ -1,5 +1,135 @@
 # fuels-wallet
 
+## 4.6.0
+
+### Minor Changes
+
+- [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+- [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+- [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+- [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+- [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+- [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+- [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+- [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+### Patch Changes
+
+- [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- Updated dependencies [[`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b), [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f), [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f), [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0), [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912), [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792), [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553), [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86), [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b), [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f), [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f), [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0), [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912), [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792), [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553), [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86)]:
+  - @fuel-wallet/connections@4.6.0
+  - @fuels/playwright-utils@4.6.0
+
 ## 4.5.0
 
 ### Minor Changes
