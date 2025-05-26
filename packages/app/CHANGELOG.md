@@ -1,5 +1,15 @@
 # fuels-wallet
 
+## 4.8.1
+
+### Patch Changes
+
+- [`5fd5f596`](https://github.com/FuelLabs/fuels-wallet/commit/5fd5f596d0095b1215a84236e888df78da4e6aeb) Thanks [@nelitow](https://github.com/nelitow)! - Change working on copy button.
+
+- Updated dependencies []:
+  - @fuel-wallet/connections@4.8.1
+  - @fuels/playwright-utils@4.8.1
+
 ## 4.8.0
 
 ### Minor Changes
