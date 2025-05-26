@@ -22,13 +22,65 @@ echo "# Bacon Wallet" > README.md
 git add README.md
 
 # Step 3: Create a changeset (non-interactive)
-echo "Creating changeset..."
-cat > .changeset/bacon-test-$(date +%s).md << EOF
+echo "Creating changesets..."
+
+# Main app changeset
+cat > .changeset/bacon-wallet-$(date +%s).md << EOF
 ---
-"fuels-wallet": patch
+"fuels-wallet": minor
 ---
 
-Added Bacon Wallet branding for testing the release process
+## Bacon Wallet Rebranding
+
+- Changed app name to Bacon Wallet
+- Updated icons and logos with bacon-themed designs
+- Enhanced UI color scheme with bacon-inspired colors
+EOF
+
+# Types package changeset
+cat > .changeset/types-update-$(date +%s).md << EOF
+---
+"@fuel-wallet/types": patch
+---
+
+### Types Package Updates
+
+- Added new transaction type definitions
+- Fixed type compatibility with latest Fuel SDK
+- Improved documentation for complex types
+EOF
+
+# Connections package changeset
+cat > .changeset/connections-update-$(date +%s).md << EOF
+---
+"@fuel-wallet/connections": patch
+---
+
+## Connection Handling Improvements
+
+* Fixed connection timeout issues
+* Added better error handling for failed connections
+* Improved connection security with additional verification steps
+
+This update improves the overall stability of wallet connections.
+EOF
+
+# Multi-package changeset
+cat > .changeset/multi-package-$(date +%s).md << EOF
+---
+"fuels-wallet": patch
+"@fuel-wallet/types": patch
+"@fuel-wallet/connections": patch
+---
+
+# Shared Improvements
+
+1. Standardized error handling across packages
+2. Updated dependencies to latest versions
+3. Improved cross-package type consistency
+
+> This update affects multiple packages to ensure compatibility
+> between all wallet components.
 EOF
 
 git add .changeset/
