@@ -1,5 +1,30 @@
 # fuels-wallet
 
+## 4.9.0
+
+### Minor Changes
+
+- ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+### Patch Changes
+
+- # Shared Improvements
+
+  1. Standardized error handling across packages
+  2. Updated dependencies to latest versions
+  3. Improved cross-package type consistency
+
+  > This update affects multiple packages to ensure compatibility
+  > between all wallet components.
+
+- Updated dependencies []:
+  - @fuel-wallet/connections@4.9.0
+  - @fuels/playwright-utils@4.9.0
+
 ## 4.8.1
 
 ### Patch Changes
