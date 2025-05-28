@@ -1,5 +1,19 @@
 # fuels-wallet
 
+## 4.18.0
+
+### Minor Changes
+
+- [#102](https://github.com/nelitow/fuels-wallet-fork/pull/102) [`9ead87a8`](https://github.com/nelitow/fuels-wallet-fork/commit/9ead87a808a91b7e51d3611d64983f28438271fe) Thanks [@nelitow](https://github.com/nelitow)! - thuingy
+
+### Patch Changes
+
+- [#104](https://github.com/nelitow/fuels-wallet-fork/pull/104) [`c48e9698`](https://github.com/nelitow/fuels-wallet-fork/commit/c48e96983f30fb7996c9a5f8fd8de4fcaacae601) Thanks [@nelitow](https://github.com/nelitow)! - lolokakaka
+
+- Updated dependencies []:
+  - @nelitow-fuel/connections@4.18.0
+  - @nelitow-fuel/playwright-utils@4.18.0
+
 ## 4.17.0
 
 ### Minor Changes
