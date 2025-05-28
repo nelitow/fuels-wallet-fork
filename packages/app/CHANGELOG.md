@@ -1,5 +1,15 @@
 # fuels-wallet
 
+## 4.18.2
+
+### Patch Changes
+
+- [#107](https://github.com/nelitow/fuels-wallet-fork/pull/107) [`a16c8b4b`](https://github.com/nelitow/fuels-wallet-fork/commit/a16c8b4b7017bd99a39df6711c2b980a4be374f0) Thanks [@nelitow](https://github.com/nelitow)! - nfts words
+
+- Updated dependencies []:
+  - @nelitow-fuel/connections@4.18.2
+  - @nelitow-fuel/playwright-utils@4.18.2
+
 ## 4.18.1
 
 ### Patch Changes
