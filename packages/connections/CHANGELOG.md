@@ -1,5 +1,11 @@
 # @fuel-wallet/connections
 
+## 4.11.0
+
+### Minor Changes
+
+- [#88](https://github.com/nelitow/fuels-wallet-fork/pull/88) [`0cc752fd`](https://github.com/nelitow/fuels-wallet-fork/commit/0cc752fd0f0b57590144dafe4c3822e3e9422ade) Thanks [@nelitow](https://github.com/nelitow)! - Minor general fixes
+
 ## 4.10.0
 
 ## 4.9.0
