@@ -10,7 +10,6 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 env:
   BUILD_VERSION: ""
-  DEBUG: "changesets:*"
 
 jobs:
   release:
@@ -45,48 +44,44 @@ jobs:
         with:
           node-version: 20.11.0
           pnpm-version: ${{ env.PNPM_VERSION }}
+          
+      - name: Install dependencies
+        run: pnpm install
+
       - uses: FuelLabs/github-actions/setups/npm@master
         with:
           npm-token: ${{ secrets.NPM_TOKEN_WALLET }}
 
-      - name: Collect Build Version
+      # if there are changesets present, package.json will be bumped
+      - name: Bump and Collect Versions
+        run: |
+          pnpm changeset version
+          echo "BUILD_VERSION=$(sed -nE 's/^\s*"version": "(.*?)",$/\1/p' packages/app/package.json)" >> $GITHUB_ENV
+          git reset --hard
+
+      - name: Verify Collected Version
         id: collect-version
         run: |
-          echo "::group::Collecting Build Version and Verifying Workspace State"
-          echo "Running: pnpm query packages --json"
-          PNPM_QUERY_OUTPUT=$(pnpm query packages --json)
-          echo "pnpm query output:"
-          echo "$PNPM_QUERY_OUTPUT"
-
-          echo "Attempting to extract version for @nelitow-fuel/fuels-wallet using jq..."
-          EXTRACTED_VERSION=$(echo "$PNPM_QUERY_OUTPUT" | jq -r '.[] | select(.name == "@nelitow-fuel/fuels-wallet") | .version')
+          echo "::group::Verifying Build Version and Workspace State"
+          echo "Collected version: ${{ env.BUILD_VERSION }}"
           
-          if [ -z "$EXTRACTED_VERSION" ]; then
-            echo "Error: jq could not extract version for @nelitow-fuel/fuels-wallet."
-            echo "Listing all package names found by pnpm query:"
-            echo "$PNPM_QUERY_OUTPUT" | jq -r '.[] | .name'
-          else
-            echo "Successfully extracted version: $EXTRACTED_VERSION"
+          if [ -z "${{ env.BUILD_VERSION }}" ]; then
+            echo "Error: BUILD_VERSION is not set."
+            exit 1
           fi
 
-          echo "BUILD_VERSION=$EXTRACTED_VERSION" >> $GITHUB_ENV
-          echo "build_version=$EXTRACTED_VERSION" >> $GITHUB_OUTPUT
-          
-          echo "Collected version: $EXTRACTED_VERSION"
+          echo "build_version=${{ env.BUILD_VERSION }}" >> $GITHUB_OUTPUT
 
-          echo "Checking current CHANGELOG.md files (should be already updated by merged PR):"
+          echo "Checking current CHANGELOG.md files (should be already updated by changeset version):"
           find . -name "CHANGELOG.md" -type f | while read -r file; do
             echo "CHANGELOG found: $file"
             head -n 20 "$file"
             echo "-----------------------"
           done
           
-          echo "Verifying .changeset directory state (should be empty of md files if consumed by PR action):"
+          echo "Verifying .changeset directory state (should be empty of md files after changeset version):"
           ls -la .changeset/ || echo "No changeset files found (expected)"
           echo "::endgroup::"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEBUG: ${{ env.DEBUG }}
 
       - name: Preview Release Description
         run: |
@@ -148,14 +143,13 @@ jobs:
         id: changesets
         uses: FuelLabs/changesets-action@v2.0.0
         with:
-          publish: pnpm changeset publish --tag next
+          publish: pnpm changeset:publish v${{ env.BUILD_VERSION }} ${{ github.ref_name }}
           createGithubReleases: aggregate
           githubReleaseName: v${{ env.BUILD_VERSION }}
           githubTagName: v${{ env.BUILD_VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN_WALLET }}
-          DEBUG: ${{ env.DEBUG }}
 
       - name: Debug Published Outputs
         id: debug-published
