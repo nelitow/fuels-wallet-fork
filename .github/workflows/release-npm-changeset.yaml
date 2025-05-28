@@ -151,38 +151,25 @@ jobs:
         with:
           npm-token: ${{ secrets.NPM_TOKEN_WALLET }}
 
-      - name: Bump and Collect Version
-        id: bump-version
+      - name: Collect Build Version # Renamed from Bump and Collect Version
+        id: collect-version # Renamed id
         run: |
-          echo "::group::Changeset Info Before Bump"
-          ls -la .changeset/ || echo "No changesets found"
-          find .changeset -type f -name "*.md" -not -name "README.md" -not -name "config.json" | while read -r file; do
-            echo "Content of changeset $file:"
-              cat "$file"
-            echo "-----------------------"
-          done
-          echo "::endgroup::"
-          
-          echo "::group::Running changeset version"
-          pnpm changeset version
-          echo "::endgroup::"
-          
-          # IMPORTANT: Collect version from the (now bumped) package.json BEFORE resetting
+          echo "::group::Collecting Build Version and Verifying Workspace State"
+          # IMPORTANT: Collect version from package.json, assuming it was already bumped by the merged Changeset PR.
           echo "BUILD_VERSION=$(pnpm query packages --json | jq -r '.[] | select(.name == "@nelitow-fuel/fuels-wallet") | .version')" >> $GITHUB_ENV
           echo "build_version=$(pnpm query packages --json | jq -r '.[] | select(.name == "@nelitow-fuel/fuels-wallet") | .version')" >> $GITHUB_OUTPUT
           
-          echo "::group::Checking CHANGELOG.md files (after version bump)"
+          echo "Collected version: ${{ env.BUILD_VERSION }}"
+
+          echo "Checking current CHANGELOG.md files (should be already updated by merged PR):"
           find . -name "CHANGELOG.md" -type f | while read -r file; do
             echo "CHANGELOG found: $file"
             head -n 20 "$file"
             echo "-----------------------"
           done
-          echo "::endgroup::"
           
-          # Reset changes made by 'pnpm changeset version' (package.json bumps, CHANGELOG.md updates)
-          # The changesets action will handle the actual publishing and tagging.
-          echo "::group::Resetting git changes"
-          git reset --hard
+          echo "Verifying .changeset directory state (should be empty of md files if consumed by PR action):"
+          ls -la .changeset/ || echo "No changeset files found (expected)"
           echo "::endgroup::"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -192,16 +179,42 @@ jobs:
         run: |
           echo "::group::Previewing Release Description"
           echo "Upcoming version: ${{ env.BUILD_VERSION }}"
-          echo "Packages that will be published:"
-          pnpm changeset status
-          find . -name "CHANGELOG.md" -type f | xargs grep -l "## ${{ env.BUILD_VERSION }}" | while read -r file; do
-            echo "Recent changes in $file:"
-            VERSION_LINE=$(grep -n "## ${{ env.BUILD_VERSION }}" "$file" | cut -d':' -f1)
-            NEXT_VERSION_LINE=$(grep -n "## " "$file" | awk -F: '$1 > '"$VERSION_LINE"' {print $1}' | head -n 1)
-            if [ -z "$NEXT_VERSION_LINE" ]; then
-              awk "NR > $VERSION_LINE" "$file"
+          echo "Packages that will be published (according to current package versions vs registry):"
+          # pnpm changeset status # This might be misleading if .changeset files are gone; publish relies on versions
+
+          if [ -z "${{ env.BUILD_VERSION }}" ]; then
+            echo "Error: BUILD_VERSION is not set. Skipping changelog preview."
+            exit 1
+          fi
+
+          TARGET_VERSION_HEADING="## ${{ env.BUILD_VERSION }}"
+          echo "Searching for heading: '$TARGET_VERSION_HEADING' in CHANGELOG.md files"
+
+          find . -name "CHANGELOG.md" -type f | while read -r file; do
+            echo "" 
+            echo "--- Analyzing: $file ---"
+            VERSION_LINE_OUTPUT=$(grep -n -m 1 "$TARGET_VERSION_HEADING" "$file")
+
+            if [ -z "$VERSION_LINE_OUTPUT" ]; then
+              echo "Did not find version heading '$TARGET_VERSION_HEADING' in $file for version ${{ env.BUILD_VERSION }}"
+              # Optionally, list other recent versions found if any
+              echo "Other recent versions found in $file:"
+              grep -n -m 5 "^## " "$file"
+              continue 
+            fi
+            
+            VERSION_LINE_NUM=$(echo "$VERSION_LINE_OUTPUT" | cut -d':' -f1)
+            echo "Found '$TARGET_VERSION_HEADING' at line: $VERSION_LINE_NUM"
+
+            NEXT_VERSION_LINE_NUM=$(awk -F: -v vl="$VERSION_LINE_NUM" '/^## / && $1 > vl {print $1; exit}' "$file")
+
+            echo "Recent changes in $file for version ${{ env.BUILD_VERSION }}:"
+            if [ -z "$NEXT_VERSION_LINE_NUM" ]; then
+              echo "(Showing content from line after heading to end of file)"
+              awk -v vl="$VERSION_LINE_NUM" 'NR > vl' "$file"
             else
-              awk "NR > $VERSION_LINE && NR < $NEXT_VERSION_LINE" "$file"
+              echo "(Showing content between line $VERSION_LINE_NUM and $NEXT_VERSION_LINE_NUM)"
+              awk -v vl="$VERSION_LINE_NUM" -v nvl="$NEXT_VERSION_LINE_NUM" 'NR > vl && NR < nvl' "$file"
             fi
             echo "-----------------------"
           done
