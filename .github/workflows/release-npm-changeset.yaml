@@ -13,6 +13,19 @@ env:
   DEBUG: "changesets:*"
 
 jobs:
+  debug:
+    name: Debug Commit Message
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug commit info
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Commit message: '${{ github.event.head_commit.message }}'"
+          echo "Before: '${{ github.event.before }}'"
+          echo "Starts with ci(release): ${{ startsWith(github.event.head_commit.message, 'ci(release):') }}"
+          echo "Before not zero: ${{ github.event.before != '0000000000000000000000000000000000000000' }}"
+          echo "Combined condition: ${{ startsWith(github.event.head_commit.message, 'ci(release):') && github.event.before != '0000000000000000000000000000000000000000' }}"
+
   release:
     name: Release to NPM and GitHub
     if: |
