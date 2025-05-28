@@ -1,5 +1,14 @@
 # @fuels/playwright-utils
 
+## 4.13.0
+
+### Patch Changes
+
+- [#92](https://github.com/nelitow/fuels-wallet-fork/pull/92) [`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f) Thanks [@nelitow](https://github.com/nelitow)! - ##### Playwright Utilities Fixes
+
+  - Resolved an issue with screenshot capture on specific devices.
+  - Updated utility functions to align with Playwright v1.46.1.
+
 ## 4.12.0
 
 ### Patch Changes
