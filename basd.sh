@@ -27,7 +27,7 @@ echo "Creating changesets..."
 # Main app changeset
 cat > .changeset/bacon-wallet-$(date +%s).md << EOF
 ---
-"fuels-wallet": minor
+"@nelitow-fuel/fuels-wallet": minor
 ---
 
 ## Bacon Wallet Rebranding
@@ -40,7 +40,7 @@ EOF
 # Types package changeset
 cat > .changeset/types-update-$(date +%s).md << EOF
 ---
-"@fuel-wallet/types": patch
+"@nelitow-fuel/types": patch
 ---
 
 ### Types Package Updates
@@ -53,34 +53,27 @@ EOF
 # Connections package changeset
 cat > .changeset/connections-update-$(date +%s).md << EOF
 ---
-"@fuel-wallet/connections": patch
+"@nelitow-fuel/connections": patch
 ---
 
-## Connection Handling Improvements
+#### Connections Package Enhancements
 
-* Fixed connection timeout issues
-* Added better error handling for failed connections
-* Improved connection security with additional verification steps
+*   Refactored connection logic for better performance.
+*   Added support for new connection protocols.
 
-This update improves the overall stability of wallet connections.
+**Note:** This is a patch update.
 EOF
 
-# Multi-package changeset
-cat > .changeset/multi-package-$(date +%s).md << EOF
+# Playwright Utils changeset
+cat > .changeset/playwright-utils-$(date +%s).md << EOF
 ---
-"fuels-wallet": patch
-"@fuel-wallet/types": patch
-"@fuel-wallet/connections": patch
+"@nelitow-fuel/playwright-utils": patch
 ---
 
-# Shared Improvements
+##### Playwright Utilities Fixes
 
-1. Standardized error handling across packages
-2. Updated dependencies to latest versions
-3. Improved cross-package type consistency
-
-> This update affects multiple packages to ensure compatibility
-> between all wallet components.
+- Resolved an issue with screenshot capture on specific devices.
+- Updated utility functions to align with Playwright v1.46.1.
 EOF
 
 git add .changeset/

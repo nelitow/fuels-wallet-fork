@@ -163,19 +163,15 @@ jobs:
           done
           echo "::endgroup::"
           
-          echo "::group::Backing up changesets"
-          mkdir -p .changeset-backup
-          cp -r .changeset/* .changeset-backup/ || echo "No changesets to backup"
-          echo "::endgroup::"
-          
           echo "::group::Running changeset version"
           pnpm changeset version
           echo "::endgroup::"
           
-          echo "BUILD_VERSION=$(pnpm -s packages:version)" >> $GITHUB_ENV
-          echo "build_version=$(pnpm -s packages:version)" >> $GITHUB_OUTPUT
+          # IMPORTANT: Collect version from the (now bumped) package.json BEFORE resetting
+          echo "BUILD_VERSION=$(pnpm query packages --json | jq -r '.[] | select(.name == "@nelitow-fuel/fuels-wallet") | .version')" >> $GITHUB_ENV
+          echo "build_version=$(pnpm query packages --json | jq -r '.[] | select(.name == "@nelitow-fuel/fuels-wallet") | .version')" >> $GITHUB_OUTPUT
           
-          echo "::group::Checking CHANGELOG.md files"
+          echo "::group::Checking CHANGELOG.md files (after version bump)"
           find . -name "CHANGELOG.md" -type f | while read -r file; do
             echo "CHANGELOG found: $file"
             head -n 20 "$file"
@@ -183,13 +179,11 @@ jobs:
           done
           echo "::endgroup::"
           
-          echo "::group::Restoring changesets for future runs"
-          rm -rf .changeset
-          mkdir -p .changeset
-          cp -r .changeset-backup/* .changeset/ || echo "No changesets to restore"
-          echo "::endgroup::"
-          
+          # Reset changes made by 'pnpm changeset version' (package.json bumps, CHANGELOG.md updates)
+          # The changesets action will handle the actual publishing and tagging.
+          echo "::group::Resetting git changes"
           git reset --hard
+          echo "::endgroup::"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEBUG: ${{ env.DEBUG }}
