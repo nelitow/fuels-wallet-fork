@@ -36,7 +36,7 @@
     "fuels": "0.100.0"
   },
   "devDependencies": {
-    "@fuel-wallet/types": "workspace:*",
+    "@nelitow-fuel/types": "workspace:*",
     "@types/uuid": "^9.0.5",
     "blob-polyfill": "^7.0.20220408",
     "fuels": "0.100.0",

@@ -5,7 +5,7 @@ import {
   useConnect,
   useFuel,
   useIsConnected,
-} from '@fuels/react';
+} from '@nelitow-fuel/react';
 import type { Asset, AssetFuel } from 'fuels';
 import { useState } from 'react';
 

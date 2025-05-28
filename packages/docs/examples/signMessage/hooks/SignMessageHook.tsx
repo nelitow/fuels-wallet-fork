@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Box, Button, Input, Tag } from '@fuel-ui/react';
-import { useConnect, useFuel, useIsConnected, useWallet } from '@fuels/react';
+import { useConnect, useFuel, useIsConnected, useWallet } from '@nelitow-fuel/react';
 import { useState } from 'react';
 
 import { ExampleBox } from '../../../src/components/ExampleBox';

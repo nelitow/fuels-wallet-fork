@@ -1,4 +1,4 @@
-import { useAccount, useWallet } from '@fuels/react';
+import { useAccount, useWallet } from '@nelitow-fuel/react';
 
 import { panicTx, revertTx } from '../contract_interactions';
 

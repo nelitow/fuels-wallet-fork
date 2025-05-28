@@ -1,5 +1,5 @@
 import { Alert, Box, Button, Input, Text } from '@fuel-ui/react';
-import { useConnectors, useFuel, useIsConnected } from '@fuels/react';
+import { useConnectors, useFuel, useIsConnected } from '@nelitow-fuel/react';
 import { useMemo, useState } from 'react';
 import { useLoading } from '~/src/hooks/useLoading';
 

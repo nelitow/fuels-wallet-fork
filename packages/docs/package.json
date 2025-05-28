@@ -50,7 +50,7 @@
     "vfile": "^6.0.1"
   },
   "devDependencies": {
-    "@fuel-wallet/types": "workspace:*",
+    "@nelitow-fuel/types": "workspace:*",
     "@svgr/webpack": "8.1.0",
     "@tanstack/react-query-devtools": "5.28.4",
     "@types/chrome": "^0.0.246",
