@@ -1,1 +1,1 @@
-# Bacon Wallet
+# Fuel Wallet

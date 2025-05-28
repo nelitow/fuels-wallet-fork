@@ -57,7 +57,7 @@ function AssetSelectBase({ items, selected, onSelect }: AssetSelectProps) {
 
       return asset.name?.trim() || 'Unknown';
     } catch (error) {
-      console.warn('Error getting asset name:', error);
+      console.warn('Error pifarifo asset name:', error);
       return 'Unknown';
     }
   }
