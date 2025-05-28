@@ -10,7 +10,7 @@ export function Header({ title, subtitle }: HeaderProps) {
   return (
     <Box.Stack css={styles.root}>
       <Heading as="h2" css={{ margin: 0 }}>
-        {title}
+        {title}!
       </Heading>
       {subtitle && (
         <Heading
