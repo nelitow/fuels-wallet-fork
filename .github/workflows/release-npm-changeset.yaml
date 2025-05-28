@@ -31,19 +31,55 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "::group::Debugging commit detection"
           COMMIT_MSG=$(git log -1 --pretty=%B)
           FIRST_LINE=$(echo "$COMMIT_MSG" | head -n1)
+          echo "Full commit message:"
+          echo "$COMMIT_MSG"
+          echo "---"
+          echo "First line: '$FIRST_LINE'"
+          
+          # Check if this is a changeset PR merge by multiple methods
+          IS_CHANGESET_PR=false
+          
+          # Method 1: Check commit message pattern
           if [[ "$FIRST_LINE" == "ci(changesets): versioning packages"* ]]; then
-            PR_NUMBER=$(echo "$FIRST_LINE" | grep -o '#[0-9]\+' | head -n1 | tr -d '#')
-            if [ -n "$PR_NUMBER" ]; then
-              PR_TITLE=$(gh pr view "$PR_NUMBER" --json title -q .title)
-              if [[ "$PR_TITLE" == "ci(changesets): versioning packages" ]]; then
-                echo "is_changeset_pr=true" >> "$GITHUB_OUTPUT"
-                exit 0
-              fi
+            echo "✅ Commit message matches changeset pattern"
+            IS_CHANGESET_PR=true
+          else
+            echo "❌ Commit message does not match changeset pattern"
+          fi
+          
+          # Method 2: Check if there are version bumps in package.json files
+          if git diff HEAD~1 --name-only | grep -q "package.json"; then
+            echo "📦 Package.json files were modified"
+            if git diff HEAD~1 | grep -q '"version":'; then
+              echo "✅ Version changes detected in package.json files"
+              IS_CHANGESET_PR=true
             fi
           fi
-          echo "is_changeset_pr=false" >> "$GITHUB_OUTPUT"
+          
+          # Method 3: Check if CHANGELOG.md files were updated
+          if git diff HEAD~1 --name-only | grep -q "CHANGELOG.md"; then
+            echo "📝 CHANGELOG.md files were modified"
+            IS_CHANGESET_PR=true
+          fi
+          
+          # Method 4: Check if .changeset files were removed
+          REMOVED_CHANGESETS=$(git diff HEAD~1 --name-only --diff-filter=D | grep "^\.changeset/.*\.md$" | grep -v "README.md" | wc -l)
+          if [ "$REMOVED_CHANGESETS" -gt 0 ]; then
+            echo "🗑️ $REMOVED_CHANGESETS changeset files were removed"
+            IS_CHANGESET_PR=true
+          fi
+          
+          echo "Final decision: IS_CHANGESET_PR=$IS_CHANGESET_PR"
+          echo "::endgroup::"
+          
+          if [ "$IS_CHANGESET_PR" = true ]; then
+            echo "is_changeset_pr=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_changeset_pr=false" >> "$GITHUB_OUTPUT"
+          fi
 
   create-pr:
     name: Push changes to Changeset PR
