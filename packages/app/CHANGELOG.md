@@ -1,5 +1,21 @@
 # fuels-wallet
 
+## 4.13.0
+
+### Minor Changes
+
+- [#92](https://github.com/nelitow/fuels-wallet-fork/pull/92) [`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
+
+  - Changed app name to Bacon Wallet
+  - Updated icons and logos with bacon-themed designs
+  - Enhanced UI color scheme with bacon-inspired colors
+
+### Patch Changes
+
+- Updated dependencies [[`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f), [`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f)]:
+  - @nelitow-fuel/connections@4.13.0
+  - @nelitow-fuel/playwright-utils@4.13.0
+
 ## 4.12.0
 
 ### Minor Changes
