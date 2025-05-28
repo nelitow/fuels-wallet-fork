@@ -1,5 +1,15 @@
 # @fuel-wallet/types
 
+## 4.12.0
+
+### Patch Changes
+
+- [#90](https://github.com/nelitow/fuels-wallet-fork/pull/90) [`437ad939`](https://github.com/nelitow/fuels-wallet-fork/commit/437ad939ecb079ae7b2d6e29768a396503150e24) Thanks [@nelitow](https://github.com/nelitow)! - ### Types Package Updates
+
+  - Added new transaction type definitions
+  - Fixed type compatibility with latest Fuel SDK
+  - Improved documentation for complex types
+
 ## 4.11.0
 
 ## 4.10.0
