@@ -1,5 +1,16 @@
 # @fuel-wallet/connections
 
+## 4.12.0
+
+### Patch Changes
+
+- [#90](https://github.com/nelitow/fuels-wallet-fork/pull/90) [`437ad939`](https://github.com/nelitow/fuels-wallet-fork/commit/437ad939ecb079ae7b2d6e29768a396503150e24) Thanks [@nelitow](https://github.com/nelitow)! - #### Connections Package Enhancements
+
+  - Refactored connection logic for better performance.
+  - Added support for new connection protocols.
+
+  **Note:** This is a patch update.
+
 ## 4.11.0
 
 ### Minor Changes
