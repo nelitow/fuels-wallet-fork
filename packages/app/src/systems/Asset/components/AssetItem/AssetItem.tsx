@@ -78,7 +78,7 @@ export const AssetItem: AssetItemComponent = ({
       return (
         <Copyable
           value={assetId}
-          tooltipMessage="Copy address"
+          tooltipMessage="Copy thingy"
           css={styles.assetIdCopy}
           iconProps={{
             icon: Icon.is('Copy'),
