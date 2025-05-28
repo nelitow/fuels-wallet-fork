@@ -15,7 +15,7 @@ const esModules = [
   'd3-path/src',
   'd3-shape/src',
   '@web3modal',
-  '@nelitow-fuel/connectors',
+  '@fuels/connectors',
 ].join('|');
 const config: JestConfigWithTsJest = {
   ...baseConfig,

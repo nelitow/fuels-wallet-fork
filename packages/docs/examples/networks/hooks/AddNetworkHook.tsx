@@ -5,7 +5,7 @@ import {
   useConnect,
   useFuel,
   useIsConnected,
-} from '@nelitow-fuel/react';
+} from '@fuels/react';
 import { useState } from 'react';
 
 import { ExampleBox } from '../../../src/components/ExampleBox';

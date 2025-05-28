@@ -1,4 +1,4 @@
-import { useConnectUI, useIsConnected } from '@nelitow-fuel/react';
+import { useConnectUI, useIsConnected } from '@fuels/react';
 import { Connected } from './Connected';
 
 import './App.css';

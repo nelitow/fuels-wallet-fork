@@ -1,6 +1,6 @@
 'use client';
 import { Box, Button, Text } from '@fuel-ui/react';
-import { useDisconnect, useIsConnected } from '@nelitow-fuel/react';
+import { useDisconnect, useIsConnected } from '@fuels/react';
 
 import { ExampleBox } from '../../../src/components/ExampleBox';
 
