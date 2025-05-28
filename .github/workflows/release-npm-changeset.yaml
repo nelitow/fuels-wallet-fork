@@ -96,48 +96,10 @@ jobs:
           ls -la .changeset/ || echo "No changeset files found (expected)"
           echo "::endgroup::"
 
-      - name: Preview Release Description
-        run: |
-          echo "::group::Previewing Release Description"
-          echo "Upcoming version: ${{ env.BUILD_VERSION }}"
-          echo "Packages that will be published (according to current package versions vs registry):"
-
-          if [ -z "${{ env.BUILD_VERSION }}" ]; then
-            echo "Error: BUILD_VERSION is not set. Skipping changelog preview."
-            exit 1
-          fi
-
-          TARGET_VERSION_HEADING="## ${{ env.BUILD_VERSION }}"
-          echo "Searching for heading: '$TARGET_VERSION_HEADING' in CHANGELOG.md files"
-
-          find . -name "CHANGELOG.md" -type f | while read -r file; do
-            echo "" 
-            echo "--- Analyzing: $file ---"
-            VERSION_LINE_OUTPUT=$(grep -n -m 1 "$TARGET_VERSION_HEADING" "$file")
-
-            if [ -z "$VERSION_LINE_OUTPUT" ]; then
-              echo "Did not find version heading '$TARGET_VERSION_HEADING' in $file for version ${{ env.BUILD_VERSION }}"
-              echo "Other recent versions found in $file:"
-              grep -n -m 5 "^## " "$file"
-              continue 
-            fi
-            
-            VERSION_LINE_NUM=$(echo "$VERSION_LINE_OUTPUT" | cut -d':' -f1)
-            echo "Found '$TARGET_VERSION_HEADING' at line: $VERSION_LINE_NUM"
-
-            NEXT_VERSION_LINE_NUM=$(awk -F: -v vl="$VERSION_LINE_NUM" '/^## / && $1 > vl {print $1; exit}' "$file")
-
-            echo "Recent changes in $file for version ${{ env.BUILD_VERSION }}:"
-            if [ -z "$NEXT_VERSION_LINE_NUM" ]; then
-              echo "(Showing content from line after heading to end of file)"
-              awk -v vl="$VERSION_LINE_NUM" 'NR > vl' "$file"
-            else
-              echo "(Showing content between line $VERSION_LINE_NUM and $NEXT_VERSION_LINE_NUM)"
-              awk -v vl="$VERSION_LINE_NUM" -v nvl="$NEXT_VERSION_LINE_NUM" 'NR > vl && NR < nvl' "$file"
-            fi
-            echo "-----------------------"
-          done
-          echo "::endgroup::"
+      - name: Ensure NPM access
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_WALLET }}
 
       - name: Build packages
         run: pnpm build:libs
