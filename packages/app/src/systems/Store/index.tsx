@@ -1,4 +1,4 @@
-import { createStore } from '@fuels/react-xstore';
+import { createStore } from '@nelitow-fuel/react-xstore';
 
 import { accountEvents } from '../Account/events';
 import { accountsMachine } from '../Account/machines';

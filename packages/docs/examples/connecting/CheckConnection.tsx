@@ -1,5 +1,5 @@
 import { Box, Button, Text } from '@fuel-ui/react';
-import { useFuel } from '@fuels/react';
+import { useFuel } from '@nelitow-fuel/react';
 import { useEffect, useState } from 'react';
 
 import { ExampleBox } from '../../src/components/ExampleBox';

@@ -7,25 +7,16 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "FuelLabs/fuels-wallet"
+      "repo": "nelitow/fuels-wallet-fork"
     }
   ],
   "commit": false,
-  "fixed": [
-    [
-      "@fuel-wallet/*",
-      "fuels-wallet",
-      "@fuels/playwright-utils"
-    ]
-  ],
+  "fixed": [["@nelitow-fuel/*"]],
   "linked": [],
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "docs",
-    "@fuel-wallet/e2e-contract-tests"
-  ],
+  "ignore": ["@nelitow-fuel/docs", "@nelitow-fuel/e2e-contract-tests"],
   "snapshot": {
     "useCalculatedVersion": true,
     "prereleaseTemplate": "{tag}-{commit}"

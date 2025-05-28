@@ -1,7 +1,7 @@
 import {
   FuelWalletConnector,
   FuelWalletDevelopmentConnector,
-} from '@fuels/connectors';
+} from '@nelitow-fuel/connectors';
 import { Fuel } from 'fuels';
 import { useEffect, useState } from 'react';
 

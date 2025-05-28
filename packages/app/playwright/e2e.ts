@@ -1,7 +1,7 @@
 import {
   FuelWalletConnector,
   FuelWalletDevelopmentConnector,
-} from '@fuels/connectors';
+} from '@nelitow-fuel/connectors';
 import { Address, Fuel } from 'fuels';
 import { VITE_CRX_NAME } from '../src/config';
 
