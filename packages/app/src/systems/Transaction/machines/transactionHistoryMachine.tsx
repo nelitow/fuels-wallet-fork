@@ -10,7 +10,7 @@ import type { TransactionCursor } from '../types';
 
 const TRANSACTION_HISTORY_ERRORS = {
   INVALID_ADDRESS: 'Invalid address',
-  NOT_FOUND: 'Address Transaction history not found',
+  NOT_FOUND: 'Bing bong Transaction history not found',
 };
 
 type MachineContext = {
