@@ -1,11 +1,11 @@
-import { POPUP_SCRIPT_NAME, VAULT_SCRIPT_NAME } from '@fuel-wallet/types';
+import { POPUP_SCRIPT_NAME, VAULT_SCRIPT_NAME } from '@nelitow-fuel/types';
 import type {
   CommunicationMessage,
   EventMessage,
   RequestMessage,
   ResponseMessage,
-} from '@fuel-wallet/types';
-import { MessageTypes } from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
+import { MessageTypes } from '@nelitow-fuel/types';
 import type { JSONRPCRequest } from 'json-rpc-2.0';
 
 import type { VaultClient } from '../services/VaultClient';

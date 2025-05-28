@@ -7,7 +7,7 @@ import type {
   NetworkData,
   StoredFuelWalletError,
   Vault,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import Dexie, { type DbEvents, type PromiseExtended, type Table } from 'dexie';
 import 'dexie-observable';
 import type { AssetFuel } from 'fuels';

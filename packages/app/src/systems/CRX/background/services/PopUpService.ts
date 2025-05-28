@@ -1,5 +1,5 @@
-import { MessageTypes, POPUP_SCRIPT_NAME } from '@fuel-wallet/types';
-import type { ResponseMessage, UIEventMessage } from '@fuel-wallet/types';
+import { MessageTypes, POPUP_SCRIPT_NAME } from '@nelitow-fuel/types';
+import type { ResponseMessage, UIEventMessage } from '@nelitow-fuel/types';
 import type { JSONRPCRequest } from 'json-rpc-2.0';
 import { JSONRPCClient } from 'json-rpc-2.0';
 import { CRXPages } from '~/systems/Core/types';

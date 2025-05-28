@@ -1,4 +1,4 @@
-import { ContentScriptMessageTypes } from '@fuel-wallet/types';
+import { ContentScriptMessageTypes } from '@nelitow-fuel/types';
 import fileName from './contentScript?script';
 
 /*

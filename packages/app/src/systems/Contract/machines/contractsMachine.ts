@@ -1,4 +1,4 @@
-import type { Contract, EcosystemProject } from '@fuel-wallet/types';
+import type { Contract, EcosystemProject } from '@nelitow-fuel/types';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { assign, createMachine } from 'xstate';
 import { FetchMachine } from '~/systems/Core';

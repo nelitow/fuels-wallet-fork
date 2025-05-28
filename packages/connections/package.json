@@ -1,5 +1,5 @@
 {
-  "name": "@fuel-wallet/connections",
+  "name": "@nelitow-fuel/connections",
   "private": true,
   "description": "Jason Wallet Connections for CRX.",
   "version": "4.10.0",

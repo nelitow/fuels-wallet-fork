@@ -1,4 +1,4 @@
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import { useCallback, useEffect, useState } from 'react';
 import { ConnectionService } from '../services';
 

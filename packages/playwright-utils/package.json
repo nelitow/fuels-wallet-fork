@@ -1,6 +1,6 @@
 {
-  "name": "@fuels/playwright-utils",
-  "version": "4.10.0",
+  "name": "@nelitow-fuel/playwright-utils",
+  "version": "4.8.0",
   "license": "Apache-2.0",
   "main": "src/index.ts",
   "type": "module",

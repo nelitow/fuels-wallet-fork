@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Box, Button } from '@fuel-ui/react';
-import type { NetworkData } from '@fuel-wallet/types';
+import type { NetworkData } from '@nelitow-fuel/types';
 import { forwardRef } from 'react';
 
 import { NetworkStatus } from '../NetworkItem';

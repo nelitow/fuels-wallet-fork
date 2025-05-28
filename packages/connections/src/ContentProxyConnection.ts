@@ -5,8 +5,8 @@ import {
   ContentScriptMessageTypes,
   EVENT_MESSAGE,
   MessageTypes,
-} from '@fuel-wallet/types';
-import type { CommunicationMessage } from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
+import type { CommunicationMessage } from '@nelitow-fuel/types';
 import { createJSONRPCSuccessResponse } from 'json-rpc-2.0';
 import type { JSONRPCID } from 'json-rpc-2.0';
 

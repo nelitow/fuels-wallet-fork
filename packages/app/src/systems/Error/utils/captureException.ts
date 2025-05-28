@@ -1,4 +1,4 @@
-import type { SentryExtraErrorData } from '@fuel-wallet/types';
+import type { SentryExtraErrorData } from '@nelitow-fuel/types';
 import * as Sentry from '@sentry/react';
 
 export function captureException(error: Error, extra: SentryExtraErrorData) {

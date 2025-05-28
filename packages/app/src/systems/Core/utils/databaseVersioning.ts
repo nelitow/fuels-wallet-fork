@@ -1,4 +1,4 @@
-import { createUUID } from '@fuel-wallet/connections';
+import { createUUID } from '@nelitow-fuel/connections';
 import type Dexie from 'dexie';
 import {
   Address,

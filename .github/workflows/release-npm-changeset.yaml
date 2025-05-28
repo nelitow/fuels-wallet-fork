@@ -76,9 +76,9 @@ jobs:
           echo "::endgroup::"
           
           if [ "$IS_CHANGESET_PR" = true ]; then
-            echo "is_changeset_pr=true" >> "$GITHUB_OUTPUT"
+                echo "is_changeset_pr=true" >> "$GITHUB_OUTPUT"
           else
-            echo "is_changeset_pr=false" >> "$GITHUB_OUTPUT"
+          echo "is_changeset_pr=false" >> "$GITHUB_OUTPUT"
           fi
 
   create-pr:
@@ -158,7 +158,7 @@ jobs:
           ls -la .changeset/ || echo "No changesets found"
           find .changeset -type f -name "*.md" -not -name "README.md" -not -name "config.json" | while read -r file; do
             echo "Content of changeset $file:"
-            cat "$file"
+              cat "$file"
             echo "-----------------------"
           done
           echo "::endgroup::"

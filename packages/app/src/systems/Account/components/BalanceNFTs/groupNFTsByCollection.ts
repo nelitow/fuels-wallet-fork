@@ -1,4 +1,4 @@
-import type { CoinAsset } from '@fuel-wallet/types';
+import type { CoinAsset } from '@nelitow-fuel/types';
 
 export const UNKNOWN_COLLECTION_TITLE = 'Others';
 

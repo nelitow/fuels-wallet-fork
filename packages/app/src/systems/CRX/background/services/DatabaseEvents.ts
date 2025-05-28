@@ -4,8 +4,8 @@ import type {
   EventMessage,
   EventMessageEvents,
   NetworkData,
-} from '@fuel-wallet/types';
-import { CONTENT_SCRIPT_NAME, MessageTypes } from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
+import { CONTENT_SCRIPT_NAME, MessageTypes } from '@nelitow-fuel/types';
 import { ConnectionService } from '~/systems/DApp/services';
 
 import {

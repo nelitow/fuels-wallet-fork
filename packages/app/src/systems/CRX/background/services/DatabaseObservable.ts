@@ -5,7 +5,7 @@ import type {
   ICreateChange,
   IDeleteChange,
   IUpdateChange,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import type { IDatabaseChange } from 'dexie-observable/api';
 import { db } from '~/systems/Core/utils/database';
 

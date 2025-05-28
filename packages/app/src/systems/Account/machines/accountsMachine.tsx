@@ -1,4 +1,4 @@
-import type { Account, AccountWithBalance } from '@fuel-wallet/types';
+import type { Account, AccountWithBalance } from '@nelitow-fuel/types';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { assign, createMachine } from 'xstate';
 import { IS_LOGGED_KEY } from '~/config';

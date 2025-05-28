@@ -1,4 +1,4 @@
-import type { NetworkData } from '@fuel-wallet/types';
+import type { NetworkData } from '@nelitow-fuel/types';
 import type { Store } from '~/store';
 import { Services } from '~/store';
 import type { AddNetworkInput } from './machines';

@@ -9,7 +9,7 @@ import {
   Text,
 } from '@fuel-ui/react';
 import { Icon, IconButton, Tooltip } from '@fuel-ui/react';
-import type { StoredFuelWalletError } from '@fuel-wallet/types';
+import type { StoredFuelWalletError } from '@nelitow-fuel/types';
 import { JsonEditor } from 'json-edit-react';
 import { useEffect, useMemo, useState } from 'react';
 

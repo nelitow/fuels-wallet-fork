@@ -1,4 +1,4 @@
-import type { Account } from '@fuel-wallet/types';
+import type { Account } from '@nelitow-fuel/types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';

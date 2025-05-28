@@ -1,4 +1,4 @@
-import type { AssetData } from '@fuel-wallet/types';
+import type { AssetData } from '@nelitow-fuel/types';
 import type { AssetFuel } from 'fuels';
 import {
   ASSET_ENDPOINTS,

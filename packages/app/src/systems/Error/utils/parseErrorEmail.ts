@@ -1,4 +1,4 @@
-import type { FuelWalletError } from '@fuel-wallet/types';
+import type { FuelWalletError } from '@nelitow-fuel/types';
 
 export function parseErrorEmail(errors: FuelWalletError[]) {
   const errorsText = errors.map((error) => JSON.stringify(error)).join('\n');

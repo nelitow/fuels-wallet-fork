@@ -1,7 +1,7 @@
 import type {
   AccountWithBalance,
   FuelProviderConfig,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import type { BN, TransactionRequest, TransactionSummary } from 'fuels';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { assign, createMachine } from 'xstate';

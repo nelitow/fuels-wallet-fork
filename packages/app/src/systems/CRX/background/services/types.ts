@@ -2,7 +2,7 @@ import type {
   AssetData,
   FuelProviderConfig,
   NetworkData,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import type { AbiMap } from 'fuels';
 import type { TransactionSummaryJson } from 'fuels';
 

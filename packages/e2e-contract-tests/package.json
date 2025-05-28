@@ -1,7 +1,10 @@
 {
-  "name": "@fuel-wallet/e2e-contract-tests",
+  "name": "@nelitow-fuel/e2e-contract-tests",
   "private": true,
   "version": "0.13.5",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev:e2e-contracts": "vite",
     "build:web": "vite build",

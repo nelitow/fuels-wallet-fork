@@ -9,7 +9,7 @@ import {
   IconButton,
   Text,
 } from '@fuel-ui/react';
-import type { AssetFuelAmount } from '@fuel-wallet/types';
+import type { AssetFuelAmount } from '@nelitow-fuel/types';
 import { memo, useState } from 'react';
 import { NFTImage } from '~/systems/Account/components/BalanceNFTs/NFTImage';
 import type { Maybe } from '~/systems/Core';

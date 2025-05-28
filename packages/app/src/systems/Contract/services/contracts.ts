@@ -1,4 +1,4 @@
-import type { Contract, EcosystemProject } from '@fuel-wallet/types';
+import type { Contract, EcosystemProject } from '@nelitow-fuel/types';
 import { CHAIN_IDS } from 'fuels';
 
 // biome-ignore lint/complexity/noStaticOnlyClass: <explanation>

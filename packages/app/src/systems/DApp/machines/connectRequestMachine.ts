@@ -1,4 +1,4 @@
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { assign, createMachine } from 'xstate';
 import type { FetchResponse } from '~/systems/Core';

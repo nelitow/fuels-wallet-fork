@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Accordion, Badge, Box, Copyable } from '@fuel-ui/react';
-import type { CoinAsset } from '@fuel-wallet/types';
+import type { CoinAsset } from '@nelitow-fuel/types';
 import { memo, useMemo } from 'react';
 import { NFTImageLoading } from '~/systems/Account/components/BalanceNFTs/NFTImageLoading';
 import { AssetList } from '~/systems/Asset';

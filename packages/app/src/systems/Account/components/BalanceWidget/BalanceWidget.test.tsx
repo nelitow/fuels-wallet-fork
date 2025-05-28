@@ -6,7 +6,7 @@ import { renderWithProvider } from '~/systems/Core/__tests__/utils';
 
 import { MOCK_ACCOUNTS } from '../../__mocks__';
 
-import type { AccountWithBalance } from '@fuel-wallet/types';
+import type { AccountWithBalance } from '@nelitow-fuel/types';
 import { Address, bn } from 'fuels';
 import { act } from 'react';
 import { mockServer } from '~/systems/Core/__tests__/utils/msw';

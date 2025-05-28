@@ -1,10 +1,10 @@
-import { BACKGROUND_SCRIPT_NAME, POPUP_SCRIPT_NAME } from '@fuel-wallet/types';
+import { BACKGROUND_SCRIPT_NAME, POPUP_SCRIPT_NAME } from '@nelitow-fuel/types';
 import {
   type CommunicationMessage,
   MessageTypes,
   type RequestMessage,
   type ResponseMessage,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import type { JSONRPCResponse } from 'json-rpc-2.0';
 
 import { BaseConnection } from './BaseConnection';

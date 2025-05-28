@@ -3,7 +3,7 @@ import type {
   Connection,
   NetworkData,
   Account as WalletAccount,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import type { Page } from '@playwright/test';
 import type { Asset, AssetFuel, WalletManagerAccount } from 'fuels';
 import {
@@ -15,7 +15,7 @@ import {
   encrypt,
 } from 'fuels';
 
-import { expect } from '@fuels/playwright-utils';
+import { expect } from '@nelitow-fuel/playwright-utils';
 import { getByAriaLabel } from '../commons/locator';
 import { hasText } from '../commons/text';
 import { reload, visit } from '../commons/visit';

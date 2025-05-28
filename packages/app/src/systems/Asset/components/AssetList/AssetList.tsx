@@ -1,5 +1,5 @@
 import { Button, CardList } from '@fuel-ui/react';
-import type { AssetAmount } from '@fuel-wallet/types';
+import type { AssetAmount } from '@nelitow-fuel/types';
 import type { FC } from 'react';
 import { memo, useMemo, useState } from 'react';
 

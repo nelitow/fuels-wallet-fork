@@ -1,4 +1,4 @@
-import { createProvider } from '@fuel-wallet/connections';
+import { createProvider } from '@nelitow-fuel/connections';
 import type { Provider } from 'fuels';
 import { useEffect, useState } from 'react';
 import { useNetworks } from './useNetworks';

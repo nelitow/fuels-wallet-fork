@@ -1,4 +1,7 @@
-import type { NetworkData, Account as WalletAccount } from '@fuel-wallet/types';
+import type {
+  NetworkData,
+  Account as WalletAccount,
+} from '@nelitow-fuel/types';
 import { type Locator, Page, expect } from '@playwright/test';
 
 import {

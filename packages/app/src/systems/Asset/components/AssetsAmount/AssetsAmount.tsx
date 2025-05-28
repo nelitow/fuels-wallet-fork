@@ -8,7 +8,7 @@ import {
   Tooltip,
   VStack,
 } from '@fuel-ui/react';
-import type { AssetFuelAmount } from '@fuel-wallet/types';
+import type { AssetFuelAmount } from '@nelitow-fuel/types';
 import { bn } from 'fuels';
 import { type FC, useEffect, useMemo, useRef, useState } from 'react';
 import { formatAmount, shortAddress } from '~/systems/Core';

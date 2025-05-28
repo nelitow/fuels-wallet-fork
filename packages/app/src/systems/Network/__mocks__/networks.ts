@@ -1,4 +1,4 @@
-import type { NetworkData } from '@fuel-wallet/types';
+import type { NetworkData } from '@nelitow-fuel/types';
 import { uniqueId } from 'xstate/lib/utils';
 
 export const MOCK_NETWORKS: NetworkData[] = [

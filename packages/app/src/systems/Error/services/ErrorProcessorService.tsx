@@ -1,4 +1,4 @@
-import type { StoredFuelWalletError } from '@fuel-wallet/types';
+import type { StoredFuelWalletError } from '@nelitow-fuel/types';
 import { db } from '~/systems/Core/utils/database';
 
 export class ErrorProcessorService {

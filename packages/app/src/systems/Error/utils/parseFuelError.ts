@@ -1,8 +1,8 @@
-import { createUUID } from '@fuel-wallet/connections';
+import { createUUID } from '@nelitow-fuel/connections';
 import type {
   SentryExtraErrorData,
   StoredFuelWalletError,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 
 const SANITIZE_REGEXP = /(0x[a-fA-Z0-9]{64})|(fuel[a-zA-Z0-9]{59})/g;
 

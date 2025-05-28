@@ -1,4 +1,4 @@
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import { Signer } from 'fuels';
 import { AccountService, MOCK_ACCOUNTS } from '~/systems/Account';
 import { ConnectionService } from '~/systems/DApp/services';

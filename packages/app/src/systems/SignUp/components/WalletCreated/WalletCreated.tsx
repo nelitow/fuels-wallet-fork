@@ -1,5 +1,5 @@
 import { Box, Button } from '@fuel-ui/react';
-import type { Account } from '@fuel-wallet/types';
+import type { Account } from '@nelitow-fuel/types';
 import { useNavigate } from 'react-router-dom';
 import { IS_CRX } from '~/config';
 import { AccountItem } from '~/systems/Account';

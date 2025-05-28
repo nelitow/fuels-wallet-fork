@@ -1,6 +1,6 @@
 import type { Page } from '@playwright/test';
 
-import { expect } from '@fuels/playwright-utils';
+import { expect } from '@nelitow-fuel/playwright-utils';
 import { getByAriaLabel, hasText, visit, waitAriaLabel } from '../../commons';
 import type { MockData } from '../../mocks';
 

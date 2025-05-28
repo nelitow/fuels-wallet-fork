@@ -1,5 +1,5 @@
 import { Box } from '@fuel-ui/react';
-import type { NetworkData } from '@fuel-wallet/types';
+import type { NetworkData } from '@nelitow-fuel/types';
 import { useState } from 'react';
 
 import { MOCK_NETWORKS } from '../../__mocks__/networks';

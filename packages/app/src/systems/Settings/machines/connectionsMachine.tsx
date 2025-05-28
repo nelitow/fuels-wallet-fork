@@ -1,5 +1,5 @@
 import { toast } from '@fuel-ui/react';
-import type { Account, Connection } from '@fuel-wallet/types';
+import type { Account, Connection } from '@nelitow-fuel/types';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { assign, createMachine } from 'xstate';
 import { AccountService } from '~/systems/Account';

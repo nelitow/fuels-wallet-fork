@@ -1,4 +1,4 @@
-import type { Account } from '@fuel-wallet/types';
+import type { Account } from '@nelitow-fuel/types';
 import { useMemo } from 'react';
 import * as yup from 'yup';
 

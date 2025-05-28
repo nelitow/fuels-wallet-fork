@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Avatar, Box, CardList, Icon, IconButton, Text } from '@fuel-ui/react';
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import { motion } from 'framer-motion';
 import type { FC } from 'react';
 import { animations, parseUrl, truncateByWordsNum } from '~/systems/Core';

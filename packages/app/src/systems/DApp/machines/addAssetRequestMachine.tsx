@@ -1,4 +1,4 @@
-import type { AssetData } from '@fuel-wallet/types';
+import type { AssetData } from '@nelitow-fuel/types';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { assign, createMachine } from 'xstate';
 import type { AssetInputs } from '~/systems/Asset';

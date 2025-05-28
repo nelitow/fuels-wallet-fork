@@ -1,4 +1,4 @@
-import type { StoredFuelWalletError } from '@fuel-wallet/types';
+import type { StoredFuelWalletError } from '@nelitow-fuel/types';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { assign, createMachine } from 'xstate';
 

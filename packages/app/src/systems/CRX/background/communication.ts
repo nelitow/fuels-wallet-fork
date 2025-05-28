@@ -1,4 +1,4 @@
-import { BACKGROUND_SCRIPT_NAME, VAULT_SCRIPT_NAME } from '@fuel-wallet/types';
+import { BACKGROUND_SCRIPT_NAME, VAULT_SCRIPT_NAME } from '@nelitow-fuel/types';
 
 import { communicationProtocol, errorBoundary } from '../utils';
 

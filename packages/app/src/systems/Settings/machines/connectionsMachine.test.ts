@@ -1,4 +1,4 @@
-import type { Account, Connection } from '@fuel-wallet/types';
+import type { Account, Connection } from '@nelitow-fuel/types';
 import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import type { Maybe } from '~/systems/Core';

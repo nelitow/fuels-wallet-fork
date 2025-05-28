@@ -1,4 +1,4 @@
-import type { AssetFuelData } from '@fuel-wallet/types';
+import type { AssetFuelData } from '@nelitow-fuel/types';
 import { useEffect, useState } from 'react';
 import { AssetsCache } from '~/systems/Asset/cache/AssetsCache';
 import { useProvider } from '~/systems/Network/hooks/useProvider';

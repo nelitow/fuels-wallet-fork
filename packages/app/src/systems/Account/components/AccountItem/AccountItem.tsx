@@ -10,7 +10,7 @@ import {
   IconButton,
   Switch,
 } from '@fuel-ui/react';
-import type { Account } from '@fuel-wallet/types';
+import type { Account } from '@nelitow-fuel/types';
 import type { FC } from 'react';
 import { FuelAddress } from '~/systems/Account';
 

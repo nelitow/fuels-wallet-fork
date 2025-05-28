@@ -1,5 +1,5 @@
-import type { Account } from '@fuel-wallet/types';
-import { expectButtonToBeEnabled } from '@fuels/playwright-utils';
+import type { Account } from '@nelitow-fuel/types';
+import { expectButtonToBeEnabled } from '@nelitow-fuel/playwright-utils';
 import type { Browser, Page } from '@playwright/test';
 import test, { chromium, expect } from '@playwright/test';
 import { Provider, Wallet, bn } from 'fuels';

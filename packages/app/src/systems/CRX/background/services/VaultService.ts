@@ -2,8 +2,8 @@ import {
   MessageTypes,
   POPUP_SCRIPT_NAME,
   VAULT_SCRIPT_NAME,
-} from '@fuel-wallet/types';
-import type { DatabaseRestartEvent, RequestMessage } from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
+import type { DatabaseRestartEvent, RequestMessage } from '@nelitow-fuel/types';
 import { AUTO_LOCK_IN_MINUTES } from '~/config';
 import { VaultServer } from '~/systems/Vault/services/VaultServer';
 

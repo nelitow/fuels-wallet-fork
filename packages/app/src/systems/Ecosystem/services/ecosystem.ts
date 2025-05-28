@@ -1,4 +1,4 @@
-import type { EcosystemProject } from '@fuel-wallet/types';
+import type { EcosystemProject } from '@nelitow-fuel/types';
 import { ECOSYSTEM_PROJECTS_URL } from '~/config';
 
 // biome-ignore lint/complexity/noStaticOnlyClass: <explanation>

@@ -1,4 +1,4 @@
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import { MOCK_ACCOUNTS } from '~/systems/Account';
 
 import { error } from 'node:console';

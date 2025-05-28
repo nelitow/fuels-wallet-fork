@@ -3,7 +3,7 @@ import { bn } from 'fuels';
 
 import { MOCK_ACCOUNTS } from '../../__mocks__';
 
-import type { AccountWithBalance } from '@fuel-wallet/types';
+import type { AccountWithBalance } from '@nelitow-fuel/types';
 import type { BalanceWidgetProps } from './BalanceWidget';
 import { BalanceWidget } from './BalanceWidget';
 

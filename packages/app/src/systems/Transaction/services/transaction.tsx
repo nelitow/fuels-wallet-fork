@@ -2,7 +2,7 @@ import type {
   Account,
   AccountWithBalance,
   FuelProviderConfig,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import type {
   TransactionRequest,
   TransactionSummary,
@@ -29,7 +29,7 @@ import {
 } from 'fuels';
 import { WalletLockedCustom, db, delay } from '~/systems/Core';
 
-import { createProvider } from '@fuel-wallet/connections';
+import { createProvider } from '@nelitow-fuel/connections';
 import { AccountService } from '~/systems/Account/services/account';
 import { AssetsCache } from '~/systems/Asset/cache/AssetsCache';
 import { convertToUsd } from '~/systems/Core/utils/convertToUsd';

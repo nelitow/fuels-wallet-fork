@@ -1,4 +1,4 @@
-import type { Contract } from '@fuel-wallet/types';
+import type { Contract } from '@nelitow-fuel/types';
 import { Services, store } from '~/store';
 import type { ContractsMachineState } from '../machines/contractsMachine';
 

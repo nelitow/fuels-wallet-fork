@@ -1,5 +1,5 @@
 import { fireEvent, screen } from '@fuel-ui/test-utils';
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import { TestWrapper } from '~/systems/Core';
 import { renderWithRouter } from '~/systems/Core/__tests__/utils';
 import { ConnectionService } from '~/systems/DApp/services';

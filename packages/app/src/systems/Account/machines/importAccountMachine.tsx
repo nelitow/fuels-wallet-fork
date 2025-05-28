@@ -1,4 +1,4 @@
-import type { Account } from '@fuel-wallet/types';
+import type { Account } from '@nelitow-fuel/types';
 import { Signer } from 'fuels';
 import type { InterpreterFrom, StateFrom } from 'xstate';
 import { createMachine } from 'xstate';

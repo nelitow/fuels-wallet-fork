@@ -1,4 +1,4 @@
-import type { AssetData, AssetFuelData } from '@fuel-wallet/types';
+import type { AssetData, AssetFuelData } from '@nelitow-fuel/types';
 import { useEffect, useState } from 'react';
 import { getAssetFuelCurrentChain } from '../utils';
 

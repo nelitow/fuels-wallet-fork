@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Avatar, Box, Button, Heading, Icon, Text } from '@fuel-ui/react';
-import type { AccountWithBalance } from '@fuel-wallet/types';
+import type { AccountWithBalance } from '@nelitow-fuel/types';
 import type { ReactNode } from 'react';
 import { FuelAddress } from '~/systems/Account';
 import { VisibilityButton } from '~/systems/Core';

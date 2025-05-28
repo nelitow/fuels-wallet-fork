@@ -1,4 +1,4 @@
-import type { Account, NetworkData, Vault } from '@fuel-wallet/types';
+import type { Account, NetworkData, Vault } from '@nelitow-fuel/types';
 
 interface ChromeStorageRow<T> {
   key: string;

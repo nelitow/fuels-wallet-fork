@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Box, Dropdown } from '@fuel-ui/react';
-import type { NetworkData } from '@fuel-wallet/types';
+import type { NetworkData } from '@nelitow-fuel/types';
 
 import { NetworkDropdown } from '../NetworkDropdown';
 

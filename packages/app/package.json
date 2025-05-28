@@ -1,8 +1,11 @@
 {
-  "name": "fuels-wallet",
+  "name": "@nelitow-fuel/fuels-wallet",
   "private": true,
   "version": "4.10.0",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "database": "23",
   "scripts": {
     "build:all": "run-s build:web build:crx build:storybook",

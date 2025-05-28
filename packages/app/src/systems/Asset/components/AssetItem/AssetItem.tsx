@@ -19,7 +19,7 @@ import { Pages, shortAddress } from '~/systems/Core';
 
 import { AssetRemoveDialog } from '../AssetRemoveDialog';
 
-import type { AssetData, AssetFuelData } from '@fuel-wallet/types';
+import type { AssetData, AssetFuelData } from '@nelitow-fuel/types';
 import type { BNInput } from 'fuels';
 import { useTruncation } from '~/systems/Core/hooks/useTruncation';
 import useFuelAsset from '../../hooks/useFuelAsset';

@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { AlertDialog, Box, Button, Text } from '@fuel-ui/react';
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 

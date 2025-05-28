@@ -1,4 +1,4 @@
-import type { Connection } from '@fuel-wallet/types';
+import type { Connection } from '@nelitow-fuel/types';
 import { useInterpret, useSelector } from '@xstate/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 

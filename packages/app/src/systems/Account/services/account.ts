@@ -1,10 +1,10 @@
-import { createProvider } from '@fuel-wallet/connections';
+import { createProvider } from '@nelitow-fuel/connections';
 import type {
   Account,
   AccountBalance,
   AccountWithBalance,
   CoinAsset,
-} from '@fuel-wallet/types';
+} from '@nelitow-fuel/types';
 import * as Sentry from '@sentry/react';
 import { Address, BN, type Provider, bn } from 'fuels';
 import { AssetsCache } from '~/systems/Asset/cache/AssetsCache';

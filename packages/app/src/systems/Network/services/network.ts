@@ -1,5 +1,5 @@
-import { createProvider, createUUID } from '@fuel-wallet/connections';
-import type { NetworkData } from '@fuel-wallet/types';
+import { createProvider, createUUID } from '@nelitow-fuel/connections';
+import type { NetworkData } from '@nelitow-fuel/types';
 import { compare } from 'compare-versions';
 import { type NodeInfo, Provider, type SelectNetworkArguments } from 'fuels';
 import { MIN_NODE_VERSION, VITE_FUEL_PROVIDER_URL } from '~/config';

@@ -1,4 +1,4 @@
-import { ContentProxyConnection } from '@fuel-wallet/connections';
+import { ContentProxyConnection } from '@nelitow-fuel/connections';
 import { WALLET_NAME } from '~/config';
 
 const connection = ContentProxyConnection.start(WALLET_NAME);

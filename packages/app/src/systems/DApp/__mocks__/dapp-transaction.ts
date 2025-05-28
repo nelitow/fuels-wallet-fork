@@ -1,4 +1,4 @@
-import { createProvider } from '@fuel-wallet/connections';
+import { createProvider } from '@nelitow-fuel/connections';
 import { Address, Provider, bn } from 'fuels';
 import { TxService } from '~/systems/Transaction/services';
 

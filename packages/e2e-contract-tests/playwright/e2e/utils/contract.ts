@@ -1,10 +1,10 @@
-import type { FuelWalletTestHelper } from '@fuels/playwright-utils';
+import type { FuelWalletTestHelper } from '@nelitow-fuel/playwright-utils';
 import {
   expect,
   getButtonByText,
   getByAriaLabel,
   hasText,
-} from '@fuels/playwright-utils';
+} from '@nelitow-fuel/playwright-utils';
 import type { Page } from '@playwright/test';
 
 export const connect = async (

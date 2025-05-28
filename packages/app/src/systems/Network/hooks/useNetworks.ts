@@ -1,4 +1,4 @@
-import type { NetworkData } from '@fuel-wallet/types';
+import type { NetworkData } from '@nelitow-fuel/types';
 import { useEffect, useMemo } from 'react';
 import { Services, store } from '~/store';
 import { useOverlay } from '~/systems/Overlay';

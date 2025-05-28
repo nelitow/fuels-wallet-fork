@@ -1,4 +1,4 @@
-import type { AssetData, NetworkData } from '@fuel-wallet/types';
+import type { AssetData, NetworkData } from '@nelitow-fuel/types';
 import { type BNInput, type BigNumberish, assets, bn } from 'fuels';
 import { graphql } from 'msw';
 import { uniqueId } from 'xstate/lib/utils';

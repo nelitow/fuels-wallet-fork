@@ -1,7 +1,10 @@
 {
-  "name": "docs",
+  "name": "@nelitow-fuel/docs",
   "version": "0.0.1",
   "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:preview": "next build",
     "dev": "next dev -p 3030",

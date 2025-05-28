@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Card } from '@fuel-ui/react';
-import type { Account } from '@fuel-wallet/types';
+import type { Account } from '@nelitow-fuel/types';
 import { AccountItem } from '~/systems/Account';
 
 import { AccountInfoLoader } from './AccountInfoLoader';

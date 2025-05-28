@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Avatar, Box, Icon, Image, Text, Tooltip } from '@fuel-ui/react';
-import type { AssetFuelAmount } from '@fuel-wallet/types';
+import type { AssetFuelAmount } from '@nelitow-fuel/types';
 import { bn } from 'fuels';
 import { useEffect, useRef, useState } from 'react';
 import { formatAmount, shortAddress } from '~/systems/Core';
