@@ -1,4 +1,4 @@
-import { useConnectUI } from '@fuels/react';
+import { useConnectUI } from '@nelitow-fuel/react';
 
 export const Header = () => {
   const { connect, isConnected } = useConnectUI();

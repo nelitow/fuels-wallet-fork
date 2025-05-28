@@ -4,7 +4,7 @@ import {
   FuelWalletConnector,
   FuelWalletDevelopmentConnector,
   FueletWalletConnector,
-} from '@fuels/connectors';
+} from '@nelitow-fuel/connectors';
 import type { FuelConnector } from 'fuels'; // ignore-line
 import { Fuel } from 'fuels';
 import { useEffect, useState } from 'react'; // ignore-line

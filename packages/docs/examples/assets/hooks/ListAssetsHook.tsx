@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Box, Tag } from '@fuel-ui/react';
-import { useAssets } from '@fuels/react';
+import { useAssets } from '@nelitow-fuel/react';
 
 import { ExampleBox } from '../../../src/components/ExampleBox';
 import { getAssetByChain } from '../../../src/utils/getAssetByChain';

@@ -1,8 +1,8 @@
 import {
   FuelWalletConnector,
   FuelWalletDevelopmentConnector,
-} from '@fuels/connectors';
-import { FuelProvider, type UIConfig } from '@fuels/react';
+} from '@nelitow-fuel/connectors';
+import { FuelProvider, type UIConfig } from '@nelitow-fuel/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { FuelConfig, Network } from 'fuels';
 import type { ReactNode } from 'react';

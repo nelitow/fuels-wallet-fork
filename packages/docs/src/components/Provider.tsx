@@ -9,8 +9,8 @@ import {
   FuelWalletConnector,
   FuelWalletDevelopmentConnector,
   FueletWalletConnector,
-} from '@fuels/connectors';
-import { FuelProvider } from '@fuels/react';
+} from '@nelitow-fuel/connectors';
+import { FuelProvider } from '@nelitow-fuel/react';
 import { MDXProvider } from '@mdx-js/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';

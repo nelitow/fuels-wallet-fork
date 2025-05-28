@@ -8,7 +8,7 @@ import {
   useNetworks,
   useSelectNetwork,
   useWallet,
-} from '@fuels/react';
+} from '@nelitow-fuel/react';
 
 import { DEVNET_NETWORK_URL, TESTNET_NETWORK_URL, bn } from 'fuels';
 import { useState } from 'react';
