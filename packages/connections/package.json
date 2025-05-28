@@ -2,7 +2,7 @@
   "name": "@nelitow-fuel/connections",
   "private": true,
   "description": "Jason Wallet Connections for CRX.",
-  "version": "4.18.1",
+  "version": "4.18.2",
   "license": "Apache-2.0",
   "main": "src/index.ts",
   "publishConfig": {

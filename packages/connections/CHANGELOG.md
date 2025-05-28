@@ -1,5 +1,7 @@
 # @fuel-wallet/connections
 
+## 4.18.2
+
 ## 4.18.1
 
 ## 4.18.0
