@@ -40,7 +40,7 @@ const styles = {
   }),
   close: cssObj({
     position: 'relative !important',
-    top: '0 !important',
+    top: '2 !important',
     left: '0 !important',
   }),
 };
