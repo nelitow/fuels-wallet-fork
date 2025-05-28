@@ -56,9 +56,8 @@ jobs:
         id: create_pr_action # Added id to potentially get outputs
         uses: changesets/action@v1
         with:
-          # title: "ci(changesets): versioning packages" # Default title by action
-          # commit: "ci(changesets): versioning packages" # Default commit by action
-          # publish: # This action doesn't publish, it only versions and creates PR
+          commit: "ci(release): versioning packages and changesets"
+          title: "ci(release): versioning packages and changesets"
           createGithubReleases: false # We don't want this action to make GitHub releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

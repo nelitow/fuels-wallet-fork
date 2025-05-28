@@ -16,7 +16,7 @@ jobs:
   release:
     name: Release to NPM and GitHub
     if: |
-      startsWith(github.event.head_commit.message, 'ci(changesets): versioning packages') &&
+      startsWith(github.event.head_commit.message, 'ci(release):') &&
       github.event.before != '0000000000000000000000000000000000000000'
     runs-on: ubuntu-latest
     environment: npm-deploy
