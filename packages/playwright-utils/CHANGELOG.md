@@ -1,5 +1,17 @@
 # @fuels/playwright-utils
 
+## 4.19.0
+
+### Minor Changes
+
+- [`ea138c4b`](https://github.com/nelitow/fuels-wallet-fork/commit/ea138c4b5afcfd358bd29c89996cda449f3f315b) Thanks [@nelitow](https://github.com/nelitow)! - Add comprehensive test utilities and monitoring features
+
+### Patch Changes
+
+- [#112](https://github.com/nelitow/fuels-wallet-fork/pull/112) [`db55b415`](https://github.com/nelitow/fuels-wallet-fork/commit/db55b41532ee63b89f76c45cc38e7b01281bb0d8) Thanks [@nelitow](https://github.com/nelitow)! - Patch that includes minor utils for testing purposes on playwright and types.
+
+- [#112](https://github.com/nelitow/fuels-wallet-fork/pull/112) [`eef0950a`](https://github.com/nelitow/fuels-wallet-fork/commit/eef0950aaffca4d86dcdfd3321ae46137246c46c) Thanks [@nelitow](https://github.com/nelitow)! - Fix imports
+
 ## 4.18.4
 
 ## 4.18.3
