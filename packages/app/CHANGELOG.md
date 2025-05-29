@@ -12,7 +12,7 @@
 
 - Updated dependencies []:
   - @nelitow-fuel/connections@4.18.0
-  - @nelitow-fuel/playwright-utils@4.18.0
+  - @fuels/playwright-utils@4.18.0
 
 ## 4.17.0
 
@@ -26,7 +26,7 @@
 
 - Updated dependencies []:
   - @nelitow-fuel/connections@4.17.0
-  - @nelitow-fuel/playwright-utils@4.17.0
+  - @fuels/playwright-utils@4.17.0
 
 ## 4.16.0
 
@@ -38,7 +38,7 @@
 
 - Updated dependencies []:
   - @nelitow-fuel/connections@4.16.0
-  - @nelitow-fuel/playwright-utils@4.16.0
+  - @fuels/playwright-utils@4.16.0
 
 ## 4.15.0
 
@@ -50,7 +50,7 @@
 
 - Updated dependencies []:
   - @nelitow-fuel/connections@4.15.0
-  - @nelitow-fuel/playwright-utils@4.15.0
+  - @fuels/playwright-utils@4.15.0
 
 ## 4.14.0
 
@@ -62,7 +62,7 @@
 
 - Updated dependencies []:
   - @nelitow-fuel/connections@4.14.0
-  - @nelitow-fuel/playwright-utils@4.14.0
+  - @fuels/playwright-utils@4.14.0
 
 ## 4.13.0
 
@@ -78,7 +78,7 @@
 
 - Updated dependencies [[`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f), [`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f)]:
   - @nelitow-fuel/connections@4.13.0
-  - @nelitow-fuel/playwright-utils@4.13.0
+  - @fuels/playwright-utils@4.13.0
 
 ## 4.12.0
 
@@ -94,7 +94,7 @@
 
 - Updated dependencies [[`437ad939`](https://github.com/nelitow/fuels-wallet-fork/commit/437ad939ecb079ae7b2d6e29768a396503150e24), [`437ad939`](https://github.com/nelitow/fuels-wallet-fork/commit/437ad939ecb079ae7b2d6e29768a396503150e24)]:
   - @nelitow-fuel/connections@4.12.0
-  - @nelitow-fuel/playwright-utils@4.12.0
+  - @fuels/playwright-utils@4.12.0
 
 ## 4.11.0
 
@@ -108,7 +108,7 @@
 
 - Updated dependencies [[`0cc752fd`](https://github.com/nelitow/fuels-wallet-fork/commit/0cc752fd0f0b57590144dafe4c3822e3e9422ade)]:
   - @nelitow-fuel/connections@4.11.0
-  - @nelitow-fuel/playwright-utils@4.11.0
+  - @fuels/playwright-utils@4.11.0
 
 ## 4.10.0
 

@@ -15,7 +15,7 @@ import {
   encrypt,
 } from 'fuels';
 
-import { expect } from '@nelitow-fuel/playwright-utils';
+import { expect } from '@fuels/playwright-utils';
 import { getByAriaLabel } from '../commons/locator';
 import { hasText } from '../commons/text';
 import { reload, visit } from '../commons/visit';

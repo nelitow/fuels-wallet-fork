@@ -1,5 +1,5 @@
 ---
-"@nelitow-fuel/playwright-utils": patch
+"@fuels/playwright-utils": patch
 "@nelitow-fuel/types": patch
 ---
 
