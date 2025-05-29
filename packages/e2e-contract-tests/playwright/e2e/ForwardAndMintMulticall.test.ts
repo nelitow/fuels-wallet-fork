@@ -2,8 +2,8 @@ import {
   expectButtonToBeEnabled,
   getButtonByText,
   hasText,
-} from '@nelitow-fuel/playwright-utils';
-import type { FuelWalletTestHelper } from '@nelitow-fuel/playwright-utils';
+} from '@fuels/playwright-utils';
+import type { FuelWalletTestHelper } from '@fuels/playwright-utils';
 import { expect } from '@playwright/test';
 import { bn } from 'fuels';
 import type { WalletUnlocked } from 'fuels';

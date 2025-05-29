@@ -1,6 +1,6 @@
 import type { Page } from '@playwright/test';
 
-import { expect } from '@nelitow-fuel/playwright-utils';
+import { expect } from '@fuels/playwright-utils';
 import { getButtonByText } from './button';
 import { getByAriaLabel } from './locator';
 import { hasText } from './text';

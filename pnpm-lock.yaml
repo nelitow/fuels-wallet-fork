@@ -228,7 +228,7 @@ importers:
       '@nelitow-fuel/connections':
         specifier: workspace:*
         version: link:../connections
-      '@nelitow-fuel/playwright-utils':
+      '@fuels/playwright-utils':
         specifier: workspace:*
         version: link:../playwright-utils
       '@react-aria/utils':
@@ -670,7 +670,7 @@ importers:
         specifier: ^2.4.1
         version: 2.4.1(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
-      '@nelitow-fuel/playwright-utils':
+      '@fuels/playwright-utils':
         specifier: workspace:*
         version: link:../playwright-utils
       '@nelitow-fuel/types':

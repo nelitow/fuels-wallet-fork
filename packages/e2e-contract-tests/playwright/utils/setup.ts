@@ -1,7 +1,4 @@
-import {
-  FuelWalletTestHelper,
-  seedWallet,
-} from '@nelitow-fuel/playwright-utils';
+import { FuelWalletTestHelper, seedWallet } from '@fuels/playwright-utils';
 import type { BrowserContext, Page } from '@playwright/test';
 import {
   type BNInput,
