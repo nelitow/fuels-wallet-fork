@@ -26,7 +26,7 @@ You can import `defaultConnectors` from `@fuels/connectors` to get a list of all
 ### Using default connectors
 ```ts
 import { Fuel } from 'fuels';
-import { defaultConnectors } from '@nelitow-fuel/connectors';
+import { defaultConnectors } from '@fuels/connectors';
 
 const fuel = new Fuel({
   connectors: defaultConnectors({ devMode: true }),
@@ -39,7 +39,7 @@ await fuel.connect();
 ### Using a custom list
 ```ts
 import { Fuel } from 'fuels';
-import { FuelWalletConnector } from '@nelitow-fuel/connectors';
+import { FuelWalletConnector } from '@fuels/connectors';
 
 const fuel = new Fuel({
   connectors: [new FuelWalletConnector()],
@@ -73,8 +73,8 @@ Wrap your application with the providers `QueryClientProvider` and `FuelProvider
 ```tsx
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { FuelProvider } from '@nelitow-fuel/react';
-import { defaultConnectors } from '@nelitow-fuel/connectors';
+import { FuelProvider } from '@fuels/react';
+import { defaultConnectors } from '@fuels/connectors';
 
 const queryClient = new QueryClient();
 
@@ -94,7 +94,7 @@ Alternatively, you can pass `ui={false}` to the `FuelProvider` to disable the UI
 #### Usage
 
 ```ts
-import { useConnectUI } from '@nelitow-fuel/react';
+import { useConnectUI } from '@fuels/react';
 const { connect, isConnecting } = useConnectUI();
 
 <button onClick={connect}>
