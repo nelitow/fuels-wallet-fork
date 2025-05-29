@@ -1,6 +1,6 @@
 import { cssObj } from '@fuel-ui/css';
 import { Box, Button, Input, InputAmount, Link, Text } from '@fuel-ui/react';
-import { useAssets, useFuel, useWallet } from '@nelitow-fuel/react';
+import { useAssets, useFuel, useWallet } from '@fuels/react';
 import type { BN } from 'fuels';
 import { Address, Provider, bn, buildBlockExplorerUrl } from 'fuels';
 import { useEffect, useMemo, useState } from 'react';

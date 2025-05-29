@@ -1,4 +1,4 @@
-import { useAccount, useWallet } from '@nelitow-fuel/react';
+import { useAccount, useWallet } from '@fuels/react';
 import { bn } from 'fuels';
 import { useState } from 'react';
 

@@ -6,7 +6,7 @@ import {
   useIsConnected,
   useSendTransaction,
   useWallet,
-} from '@nelitow-fuel/react';
+} from '@fuels/react';
 import { bn } from 'fuels';
 import { useState } from 'react';
 
