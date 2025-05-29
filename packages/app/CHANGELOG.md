@@ -1,5 +1,18 @@
 # fuels-wallet
 
+## 4.19.0
+
+### Minor Changes
+
+- [`ea138c4b`](https://github.com/nelitow/fuels-wallet-fork/commit/ea138c4b5afcfd358bd29c89996cda449f3f315b) Thanks [@nelitow](https://github.com/nelitow)! - Add comprehensive test utilities and monitoring features
+
+### Patch Changes
+
+- [#112](https://github.com/nelitow/fuels-wallet-fork/pull/112) [`eef0950a`](https://github.com/nelitow/fuels-wallet-fork/commit/eef0950aaffca4d86dcdfd3321ae46137246c46c) Thanks [@nelitow](https://github.com/nelitow)! - Fix imports
+
+- Updated dependencies [[`ea138c4b`](https://github.com/nelitow/fuels-wallet-fork/commit/ea138c4b5afcfd358bd29c89996cda449f3f315b)]:
+  - @nelitow-fuel/connections@4.19.0
+
 ## 4.18.4
 
 ### Patch Changes

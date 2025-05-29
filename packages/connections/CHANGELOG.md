@@ -1,5 +1,11 @@
 # @fuel-wallet/connections
 
+## 4.19.0
+
+### Minor Changes
+
+- [`ea138c4b`](https://github.com/nelitow/fuels-wallet-fork/commit/ea138c4b5afcfd358bd29c89996cda449f3f315b) Thanks [@nelitow](https://github.com/nelitow)! - Add comprehensive test utilities and monitoring features
+
 ## 4.18.4
 
 ## 4.18.3
