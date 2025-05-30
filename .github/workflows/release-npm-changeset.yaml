@@ -44,9 +44,6 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Check for jq
-        run: jq --version
-        
       - name: Extract pnpm version from .tool-versions
         id: get_pnpm
         run: |
@@ -158,7 +155,7 @@ jobs:
           echo "has_published_packages=$PACKAGES_PUBLISHED" >> "$GITHUB_OUTPUT"
           echo "::endgroup::"
 
-      - name: Prettify changelog
+      - name: Enhanced changelog with all packages
         if: steps.debug-published.outputs.has_published_packages == 'true'
         run: pnpm changeset:update-changelog
         env:
@@ -168,6 +165,7 @@ jobs:
           REF_NAME: master
           LATEST_RELEASE: ${{ env.LATEST_RELEASE }}
           RELEASE_VERSION_HIGHER_THAN_LATEST: ${{ env.RELEASE_VERSION_HIGHER_THAN_LATEST }}
+          INCLUDE_NON_PUBLISHED: "true"
 
       - name: Build Fuel Wallet
         if: steps.debug-published.outputs.has_published_packages == 'true'
