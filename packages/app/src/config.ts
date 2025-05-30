@@ -57,5 +57,21 @@ export const TEST_CONFIG = {
     debugLogging: IS_TEST_FEATURES_ENABLED,
     mockData: IS_TEST_FEATURES_ENABLED && IS_DEVELOPMENT,
     connectionMonitoring: IS_TEST_FEATURES_ENABLED,
+    performanceMetrics: IS_TEST_FEATURES_ENABLED,
+    memoryTracking: IS_TEST_FEATURES_ENABLED && IS_DEVELOPMENT,
+  },
+} as const;
+
+/**
+ * NEW: Performance monitoring configuration
+ */
+export const PERFORMANCE_CONFIG = {
+  enableMetrics: TEST_CONFIG.features.performanceMetrics,
+  sampleRate: IS_DEVELOPMENT ? 1.0 : 0.1,
+  maxMetrics: 1000,
+  thresholds: {
+    slowTransaction: 5000, // 5 seconds
+    memoryWarning: 100 * 1024 * 1024, // 100MB
+    connectionTimeout: 10000, // 10 seconds
   },
 } as const;

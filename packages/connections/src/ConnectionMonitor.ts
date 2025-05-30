@@ -7,6 +7,8 @@ export interface ConnectionHealth {
   lastPing: Date | null;
   responseTime: number;
   errorCount: number;
+  totalAttempts: number;
+  successRate: number;
 }
 
 export interface MonitorConfig {
@@ -14,6 +16,8 @@ export interface MonitorConfig {
   maxErrors: number;
   timeout: number;
   retryAttempts: number;
+  retryDelay: number;
+  backoffMultiplier: number;
 }
 
 export const DEFAULT_MONITOR_CONFIG: MonitorConfig = {
@@ -21,6 +25,8 @@ export const DEFAULT_MONITOR_CONFIG: MonitorConfig = {
   maxErrors: 5,
   timeout: 5000,
   retryAttempts: 3,
+  retryDelay: 1000,
+  backoffMultiplier: 2,
 };
 
 export class ConnectionMonitor {
@@ -36,6 +42,8 @@ export class ConnectionMonitor {
       lastPing: null,
       responseTime: 0,
       errorCount: 0,
+      totalAttempts: 0,
+      successRate: 0,
     };
   }
 
@@ -83,6 +91,8 @@ export class ConnectionMonitor {
         lastPing: new Date(),
         responseTime,
         errorCount: Math.max(0, this.health.errorCount - 1), // Decrease error count on success
+        totalAttempts: this.health.totalAttempts + 1,
+        successRate: this.health.successRate + (responseTime < this.config.timeout ? 1 : 0) / this.health.totalAttempts,
       };
     } catch (error) {
       console.warn('Connection health check failed:', error);
@@ -90,6 +100,7 @@ export class ConnectionMonitor {
         ...this.health,
         isConnected: false,
         errorCount: this.health.errorCount + 1,
+        totalAttempts: this.health.totalAttempts + 1,
       };
     }
 
@@ -107,6 +118,33 @@ export class ConnectionMonitor {
     return (
       this.health.isConnected && this.health.errorCount < this.config.maxErrors
     );
+  }
+
+  /**
+   * NEW: Automatic retry with exponential backoff
+   */
+  async retryWithBackoff<T>(
+    operation: () => Promise<T>,
+    maxRetries: number = this.config.retryAttempts
+  ): Promise<T> {
+    let lastError: Error;
+    
+    for (let attempt = 0; attempt < maxRetries; attempt++) {
+      try {
+        return await operation();
+      } catch (error) {
+        lastError = error as Error;
+        
+        if (attempt === maxRetries - 1) {
+          throw lastError;
+        }
+        
+        const delay = this.config.retryDelay * Math.pow(this.config.backoffMultiplier, attempt);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+    }
+    
+    throw lastError!;
   }
 
   private async simulatePing(): Promise<void> {
