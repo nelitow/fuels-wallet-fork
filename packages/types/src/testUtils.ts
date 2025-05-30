@@ -46,3 +46,27 @@ export type TestEnvironment = {
   isProduction: boolean;
   testId?: string;
 };
+
+/**
+ * NEW: Debug logging utility for development
+ */
+export interface DebugLogger {
+  level: 'debug' | 'info' | 'warn' | 'error';
+  prefix: string;
+  enabled: boolean;
+}
+
+export function createDebugLogger(prefix: string = 'FUEL'): DebugLogger {
+  return {
+    level: 'debug',
+    prefix,
+    enabled: process.env.NODE_ENV === 'development',
+  };
+}
+
+export function logDebug(logger: DebugLogger, message: string, data?: any): void {
+  if (logger.enabled) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${logger.prefix}: ${message}`, data || '');
+  }
+}
