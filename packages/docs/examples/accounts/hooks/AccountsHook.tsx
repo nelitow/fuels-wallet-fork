@@ -25,7 +25,7 @@ export function AccountsHook() {
               ))}
               <Text>
                 <em>
-                  Connect / Disconnect accounts in your Jason Wallet to test the
+                  Connect / Disconnect accounts in your Fuel wallet to test the
                   event.
                 </em>
               </Text>

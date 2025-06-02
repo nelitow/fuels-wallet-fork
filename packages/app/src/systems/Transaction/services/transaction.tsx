@@ -4,12 +4,14 @@ import type {
   FuelProviderConfig,
 } from '@nelitow-fuel/types';
 import type {
+  Operation,
+  OperationCoin,
   TransactionRequest,
   TransactionSummary,
   TransactionSummaryJson,
   WalletLocked,
 } from 'fuels';
-import { clone } from 'ramda';
+import { clone, equals } from 'ramda';
 
 import {
   Address,
@@ -22,10 +24,10 @@ import {
   assembleTransactionSummary,
   assembleTransactionSummaryFromJson,
   bn,
-  deserializeProviderCache,
   getTransactionSummary,
   getTransactionSummaryFromRequest,
   getTransactionsSummaries,
+  transactionRequestify,
 } from 'fuels';
 import { WalletLockedCustom, db, delay } from '~/systems/Core';
 
@@ -186,8 +188,8 @@ export class TxService {
       (account?.address?.toString() || address) as string,
       provider
     );
-    const txSent = await wallet.sendTransaction(transactionRequest);
 
+    const txSent = await wallet.sendTransaction(transactionRequest);
     return txSent;
   }
 
@@ -215,7 +217,6 @@ export class TxService {
     tip: inputCustomTip,
     gasLimit: inputCustomGasLimit,
     transactionState,
-    transactionSummary,
   }: TxInputs['simulateTransaction']) {
     const provider = new Provider(providerConfig?.url || '', {
       cache: providerConfig?.cache,
@@ -282,20 +283,11 @@ export class TxService {
         inputs: transaction.inputs,
       });
 
-      let txSummary: TransactionSummary<void>;
-      if (transactionSummary) {
-        const summary = await assembleTransactionSummaryFromJson({
-          transactionSummary,
-          provider,
-        });
-        txSummary = summary;
-      } else {
-        txSummary = await getTransactionSummaryFromRequest({
-          provider,
-          transactionRequest: proposedTxRequest,
-          abiMap,
-        });
-      }
+      const txSummary = await getTransactionSummaryFromRequest({
+        provider,
+        transactionRequest: proposedTxRequest,
+        abiMap,
+      });
 
       // Adding 1 magical unit to match the fake unit that is added on TS SDK (.add(1))
       const feeAdaptedToSdkDiff = txSummary.fee.add(1);
@@ -460,6 +452,10 @@ export class TxService {
 
     if (!to || !assetId || !amount || !tip || !gasLimit) {
       throw new Error('Missing params for transaction request');
+    }
+
+    if (amount.lte(0)) {
+      throw new Error('Amount must be greater than 0');
     }
 
     const [network, account] = await Promise.all([

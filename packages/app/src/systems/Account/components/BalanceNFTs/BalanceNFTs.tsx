@@ -55,7 +55,7 @@ export const BalanceNFTs = ({
       {!isLoading && !collections?.length && (
         <AssetListEmpty
           text="You don't have any NFTs"
-          supportText="To add NFTs, simply send them."
+          supportText="To add NFTs, simply send them to your Fuel address."
           hideFaucet
         />
       )}

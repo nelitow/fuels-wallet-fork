@@ -52,7 +52,7 @@ export const Accounts = () => {
           iconSize={14}
           isLoading={isAddingAccount}
         >
-          Add new ac
+          Add new account
         </Button>
       </Dialog.Footer>
     </>

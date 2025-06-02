@@ -1,6 +1,6 @@
 {
-  "name": "@nelitow-fuel/playwright-utils",
-  "version": "4.20.0",
+  "name": "@fuels/playwright-utils",
+  "version": "0.55.2",
   "license": "Apache-2.0",
   "main": "src/index.ts",
   "type": "module",
@@ -17,9 +17,7 @@
       }
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "pnpm ts:check && tsup",
     "ts:check": "pnpm tsc --noEmit"

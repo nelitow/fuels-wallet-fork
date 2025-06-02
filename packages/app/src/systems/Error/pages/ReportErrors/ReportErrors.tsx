@@ -141,7 +141,7 @@ export function ReportErrors({
       </Box.Stack>
       <Box.Stack css={styles.content}>
         <Text>
-          Would you like to send the following error logs to Jason Wallet team?
+          Would you like to send the following error logs to Fuel Wallet team?
         </Text>
         <HStack css={styles.controlsContainer}>
           <Box css={styles.editorControls}>
