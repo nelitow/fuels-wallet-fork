@@ -1,5 +1,11 @@
 # @nelitow-fuel/types
 
+## 0.56.0
+
+### Minor Changes
+
+- [#117](https://github.com/nelitow/fuels-wallet-fork/pull/117) [`cf94573dd9f083fc1b6e6a4d81d2193520cb3686`](https://github.com/nelitow/fuels-wallet-fork/commit/cf94573dd9f083fc1b6e6a4d81d2193520cb3686) Thanks [@nelitow](https://github.com/nelitow)! - REvert to roots.
+
 ## 0.55.2
 
 ## 0.55.1
