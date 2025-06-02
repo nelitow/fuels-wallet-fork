@@ -4,7 +4,25 @@ on:
   push:
     branches:
       - master
-      # - release/* # Uncomment if you use release branches
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
+      version:
+        description: 'Version to release'
+        required: false
+        type: string
+      dry_run:
+        description: 'Perform dry run'
+        required: false
+        type: boolean
+        default: false
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -12,24 +30,12 @@ env:
   BUILD_VERSION: ""
 
 jobs:
-  debug:
-    name: Debug Commit Message
-    runs-on: ubuntu-latest
-    steps:
-      - name: Debug commit info
-        run: |
-          echo "Event name: ${{ github.event_name }}"
-          echo "Commit message: '${{ github.event.head_commit.message }}'"
-          echo "Before: '${{ github.event.before }}'"
-          echo "Starts with ci(release): ${{ startsWith(github.event.head_commit.message, 'ci(release):') }}"
-          echo "Before not zero: ${{ github.event.before != '0000000000000000000000000000000000000000' }}"
-          echo "Combined condition: ${{ startsWith(github.event.head_commit.message, 'ci(release):') && github.event.before != '0000000000000000000000000000000000000000' }}"
-
   release:
     name: Release to NPM and GitHub
     if: |
-      startsWith(github.event.head_commit.message, 'ci(release):') &&
-      github.event.before != '0000000000000000000000000000000000000000'
+      (startsWith(github.event.head_commit.message, 'ci(changesets): versioning packages') && 
+       github.event.before != '0000000000000000000000000000000000000000') ||
+      github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment: npm-deploy
     outputs:
@@ -65,9 +71,7 @@ jobs:
       # if there are changesets present, package.json will be bumped
       - name: Bump and Collect Versions
         run: |
-          pnpm changeset version
           echo "BUILD_VERSION=$(sed -nE 's/^\s*"version": "(.*?)",$/\1/p' packages/app/package.json)" >> $GITHUB_ENV
-          git reset --hard
 
       - name: Verify Collected Version
         id: collect-version
@@ -182,6 +186,28 @@ jobs:
           CRX_OUT: "dist-crx-dev"
           APP_VERSION_POSTFIX: "-development"
           NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Upload Production artifacts to Sentry
+        if: steps.debug-published.outputs.has_published_packages == 'true'
+        run: |
+          pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx
+          pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
+        working-directory: ./packages/app
+
+      - name: Upload Development artifacts to Sentry
+        if: steps.debug-published.outputs.has_published_packages == 'true'
+        run: |
+          pnpm sentry-cli sourcemaps inject --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
+          pnpm sentry-cli sourcemaps upload --release ${{ env.BUILD_VERSION }} ./dist-crx-dev
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
+        working-directory: ./packages/app
 
       - name: Attach Fuel Wallet to release
         if: steps.debug-published.outputs.has_published_packages == 'true'

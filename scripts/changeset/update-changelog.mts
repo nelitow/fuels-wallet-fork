@@ -102,7 +102,6 @@ async function updatePublishedRelease() {
 
   let releaseBody = pr.data.body as string;
 
-  // If INCLUDE_NON_PUBLISHED is enabled, add wallet app info
   if (INCLUDE_NON_PUBLISHED === 'true') {
     const version = RELEASE_TAG?.replace('v', '') || '';
     const walletSection = `
