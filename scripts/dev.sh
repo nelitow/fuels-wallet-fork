@@ -19,5 +19,5 @@ elif [ "$1" == "--storybook" ]; then
 elif [ "$1" == "--docs" ]; then
 	NODE_ENV=development turbo run dev --filter=docs
 elif [ "$1" == "--e2e-contracts-test" ]; then
-	turbo run dev:e2e-contracts --filter=@fuel-wallet/e2e-contract-tests
+	turbo run dev:e2e-contracts --filter=@nelitow-fuel/e2e-contract-tests
 fi

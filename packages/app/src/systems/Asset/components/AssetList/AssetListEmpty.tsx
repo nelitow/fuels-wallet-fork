@@ -11,7 +11,7 @@ export type AssetListEmptyProps = {
 
 export function AssetListEmpty({
   text = `You don't have any assets`,
-  supportText = 'Start depositing some assets bro',
+  supportText = 'Start depositing some assets',
   hideFaucet = false,
 }: AssetListEmptyProps) {
   const { open, hasFaucet, hasBridge } = useFundWallet();

@@ -2,7 +2,7 @@ import { cssObj } from '@fuel-ui/css';
 import { Box, FuelLogo } from '@fuel-ui/react';
 
 export function HeaderFuelBranding({
-  title = 'Jason Wallet',
+  title = 'Fuel Wallet',
 }: { title: string }) {
   return (
     <Box.Flex css={{ alignItems: 'center' }}>

@@ -20,10 +20,10 @@ export function InstallSection() {
               The Official
             </Heading>
             <Heading css={styles.title} fontSize={'7xl'}>
-              Jason Wallet
+              Fuel Wallet
             </Heading>
             <Text fontSize="lg">
-              With the Jason Wallet, <br /> you can explore DApps on Fuel <br />{' '}
+              With the Fuel Wallet, <br /> you can explore DApps on Fuel <br />{' '}
               and manage your crypto assets, <br /> all in one place.
             </Text>
           </Box.Stack>

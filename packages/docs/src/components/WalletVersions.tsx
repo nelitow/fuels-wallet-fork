@@ -16,19 +16,19 @@ export function WalletVersions() {
       <UL>
         <li>
           <Text>
-            <Link href={WALLET_LINK_PROD}>Jason Wallet</Link> - Stable - The
+            <Link href={WALLET_LINK_PROD}>Fuel Wallet</Link> - Stable - The
             official version on Chrome Store.
           </Text>
         </li>
         <li>
           <Text>
-            <Link href={WALLET_LINK_STAGING}>Jason Wallet Development</Link> -
+            <Link href={WALLET_LINK_STAGING}>Fuel Wallet Development</Link> -
             Development - The development version on Chrome Store
           </Text>
         </li>
         <li>
           <Text>
-            <Link href={WALLET_LINK_NEXT}>Jason Wallet Next</Link> - Latest -
+            <Link href={WALLET_LINK_NEXT}>Fuel Wallet Next</Link> - Latest -
             Contains the latest changes. Available only in zip format
           </Text>
         </li>

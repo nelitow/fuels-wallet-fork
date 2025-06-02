@@ -16,7 +16,7 @@
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
-  "ignore": ["@nelitow-fuel/docs", "@nelitow-fuel/e2e-contract-tests"],
+  "ignore": ["docs", "@nelitow-fuel/e2e-contract-tests"],
   "snapshot": {
     "useCalculatedVersion": true,
     "prereleaseTemplate": "{tag}-{commit}"

@@ -12,4 +12,3 @@ export * from './error';
 export * from './database';
 export * from './contentScript';
 export * from './connector';
-export * from './testUtils';

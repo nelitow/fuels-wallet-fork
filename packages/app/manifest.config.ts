@@ -12,7 +12,7 @@ export default defineManifest({
   manifest_version: 3,
   name: process.env.VITE_CRX_NAME,
   version: process.env.VITE_APP_VERSION,
-  description: 'The official Jason Wallet',
+  description: 'The official Fuel Wallet',
   icons: {
     '16': `icons/fuel-logo${imageNameColor}-16.png`,
     '19': `icons/fuel-logo${imageNameColor}-19.png`,
@@ -26,7 +26,7 @@ export default defineManifest({
     '512': `icons/fuel-logo${imageNameColor}-512.png`,
   },
   action: {
-    default_title: 'Jason!',
+    default_title: 'Fuel Wallet',
     default_popup: 'popup.html',
   },
   background: {

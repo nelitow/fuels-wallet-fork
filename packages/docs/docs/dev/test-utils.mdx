@@ -5,7 +5,7 @@ category: For Developers
 
 # Playwright Utils
 
-The `@fuels/playwright-utils` package allows developers building frontend applications on fuel to test their application as it interacts with the Jason Wallet. This package is compatible with the [playwright](https://playwright.dev/) test framework.
+The `@fuels/playwright-utils` package allows developers building frontend applications on fuel to test their application as it interacts with the fuel wallet. This package is compatible with the [playwright](https://playwright.dev/) test framework.
 
 ## Fixtures
 
@@ -25,7 +25,7 @@ If you are using custom test fixtures in your playwright tests then setup the `c
 
 ## `FuelWalletTestHelper`
 
-The `FuelWalletTestHelper` is a class which allows you to interact with the Jason Wallet extension.
+The `FuelWalletTestHelper` is a class which allows you to interact with the fuel wallet extension.
 
 ### `walletSetup`
 
@@ -40,7 +40,7 @@ static async walletSetup(
 ): Promise<FuelWalletTestHelper>
 ```
 
-This function sets up your Jason Wallet extension and returns an instance of `FuelWalletTestHelper`.
+This function sets up your fuel wallet extension and returns an instance of `FuelWalletTestHelper`.
 
 ### `walletConnect`
 
@@ -51,7 +51,7 @@ async walletConnect(
 ): Promise<void>
 ```
 
-This function connects Jason Wallet accounts to your web application through the connect popup window. It will throw an error if the connect popup window does not appear.
+This function connects fuel wallet accounts to your web application through the connect popup window. It will throw an error if the connect popup window does not appear.
 
 ### `walletApprove`
 
@@ -131,4 +131,4 @@ This function switches to the network named `chainName`. It will throw an error 
 
 ## Mocks
 
-Mnemonic and password mock variables for the Jason Wallet. These are the default mnemonic and password variables for the `walletSetup` function.
+Mnemonic and password mock variables for the fuel wallet. These are the default mnemonic and password variables for the `walletSetup` function.

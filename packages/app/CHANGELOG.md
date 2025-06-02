@@ -1,692 +1,43 @@
 # fuels-wallet
 
-## 4.20.0
-
-### Minor Changes
-
-- [#115](https://github.com/nelitow/fuels-wallet-fork/pull/115) [`a1c8d4b0`](https://github.com/nelitow/fuels-wallet-fork/commit/a1c8d4b01295408fab5b310e2a124f8997becc59) Thanks [@nelitow](https://github.com/nelitow)! - Add enhanced debugging, monitoring, and performance features
+## 0.55.2
 
 ### Patch Changes
 
-- Updated dependencies [[`a1c8d4b0`](https://github.com/nelitow/fuels-wallet-fork/commit/a1c8d4b01295408fab5b310e2a124f8997becc59)]:
-  - @nelitow-fuel/connections@4.20.0
-
-## 4.19.0
-
-### Minor Changes
-
-- [`ea138c4b`](https://github.com/nelitow/fuels-wallet-fork/commit/ea138c4b5afcfd358bd29c89996cda449f3f315b) Thanks [@nelitow](https://github.com/nelitow)! - Add comprehensive test utilities and monitoring features
-
-### Patch Changes
-
-- [#112](https://github.com/nelitow/fuels-wallet-fork/pull/112) [`eef0950a`](https://github.com/nelitow/fuels-wallet-fork/commit/eef0950aaffca4d86dcdfd3321ae46137246c46c) Thanks [@nelitow](https://github.com/nelitow)! - Fix imports
-
-- Updated dependencies [[`ea138c4b`](https://github.com/nelitow/fuels-wallet-fork/commit/ea138c4b5afcfd358bd29c89996cda449f3f315b)]:
-  - @nelitow-fuel/connections@4.19.0
-
-## 4.18.4
-
-### Patch Changes
-
-- [#110](https://github.com/nelitow/fuels-wallet-fork/pull/110) [`be54e606`](https://github.com/nelitow/fuels-wallet-fork/commit/be54e6060aa37bc947da5831f3740ac2d069517a) Thanks [@nelitow](https://github.com/nelitow)! - asd
+- [#1916](https://github.com/FuelLabs/fuels-wallet/pull/1916) [`4b38db67`](https://github.com/FuelLabs/fuels-wallet/commit/4b38db67124a627e478ba302998567c609ab0055) Thanks [@nelitow](https://github.com/nelitow)! - fix: include dryRun before showing transaction on approval screen coming from dapp
 
 - Updated dependencies []:
-  - @nelitow-fuel/connections@4.18.4
-  - @nelitow-fuel/playwright-utils@4.18.4
+  - @nelitow-fuel/connections@0.55.2
+  - @fuels/playwright-utils@0.55.2
 
-## 4.18.3
+## 0.55.1
 
 ### Patch Changes
 
-- [`83e04bf8`](https://github.com/nelitow/fuels-wallet-fork/commit/83e04bf8e111bb0c8da2cf8d6dc27311fbc6f58b) Thanks [@nelitow](https://github.com/nelitow)! - fix paths
+- [#1911](https://github.com/FuelLabs/fuels-wallet/pull/1911) [`e29d09a4`](https://github.com/FuelLabs/fuels-wallet/commit/e29d09a4a329add71c8f830595c22772e75da87d) Thanks [@nelitow](https://github.com/nelitow)! - fix: Rely on TS-SDK to define fee of a maximum balance transaction
+
+- [#1914](https://github.com/FuelLabs/fuels-wallet/pull/1914) [`ee88a271`](https://github.com/FuelLabs/fuels-wallet/commit/ee88a27193886818237a90b99db6415986701170) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - fix: support hashable messages that are bytes only
 
 - Updated dependencies []:
-  - @nelitow-fuel/connections@4.18.3
-  - @nelitow-fuel/playwright-utils@4.18.3
-
-## 4.18.2
-
-### Patch Changes
-
-- [#107](https://github.com/nelitow/fuels-wallet-fork/pull/107) [`a16c8b4b`](https://github.com/nelitow/fuels-wallet-fork/commit/a16c8b4b7017bd99a39df6711c2b980a4be374f0) Thanks [@nelitow](https://github.com/nelitow)! - nfts words
-
-- Updated dependencies []:
-  - @nelitow-fuel/connections@4.18.2
-  - @nelitow-fuel/playwright-utils@4.18.2
-
-## 4.18.1
-
-### Patch Changes
-
-- [#105](https://github.com/nelitow/fuels-wallet-fork/pull/105) [`b9c0e059`](https://github.com/nelitow/fuels-wallet-fork/commit/b9c0e059455f004a045549fa468c643972c57baa) Thanks [@nelitow](https://github.com/nelitow)! - trasn to tx
-
-- Updated dependencies []:
-  - @nelitow-fuel/connections@4.18.1
-  - @nelitow-fuel/playwright-utils@4.18.1
-
-## 4.18.0
-
-### Minor Changes
-
-- [#102](https://github.com/nelitow/fuels-wallet-fork/pull/102) [`9ead87a8`](https://github.com/nelitow/fuels-wallet-fork/commit/9ead87a808a91b7e51d3611d64983f28438271fe) Thanks [@nelitow](https://github.com/nelitow)! - thuingy
-
-### Patch Changes
-
-- [#104](https://github.com/nelitow/fuels-wallet-fork/pull/104) [`c48e9698`](https://github.com/nelitow/fuels-wallet-fork/commit/c48e96983f30fb7996c9a5f8fd8de4fcaacae601) Thanks [@nelitow](https://github.com/nelitow)! - lolokakaka
-
-- Updated dependencies []:
-  - @nelitow-fuel/connections@4.18.0
-  - @fuels/playwright-utils@4.18.0
-
-## 4.17.0
-
-### Minor Changes
-
-- [#100](https://github.com/nelitow/fuels-wallet-fork/pull/100) [`c6ac40eb`](https://github.com/nelitow/fuels-wallet-fork/commit/c6ac40ebe3b6a61fd8ebe7ff182a34c6227df50c) Thanks [@nelitow](https://github.com/nelitow)! - css blog
-
-- [#98](https://github.com/nelitow/fuels-wallet-fork/pull/98) [`749002c7`](https://github.com/nelitow/fuels-wallet-fork/commit/749002c7408c0c71d2befaee4f4f5182976609e9) Thanks [@nelitow](https://github.com/nelitow)! - bling blong
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @nelitow-fuel/connections@4.17.0
-  - @fuels/playwright-utils@4.17.0
-
-## 4.16.0
-
-### Minor Changes
-
-- [#98](https://github.com/nelitow/fuels-wallet-fork/pull/98) [`749002c7`](https://github.com/nelitow/fuels-wallet-fork/commit/749002c7408c0c71d2befaee4f4f5182976609e9) Thanks [@nelitow](https://github.com/nelitow)! - bling blong
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @nelitow-fuel/connections@4.16.0
-  - @fuels/playwright-utils@4.16.0
-
-## 4.15.0
-
-### Minor Changes
-
-- [#96](https://github.com/nelitow/fuels-wallet-fork/pull/96) [`7d90fe73`](https://github.com/nelitow/fuels-wallet-fork/commit/7d90fe736a5f3e64f4c50789a75bfe8885b70b3f) Thanks [@nelitow](https://github.com/nelitow)! - 123 feature!!!
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @nelitow-fuel/connections@4.15.0
-  - @fuels/playwright-utils@4.15.0
-
-## 4.14.0
-
-### Minor Changes
-
-- [#94](https://github.com/nelitow/fuels-wallet-fork/pull/94) [`22ab89cd`](https://github.com/nelitow/fuels-wallet-fork/commit/22ab89cd1f1e0604019ac2a06f4084e19e1bd57c) Thanks [@nelitow](https://github.com/nelitow)! - Pifarifo
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @nelitow-fuel/connections@4.14.0
-  - @fuels/playwright-utils@4.14.0
-
-## 4.13.0
-
-### Minor Changes
-
-- [#92](https://github.com/nelitow/fuels-wallet-fork/pull/92) [`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- Updated dependencies [[`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f), [`c05ae2c5`](https://github.com/nelitow/fuels-wallet-fork/commit/c05ae2c5365c875acf5833302b907e333c82208f)]:
-  - @nelitow-fuel/connections@4.13.0
-  - @fuels/playwright-utils@4.13.0
-
-## 4.12.0
-
-### Minor Changes
-
-- [#90](https://github.com/nelitow/fuels-wallet-fork/pull/90) [`437ad939`](https://github.com/nelitow/fuels-wallet-fork/commit/437ad939ecb079ae7b2d6e29768a396503150e24) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- Updated dependencies [[`437ad939`](https://github.com/nelitow/fuels-wallet-fork/commit/437ad939ecb079ae7b2d6e29768a396503150e24), [`437ad939`](https://github.com/nelitow/fuels-wallet-fork/commit/437ad939ecb079ae7b2d6e29768a396503150e24)]:
-  - @nelitow-fuel/connections@4.12.0
-  - @fuels/playwright-utils@4.12.0
-
-## 4.11.0
-
-### Minor Changes
-
-- [#88](https://github.com/nelitow/fuels-wallet-fork/pull/88) [`0cc752fd`](https://github.com/nelitow/fuels-wallet-fork/commit/0cc752fd0f0b57590144dafe4c3822e3e9422ade) Thanks [@nelitow](https://github.com/nelitow)! - Minor general fixes
-
-### Patch Changes
-
-- [#89](https://github.com/nelitow/fuels-wallet-fork/pull/89) [`f74bb7c3`](https://github.com/nelitow/fuels-wallet-fork/commit/f74bb7c3c6ccb21efec4d9ce7ad6e6a25df6a86d) Thanks [@nelitow](https://github.com/nelitow)! - change wording
-
-- Updated dependencies [[`0cc752fd`](https://github.com/nelitow/fuels-wallet-fork/commit/0cc752fd0f0b57590144dafe4c3822e3e9422ade)]:
-  - @nelitow-fuel/connections@4.11.0
-  - @fuels/playwright-utils@4.11.0
-
-## 4.10.0
-
-### Minor Changes
-
-- [`ae8afc1f`](https://github.com/FuelLabs/fuels-wallet/commit/ae8afc1fc2d2106d59bb2e37ba2d828ce4fae755) Thanks [@nelitow](https://github.com/nelitow)! - Added ! to title
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.10.0
-  - @fuels/playwright-utils@4.10.0
-
-## 4.9.0
-
-### Minor Changes
-
-- ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.9.0
-  - @fuels/playwright-utils@4.9.0
-
-## 4.8.1
-
-### Patch Changes
-
-- [`5fd5f596`](https://github.com/FuelLabs/fuels-wallet/commit/5fd5f596d0095b1215a84236e888df78da4e6aeb) Thanks [@nelitow](https://github.com/nelitow)! - Change working on copy button.
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.8.1
-  - @fuels/playwright-utils@4.8.1
-
-## 4.8.0
-
-### Minor Changes
-
-- [`642d09e6`](https://github.com/FuelLabs/fuels-wallet/commit/642d09e62df0a0993623979c9b62e94a0cf49774) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- [`642d09e6`](https://github.com/FuelLabs/fuels-wallet/commit/642d09e62df0a0993623979c9b62e94a0cf49774) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies [[`642d09e6`](https://github.com/FuelLabs/fuels-wallet/commit/642d09e62df0a0993623979c9b62e94a0cf49774), [`642d09e6`](https://github.com/FuelLabs/fuels-wallet/commit/642d09e62df0a0993623979c9b62e94a0cf49774)]:
-  - @fuel-wallet/connections@4.8.0
-  - @fuels/playwright-utils@4.8.0
-
-## 4.7.0
-
-### Minor Changes
-
-- [`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- [`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies [[`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf), [`bcc0780e`](https://github.com/FuelLabs/fuels-wallet/commit/bcc0780e153bb9006f7387e9352832a840981fdf)]:
-  - @fuel-wallet/connections@4.7.0
-  - @fuels/playwright-utils@4.7.0
-
-## 4.6.0
-
-### Minor Changes
-
-- [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-- [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-- [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-- [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-- [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-- [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-- [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-- [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies [[`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b), [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f), [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f), [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0), [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912), [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792), [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553), [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86), [`b4fc11f5`](https://github.com/FuelLabs/fuels-wallet/commit/b4fc11f55393d9ef56d5da59c83fd47ad105290b), [`68ca9d15`](https://github.com/FuelLabs/fuels-wallet/commit/68ca9d15e15eabb5e78dbe4d406b039d9e3d852f), [`cedef7b8`](https://github.com/FuelLabs/fuels-wallet/commit/cedef7b818c82a9c1a9bca389579053492def90f), [`a52b9e6e`](https://github.com/FuelLabs/fuels-wallet/commit/a52b9e6e85564080458ef844e9848821ccc4a3d0), [`1d55be52`](https://github.com/FuelLabs/fuels-wallet/commit/1d55be52ca8276c4dde6b377646f610bf9708912), [`ca39adca`](https://github.com/FuelLabs/fuels-wallet/commit/ca39adca1816cb55eb80ec41218523cc1f41f792), [`054477b9`](https://github.com/FuelLabs/fuels-wallet/commit/054477b93cf0e23477cec691d015dd8b42361553), [`ee00b6b5`](https://github.com/FuelLabs/fuels-wallet/commit/ee00b6b564d6600afec65f291087d1c8854cda86)]:
-  - @fuel-wallet/connections@4.6.0
-  - @fuels/playwright-utils@4.6.0
-
-## 4.5.0
-
-### Minor Changes
-
-- [`aa641e09`](https://github.com/FuelLabs/fuels-wallet/commit/aa641e0936f5accef731ff1d5711366bf222c0db) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- [`aa641e09`](https://github.com/FuelLabs/fuels-wallet/commit/aa641e0936f5accef731ff1d5711366bf222c0db) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies [[`aa641e09`](https://github.com/FuelLabs/fuels-wallet/commit/aa641e0936f5accef731ff1d5711366bf222c0db), [`aa641e09`](https://github.com/FuelLabs/fuels-wallet/commit/aa641e0936f5accef731ff1d5711366bf222c0db)]:
-  - @fuel-wallet/connections@4.5.0
-  - @fuels/playwright-utils@4.5.0
-
-## 4.4.0
-
-### Minor Changes
-
-- [`6179b009`](https://github.com/FuelLabs/fuels-wallet/commit/6179b0097ffacade707a28ed65210e5c41047a5b) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- [`6179b009`](https://github.com/FuelLabs/fuels-wallet/commit/6179b0097ffacade707a28ed65210e5c41047a5b) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies [[`6179b009`](https://github.com/FuelLabs/fuels-wallet/commit/6179b0097ffacade707a28ed65210e5c41047a5b), [`6179b009`](https://github.com/FuelLabs/fuels-wallet/commit/6179b0097ffacade707a28ed65210e5c41047a5b)]:
-  - @fuel-wallet/connections@4.4.0
-  - @fuels/playwright-utils@4.4.0
-
-## 4.3.0
-
-### Minor Changes
-
-- [`990077df`](https://github.com/FuelLabs/fuels-wallet/commit/990077df45afce5920dcd320a37d6b9a622cb9be) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- [`990077df`](https://github.com/FuelLabs/fuels-wallet/commit/990077df45afce5920dcd320a37d6b9a622cb9be) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies [[`990077df`](https://github.com/FuelLabs/fuels-wallet/commit/990077df45afce5920dcd320a37d6b9a622cb9be), [`990077df`](https://github.com/FuelLabs/fuels-wallet/commit/990077df45afce5920dcd320a37d6b9a622cb9be)]:
-  - @fuel-wallet/connections@4.3.0
-  - @fuels/playwright-utils@4.3.0
-
-## 4.2.0
-
-### Minor Changes
-
-- [`2cb629a3`](https://github.com/FuelLabs/fuels-wallet/commit/2cb629a3a5f13fe86d1c35aabe5aecbf6c7f9466) Thanks [@nelitow](https://github.com/nelitow)! - ## Bacon Wallet Rebranding
-
-  - Changed app name to Bacon Wallet
-  - Updated icons and logos with bacon-themed designs
-  - Enhanced UI color scheme with bacon-inspired colors
-
-### Patch Changes
-
-- [`2cb629a3`](https://github.com/FuelLabs/fuels-wallet/commit/2cb629a3a5f13fe86d1c35aabe5aecbf6c7f9466) Thanks [@nelitow](https://github.com/nelitow)! - # Shared Improvements
-
-  1. Standardized error handling across packages
-  2. Updated dependencies to latest versions
-  3. Improved cross-package type consistency
-
-  > This update affects multiple packages to ensure compatibility
-  > between all wallet components.
-
-- Updated dependencies [[`2cb629a3`](https://github.com/FuelLabs/fuels-wallet/commit/2cb629a3a5f13fe86d1c35aabe5aecbf6c7f9466), [`2cb629a3`](https://github.com/FuelLabs/fuels-wallet/commit/2cb629a3a5f13fe86d1c35aabe5aecbf6c7f9466)]:
-  - @fuel-wallet/connections@4.2.0
-  - @fuels/playwright-utils@4.2.0
-
-## 4.1.10
-
-### Patch Changes
-
-- [`c3f4c40a`](https://github.com/FuelLabs/fuels-wallet/commit/c3f4c40a0249e00129c55f35486fb5a020c2e3f9) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.10
-  - @fuels/playwright-utils@4.1.10
-
-## 4.1.9
-
-### Patch Changes
-
-- [`9513e5b6`](https://github.com/FuelLabs/fuels-wallet/commit/9513e5b6851ce0745c3e035e2cc1f9cf221b1669) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.9
-  - @fuels/playwright-utils@4.1.9
-
-## 4.1.8
-
-### Patch Changes
-
-- [`303abee2`](https://github.com/FuelLabs/fuels-wallet/commit/303abee205759ceec1a5d3249557614592a2a3ff) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.8
-  - @fuels/playwright-utils@4.1.8
-
-## 4.1.7
-
-### Patch Changes
-
-- [`d8f24f8c`](https://github.com/FuelLabs/fuels-wallet/commit/d8f24f8c941794f56408ed1b40e646a4f72b9926) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.7
-  - @fuels/playwright-utils@4.1.7
-
-## 4.1.6
-
-### Patch Changes
-
-- [`86a53cc5`](https://github.com/FuelLabs/fuels-wallet/commit/86a53cc589b4253c3fddc0034127211d08bc6886) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.6
-  - @fuels/playwright-utils@4.1.6
-
-## 4.1.5
-
-### Patch Changes
-
-- [`2e3b528f`](https://github.com/FuelLabs/fuels-wallet/commit/2e3b528fa3322b8edbd743db2badfd2b7905093c) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.5
-  - @fuels/playwright-utils@4.1.5
-
-## 4.1.4
-
-### Patch Changes
-
-- [`a1c01928`](https://github.com/FuelLabs/fuels-wallet/commit/a1c0192866ba692657c951ccb5b4363e93776551) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.4
-  - @fuels/playwright-utils@4.1.4
-
-## 4.1.3
-
-### Patch Changes
-
-- [`723cd816`](https://github.com/FuelLabs/fuels-wallet/commit/723cd8164a0c47d8934ac0fe7fcd55d634f2e8b4) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.3
-  - @fuels/playwright-utils@4.1.3
-
-## 4.1.2
-
-### Patch Changes
-
-- [`e1ee4a7d`](https://github.com/FuelLabs/fuels-wallet/commit/e1ee4a7d7f0ce8d632a008a8526434810b47d6ee) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.2
-  - @fuels/playwright-utils@4.1.2
-
-## 4.1.1
-
-### Patch Changes
-
-- [`29f668e7`](https://github.com/FuelLabs/fuels-wallet/commit/29f668e789e0f1e0443fa7054d4758aeb1a86707) Thanks [@nelitow](https://github.com/nelitow)! - Added Bacon Wallet branding for testing the release process
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.1
-  - @fuels/playwright-utils@4.1.1
-
-## 4.1.0
-
-### Minor Changes
-
-- [`ee6c40d6`](https://github.com/FuelLabs/fuels-wallet/commit/ee6c40d6c6e0727386d1e8efb97784c82facd2b7) Thanks [@nelitow](https://github.com/nelitow)! - 123
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.1.0
-  - @fuels/playwright-utils@4.1.0
-
-## 4.0.0
-
-### Major Changes
-
-- [`f63da0c6`](https://github.com/FuelLabs/fuels-wallet/commit/f63da0c6f4915b5ff05a8c6e1390d108f329a0a2) Thanks [@nelitow](https://github.com/nelitow)! - asd
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@4.0.0
-  - @fuels/playwright-utils@4.0.0
-
-## 3.0.1
-
-### Patch Changes
-
-- [`fd3c3417`](https://github.com/FuelLabs/fuels-wallet/commit/fd3c3417e08b0b762fa6a4bb029369bb0067c955) Thanks [@nelitow](https://github.com/nelitow)! - bro change
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@3.0.1
-  - @fuels/playwright-utils@3.0.1
-
-## 3.0.0
-
-### Major Changes
-
-- [`cdf2f26b`](https://github.com/FuelLabs/fuels-wallet/commit/cdf2f26b6607b10e5e18225e02e096e13f425334) Thanks [@nelitow](https://github.com/nelitow)! - Jason wallet!!!!!!
-
-### Patch Changes
-
-- Updated dependencies [[`cdf2f26b`](https://github.com/FuelLabs/fuels-wallet/commit/cdf2f26b6607b10e5e18225e02e096e13f425334)]:
-  - @fuel-wallet/connections@3.0.0
-  - @fuels/playwright-utils@3.0.0
-
-## 2.0.0
-
-### Major Changes
-
-- [`c8344e3b`](https://github.com/FuelLabs/fuels-wallet/commit/c8344e3bf0ad98bbd1454a9b602445b72757178f) Thanks [@nelitow](https://github.com/nelitow)! - Jason Wallet name change.
-
-### Minor Changes
-
-- [`5b753d91`](https://github.com/FuelLabs/fuels-wallet/commit/5b753d918ac47abc3e4f41d2fa60ce34c86394df) Thanks [@nelitow](https://github.com/nelitow)! - Back from bacon
-
-### Patch Changes
-
-- Updated dependencies [[`c8344e3b`](https://github.com/FuelLabs/fuels-wallet/commit/c8344e3bf0ad98bbd1454a9b602445b72757178f)]:
-  - @fuel-wallet/connections@2.0.0
-  - @fuels/playwright-utils@2.0.0
-
-## 1.0.0
-
-### Major Changes
-
-- [`7bfe7276`](https://github.com/FuelLabs/fuels-wallet/commit/7bfe72760a5a75a752d54288c31819fa70aae84f) Thanks [@nelitow](https://github.com/nelitow)! - bacon4
-
-### Patch Changes
-
-- Updated dependencies []:
-  - @fuel-wallet/connections@1.0.0
-  - @fuels/playwright-utils@1.0.0
+  - @nelitow-fuel/connections@0.55.1
+  - @fuels/playwright-utils@0.55.1
 
 ## 0.55.0
 
 ### Minor Changes
 
-- [`5175ed38`](https://github.com/FuelLabs/fuels-wallet/commit/5175ed387831f8e71bc0114c32ba990d6f7308ef) Thanks [@nelitow](https://github.com/nelitow)! - Jason Wallet!
+- [#1904](https://github.com/FuelLabs/fuels-wallet/pull/1904) [`6dea2d0a`](https://github.com/FuelLabs/fuels-wallet/commit/6dea2d0a6f4e58ab848b11756767baa81b7a893e) Thanks [@Vitosoaresp](https://github.com/Vitosoaresp)! - feat: Add integration with BakoID in "Send" and "TransactionView" screens
 
-- [`750fef74`](https://github.com/FuelLabs/fuels-wallet/commit/750fef74ad29b7034963c3673bdeb9e079c62e0f) Thanks [@nelitow](https://github.com/nelitow)! - bacon
+- [#1894](https://github.com/FuelLabs/fuels-wallet/pull/1894) [`2ed8e18c`](https://github.com/FuelLabs/fuels-wallet/commit/2ed8e18c67f6ef55d63a134e6e14ae4eebcbee93) Thanks [@nelitow](https://github.com/nelitow)! - fix: Blinking error feedback in the send screen.
+
+- [#1897](https://github.com/FuelLabs/fuels-wallet/pull/1897) [`620a358c`](https://github.com/FuelLabs/fuels-wallet/commit/620a358c2e9458a6d4b254b38c3b260901baf969) Thanks [@nelitow](https://github.com/nelitow)! - feat: Added a transaction verification step that makes sure the transaction being viewed is the same as the one being signed.
+
+- [#1899](https://github.com/FuelLabs/fuels-wallet/pull/1899) [`0ca3d69a`](https://github.com/FuelLabs/fuels-wallet/commit/0ca3d69a01209e7a3b7d8d93a14ed82184385925) Thanks [@nelitow](https://github.com/nelitow)! - Enable the signature of HashableMessages
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.55.0
+  - @nelitow-fuel/connections@0.55.0
   - @fuels/playwright-utils@0.55.0
 
 ## 0.54.0
@@ -702,7 +53,7 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.54.0
+  - @nelitow-fuel/connections@0.54.0
   - @fuels/playwright-utils@0.54.0
 
 ## 0.53.0
@@ -714,7 +65,7 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.53.0
+  - @nelitow-fuel/connections@0.53.0
   - @fuels/playwright-utils@0.53.0
 
 ## 0.52.0
@@ -731,7 +82,7 @@
 
 - Updated dependencies [[`b080e659`](https://github.com/FuelLabs/fuels-wallet/commit/b080e65952f69936bd73b49b79615f17f625c73d)]:
   - @fuels/playwright-utils@0.52.0
-  - @fuel-wallet/connections@0.52.0
+  - @nelitow-fuel/connections@0.52.0
 
 ## 0.51.1
 
@@ -740,7 +91,7 @@
 - [#1879](https://github.com/FuelLabs/fuels-wallet/pull/1879) [`abb9a79f`](https://github.com/FuelLabs/fuels-wallet/commit/abb9a79f22cf1814ee16788b78723cf3b8567fbb) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: show Withdraw operation when it has MESSAGE_OUT receipt + improve order of assets in Send Page
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.51.1
+  - @nelitow-fuel/connections@0.51.1
   - @fuels/playwright-utils@0.51.1
 
 ## 0.51.0
@@ -757,7 +108,7 @@
 
 - Updated dependencies [[`01202223`](https://github.com/FuelLabs/fuels-wallet/commit/012022232d70a2c2e5cd51a99725d8dafd85a9ed)]:
   - @fuels/playwright-utils@0.51.0
-  - @fuel-wallet/connections@0.51.0
+  - @nelitow-fuel/connections@0.51.0
 
 ## 0.50.2
 
@@ -766,7 +117,7 @@
 - [#1866](https://github.com/FuelLabs/fuels-wallet/pull/1866) [`4c201edf`](https://github.com/FuelLabs/fuels-wallet/commit/4c201edfd39b57dd0cae37da84a780e66afd99fa) Thanks [@helciofranco](https://github.com/helciofranco)! - fix: improve precision handling for USD conversion with really low rates (e.g. 0.0000007427)
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.50.2
+  - @nelitow-fuel/connections@0.50.2
   - @fuels/playwright-utils@0.50.2
 
 ## 0.50.1
@@ -778,7 +129,7 @@
 - [#1863](https://github.com/FuelLabs/fuels-wallet/pull/1863) [`f82963e1`](https://github.com/FuelLabs/fuels-wallet/commit/f82963e1c0cc47b715085a5a95cacebdc9573a94) Thanks [@helciofranco](https://github.com/helciofranco)! - fix: improve precision handling for USD conversion with low rates (e.g. $0.0123)
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.50.1
+  - @nelitow-fuel/connections@0.50.1
   - @fuels/playwright-utils@0.50.1
 
 ## 0.50.0
@@ -797,7 +148,7 @@
 
 - Updated dependencies [[`23369813`](https://github.com/FuelLabs/fuels-wallet/commit/23369813cc0cb40d369f72ab4e4c387301efd13d)]:
   - @fuels/playwright-utils@0.50.0
-  - @fuel-wallet/connections@0.50.0
+  - @nelitow-fuel/connections@0.50.0
 
 ## 0.49.0
 
@@ -812,7 +163,7 @@
 - [#1799](https://github.com/FuelLabs/fuels-wallet/pull/1799) [`118f4f44`](https://github.com/FuelLabs/fuels-wallet/commit/118f4f4467f1ce8bb267e18a207c298c50c061b9) Thanks [@arthurgeron](https://github.com/arthurgeron)! - feat: send common errors automatically, instead of asking user to review
 
 - Updated dependencies [[`32950ceb`](https://github.com/FuelLabs/fuels-wallet/commit/32950cebefc5e207f6c746bed10aa4daa72cef62), [`32950ceb`](https://github.com/FuelLabs/fuels-wallet/commit/32950cebefc5e207f6c746bed10aa4daa72cef62)]:
-  - @fuel-wallet/connections@0.49.0
+  - @nelitow-fuel/connections@0.49.0
   - @fuels/playwright-utils@0.49.0
 
 ## 0.48.3
@@ -821,14 +172,14 @@
 
 - Updated dependencies [[`58797edd`](https://github.com/FuelLabs/fuels-wallet/commit/58797eddf31deb94c89da335423ca73d4f852627)]:
   - @fuels/playwright-utils@0.48.3
-  - @fuel-wallet/connections@0.48.3
+  - @nelitow-fuel/connections@0.48.3
 
 ## 0.48.2
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.48.2
+  - @nelitow-fuel/connections@0.48.2
   - @fuels/playwright-utils@0.48.2
 
 ## 0.48.1
@@ -838,7 +189,7 @@
 - [#1829](https://github.com/FuelLabs/fuels-wallet/pull/1829) [`72366976`](https://github.com/FuelLabs/fuels-wallet/commit/723669768e9f3a28643364e42ebc0fa49f66385b) Thanks [@arthurgeron](https://github.com/arthurgeron)! - fix: nft list getting cut off
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.48.1
+  - @nelitow-fuel/connections@0.48.1
   - @fuels/playwright-utils@0.48.1
 
 ## 0.48.0
@@ -864,7 +215,7 @@
 - [#1805](https://github.com/FuelLabs/fuels-wallet/pull/1805) [`f653d59f`](https://github.com/FuelLabs/fuels-wallet/commit/f653d59f1678c04641dea923a7ac9ed02e365d47) Thanks [@arthurgeron](https://github.com/arthurgeron)! - fix: jest unit tests
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.48.0
+  - @nelitow-fuel/connections@0.48.0
   - @fuels/playwright-utils@0.48.0
 
 ## 0.47.1
@@ -876,7 +227,7 @@
 - [#1783](https://github.com/FuelLabs/fuels-wallet/pull/1783) [`5680b65b`](https://github.com/FuelLabs/fuels-wallet/commit/5680b65b8bf09c42eadc4a5342bdae905c577351) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - fix: make send screen flows more stable by relying less on form changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.47.1
+  - @nelitow-fuel/connections@0.47.1
   - @fuels/playwright-utils@0.47.1
 
 ## 0.47.0
@@ -898,7 +249,7 @@
 - [#1778](https://github.com/FuelLabs/fuels-wallet/pull/1778) [`6ddb0014`](https://github.com/FuelLabs/fuels-wallet/commit/6ddb0014464f9e536c32b4b5eeedccaa93c6befb) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: remove intentional longer loading states to avoid blinking.
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.47.0
+  - @nelitow-fuel/connections@0.47.0
   - @fuels/playwright-utils@0.47.0
 
 ## 0.46.1
@@ -908,7 +259,7 @@
 - [#1753](https://github.com/FuelLabs/fuels-wallet/pull/1753) [`22975202`](https://github.com/FuelLabs/fuels-wallet/commit/22975202ae37ca941f27df825bdea11905cf3ddb) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - chore: remove comment
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.46.1
+  - @nelitow-fuel/connections@0.46.1
   - @fuels/playwright-utils@0.46.1
 
 ## 0.46.0
@@ -922,7 +273,7 @@
 - [#1748](https://github.com/FuelLabs/fuels-wallet/pull/1748) [`cc953d4f`](https://github.com/FuelLabs/fuels-wallet/commit/cc953d4f62402895970140d243a3832a374aaa46) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - fix: clean opfs when logging out
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.46.0
+  - @nelitow-fuel/connections@0.46.0
   - @fuels/playwright-utils@0.46.0
 
 ## 0.45.0
@@ -939,7 +290,7 @@
 
 - Updated dependencies [[`197d1758`](https://github.com/FuelLabs/fuels-wallet/commit/197d1758701392bf7ab9efc97fbed3ca8d9ac567)]:
   - @fuels/playwright-utils@0.45.0
-  - @fuel-wallet/connections@0.45.0
+  - @nelitow-fuel/connections@0.45.0
 
 ## 0.44.1
 
@@ -952,7 +303,7 @@
 - [#1713](https://github.com/FuelLabs/fuels-wallet/pull/1713) [`ed5aaddc`](https://github.com/FuelLabs/fuels-wallet/commit/ed5aaddc225d5aa6817b0f637d1a979d5ef77095) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: cleaning now waits for localStorage
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.44.1
+  - @nelitow-fuel/connections@0.44.1
   - @fuels/playwright-utils@0.44.1
 
 ## 0.44.0
@@ -989,7 +340,7 @@
 
 - Updated dependencies [[`473067c9`](https://github.com/FuelLabs/fuels-wallet/commit/473067c9c3c442b3f51f28c10b99edd1827f1cad), [`55606980`](https://github.com/FuelLabs/fuels-wallet/commit/55606980a9204d6f21fbb8c290b9b1c6ba2e7dcf)]:
   - @fuels/playwright-utils@0.44.0
-  - @fuel-wallet/connections@0.44.0
+  - @nelitow-fuel/connections@0.44.0
 
 ## 0.43.0
 
@@ -1003,7 +354,7 @@
 
 - [#1680](https://github.com/FuelLabs/fuels-wallet/pull/1680) [`21eb5cd8`](https://github.com/FuelLabs/fuels-wallet/commit/21eb5cd8699002d7d46c57432f6c9e3cfa89ea03) Thanks [@helciofranco](https://github.com/helciofranco)! - Fixed amount display for large values when reviewing a transaction request.
 
-- [#1684](https://github.com/FuelLabs/fuels-wallet/pull/1684) [`882f3ea3`](https://github.com/FuelLabs/fuels-wallet/commit/882f3ea36ae4167e4b8c563e2c3734b01dbf0c17) Thanks [@helciofranco](https://github.com/helciofranco)! - Fire event to dApps when editing connections on the Jason Wallet.
+- [#1684](https://github.com/FuelLabs/fuels-wallet/pull/1684) [`882f3ea3`](https://github.com/FuelLabs/fuels-wallet/commit/882f3ea36ae4167e4b8c563e2c3734b01dbf0c17) Thanks [@helciofranco](https://github.com/helciofranco)! - Fire event to dApps when editing connections on the Fuel Wallet.
 
 - [#1683](https://github.com/FuelLabs/fuels-wallet/pull/1683) [`a7e6e48b`](https://github.com/FuelLabs/fuels-wallet/commit/a7e6e48bb0eec410b38a262486a3f2860466a738) Thanks [@helciofranco](https://github.com/helciofranco)! - Fix feedback when user has insufficient ETH to cover fees.
 
@@ -1012,7 +363,7 @@
 - [#1683](https://github.com/FuelLabs/fuels-wallet/pull/1683) [`a7e6e48b`](https://github.com/FuelLabs/fuels-wallet/commit/a7e6e48bb0eec410b38a262486a3f2860466a738) Thanks [@helciofranco](https://github.com/helciofranco)! - Fix large amounts breaking the UI on the homescreen.
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.43.0
+  - @nelitow-fuel/connections@0.43.0
   - @fuels/playwright-utils@0.43.0
 
 ## 0.42.3
@@ -1022,7 +373,7 @@
 - [#1672](https://github.com/FuelLabs/fuels-wallet/pull/1672) [`e187dc50`](https://github.com/FuelLabs/fuels-wallet/commit/e187dc50a03fd0e42b7ab85a792b97b9fb23a021) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - chore: change title/button text of Approve transaction screen
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.42.3
+  - @nelitow-fuel/connections@0.42.3
   - @fuels/playwright-utils@0.42.3
 
 ## 0.42.2
@@ -1032,7 +383,7 @@
 - [#1667](https://github.com/FuelLabs/fuels-wallet/pull/1667) [`45de3e1f`](https://github.com/FuelLabs/fuels-wallet/commit/45de3e1f1fa5bd8638c39622f49f6a64a2e74d1d) Thanks [@rodrigobranas](https://github.com/rodrigobranas)! - fix wallet reset when fetch account returns undefined
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.42.2
+  - @nelitow-fuel/connections@0.42.2
   - @fuels/playwright-utils@0.42.2
 
 ## 0.42.1
@@ -1042,7 +393,7 @@
 - [#1657](https://github.com/FuelLabs/fuels-wallet/pull/1657) [`2e3fa771`](https://github.com/FuelLabs/fuels-wallet/commit/2e3fa7712050ff5ebb8c136543dde4b027da3cc1) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - fix: hotfix for not allowing send to ANY asset address
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.42.1
+  - @nelitow-fuel/connections@0.42.1
   - @fuels/playwright-utils@0.42.1
 
 ## 0.42.0
@@ -1067,7 +418,7 @@
 
 - Updated dependencies [[`8c9edd37`](https://github.com/FuelLabs/fuels-wallet/commit/8c9edd3785d77a510519d1a50b290e8c67a17b21)]:
   - @fuels/playwright-utils@0.42.0
-  - @fuel-wallet/connections@0.42.0
+  - @nelitow-fuel/connections@0.42.0
 
 ## 0.41.1
 
@@ -1076,7 +427,7 @@
 - [#1648](https://github.com/FuelLabs/fuels-wallet/pull/1648) [`e63d6eba`](https://github.com/FuelLabs/fuels-wallet/commit/e63d6ebaecf68340e2b0cd690056cea2bd317b29) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: improve nft support + dont allow sending funds to assetId address
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.41.1
+  - @nelitow-fuel/connections@0.41.1
   - @fuels/playwright-utils@0.41.1
 
 ## 0.41.0
@@ -1090,7 +441,7 @@
 - [#1635](https://github.com/FuelLabs/fuels-wallet/pull/1635) [`448d6db2`](https://github.com/FuelLabs/fuels-wallet/commit/448d6db2f7ecf8dd53fd90c755b821aa1e4d0619) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Require chainId on add network
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.41.0
+  - @nelitow-fuel/connections@0.41.0
 
 ## 0.40.1
 
@@ -1099,7 +450,7 @@
 - [#1617](https://github.com/FuelLabs/fuels-wallet/pull/1617) [`3e754563`](https://github.com/FuelLabs/fuels-wallet/commit/3e75456306e43b2c6edf23869667d3dc1b54bfef) Thanks [@luizstacio](https://github.com/luizstacio)! - fix chrome runtim loader
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.40.1
+  - @nelitow-fuel/connections@0.40.1
 
 ## 0.40.0
 
@@ -1112,7 +463,7 @@
 - [#1612](https://github.com/FuelLabs/fuels-wallet/pull/1612) [`3a6f00a4`](https://github.com/FuelLabs/fuels-wallet/commit/3a6f00a45781a9f2a8f4b524cd561312f6cf1653) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Updated TOS
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.40.0
+  - @nelitow-fuel/connections@0.40.0
 
 ## 0.39.0
 
@@ -1138,7 +489,7 @@
 - [#1551](https://github.com/FuelLabs/fuels-wallet/pull/1551) [`fc87b6f3`](https://github.com/FuelLabs/fuels-wallet/commit/fc87b6f3c6bfcfa506c77f2f7365f2637fb2df77) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Fixed Edit Network screen not displaying correct information.
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.39.0
+  - @nelitow-fuel/connections@0.39.0
 
 ## 0.38.0
 
@@ -1151,14 +502,14 @@
 - [#1604](https://github.com/FuelLabs/fuels-wallet/pull/1604) [`dde6e3a7`](https://github.com/FuelLabs/fuels-wallet/commit/dde6e3a7c3b307daa01e173d8a861b85dcd16321) Thanks [@luizstacio](https://github.com/luizstacio)! - chore: update connectors and react version to 0.35.1
 
 - Updated dependencies [[`9020920d`](https://github.com/FuelLabs/fuels-wallet/commit/9020920d2b6f2b7402231c074236ba83c05fb827), [`72f57a3f`](https://github.com/FuelLabs/fuels-wallet/commit/72f57a3f97c329f0de65520d5c9f77f085c4f4b6)]:
-  - @fuel-wallet/connections@0.38.0
+  - @nelitow-fuel/connections@0.38.0
 
 ## 0.37.2
 
 ### Patch Changes
 
 - Updated dependencies [[`0f14e909`](https://github.com/FuelLabs/fuels-wallet/commit/0f14e9093f6157f10a619703a2d82c28f8dadf96)]:
-  - @fuel-wallet/connections@0.37.2
+  - @nelitow-fuel/connections@0.37.2
 
 ## 0.37.1
 
@@ -1177,7 +528,7 @@
 - [#1592](https://github.com/FuelLabs/fuels-wallet/pull/1592) [`7f562a81`](https://github.com/FuelLabs/fuels-wallet/commit/7f562a81cd28a1550fb992d0ef8def79ef7208b2) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - fix: fix wallet discounting fee from token value when sending tokens
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.37.1
+  - @nelitow-fuel/connections@0.37.1
 
 ## 0.37.0
 
@@ -1192,7 +543,7 @@
 - [#1570](https://github.com/FuelLabs/fuels-wallet/pull/1570) [`8e42400c`](https://github.com/FuelLabs/fuels-wallet/commit/8e42400c42e90fd1f7a42724fe5e217f5e058316) Thanks [@nelitow](https://github.com/nelitow)! - Improve account name colision verification
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.37.0
+  - @nelitow-fuel/connections@0.37.0
 
 ## 0.36.0
 
@@ -1207,7 +558,7 @@
 - [#1563](https://github.com/FuelLabs/fuels-wallet/pull/1563) [`41e0465e`](https://github.com/FuelLabs/fuels-wallet/commit/41e0465ecf70fddc8527ba2d7fbc1a4ce23e8938) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Fixed duplicated instance of services on browser session restore
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.36.0
+  - @nelitow-fuel/connections@0.36.0
 
 ## 0.35.0
 
@@ -1222,7 +573,7 @@
 - [#1554](https://github.com/FuelLabs/fuels-wallet/pull/1554) [`2fd6468f`](https://github.com/FuelLabs/fuels-wallet/commit/2fd6468fe66a59aa2d1569d611b3047e543a8208) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Added copy button to asset list
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.35.0
+  - @nelitow-fuel/connections@0.35.0
 
 ## 0.34.1
 
@@ -1235,7 +586,7 @@
 - [#1555](https://github.com/FuelLabs/fuels-wallet/pull/1555) [`3defdf83`](https://github.com/FuelLabs/fuels-wallet/commit/3defdf83c97b1a1bed1edf7a932557f69263b64c) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - chore: fix size of query complex
 
 - Updated dependencies [[`c38db1ab`](https://github.com/FuelLabs/fuels-wallet/commit/c38db1ab536b587226db90b6b872fd8c1b01c405)]:
-  - @fuel-wallet/connections@0.34.1
+  - @nelitow-fuel/connections@0.34.1
 
 ## 0.34.0
 
@@ -1252,7 +603,7 @@
 - [#1543](https://github.com/FuelLabs/fuels-wallet/pull/1543) [`a64d31f5`](https://github.com/FuelLabs/fuels-wallet/commit/a64d31f54beed711d88c118794a3b151eba4791e) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - chore: test version publish of multiple packages
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.34.0
+  - @nelitow-fuel/connections@0.34.0
 
 ## 0.33.1
 
@@ -1261,7 +612,7 @@
 - [#1540](https://github.com/FuelLabs/fuels-wallet/pull/1540) [`37d2052c`](https://github.com/FuelLabs/fuels-wallet/commit/37d2052cabe87dfcc5fefd26ec7e74dec7a8c5fc) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Consider blockExplorerUrl and bridgeUrl of network
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.33.1
+  - @nelitow-fuel/connections@0.33.1
 
 ## 0.33.0
 
@@ -1272,7 +623,7 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.33.0
+  - @nelitow-fuel/connections@0.33.0
 
 ## 0.32.1
 
@@ -1283,7 +634,7 @@
 - [#1531](https://github.com/FuelLabs/fuels-wallet/pull/1531) [`048597a5`](https://github.com/FuelLabs/fuels-wallet/commit/048597a512866a036f7ca0f5312ee540622c3cd2) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: watch networkUrl feature flag and add it to wallet
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.32.1
+  - @nelitow-fuel/connections@0.32.1
 
 ## 0.32.0
 
@@ -1300,7 +651,7 @@
 - [#1518](https://github.com/FuelLabs/fuels-wallet/pull/1518) [`9526e9a4`](https://github.com/FuelLabs/fuels-wallet/commit/9526e9a4b9e8cdb8ec7903ad3c2a27e0062ab2c9) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Added port disconnection detection and restart to `VaultCRXConnector`. Fixes wallet setup not finalizing
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.32.0
+  - @nelitow-fuel/connections@0.32.0
 
 ## 0.31.2
 
@@ -1309,14 +660,14 @@
 - [#1515](https://github.com/FuelLabs/fuels-wallet/pull/1515) [`92940a4e`](https://github.com/FuelLabs/fuels-wallet/commit/92940a4e709dd867819721110550fc58985cd31f) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - remove ignition
 
 - Updated dependencies [[`5f456f12`](https://github.com/FuelLabs/fuels-wallet/commit/5f456f12a3d42b2923382436beacfff79f19b3a1), [`92940a4e`](https://github.com/FuelLabs/fuels-wallet/commit/92940a4e709dd867819721110550fc58985cd31f)]:
-  - @fuel-wallet/connections@0.31.2
+  - @nelitow-fuel/connections@0.31.2
 
 ## 0.31.1
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.31.1
+  - @nelitow-fuel/connections@0.31.1
 
 ## 0.31.0
 
@@ -1337,7 +688,7 @@
 - [#1504](https://github.com/FuelLabs/fuels-wallet/pull/1504) [`67a14d8e`](https://github.com/FuelLabs/fuels-wallet/commit/67a14d8e67efba8ebf2191649970e3546192b05f) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Fixed being able to manually create custom assets with duplicate asset ids
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.31.0
+  - @nelitow-fuel/connections@0.31.0
 
 ## 0.30.0
 
@@ -1362,7 +713,7 @@
 - [#1492](https://github.com/FuelLabs/fuels-wallet/pull/1492) [`76c88c40`](https://github.com/FuelLabs/fuels-wallet/commit/76c88c40a852f7cae599e41b88709078d8fe4d00) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - upgrade database to remove assetId from primaryKey of assets table
 
 - Updated dependencies [[`698c272c`](https://github.com/FuelLabs/fuels-wallet/commit/698c272c05ffa99a3554af84db72550dfb97879d)]:
-  - @fuel-wallet/connections@0.30.0
+  - @nelitow-fuel/connections@0.30.0
 
 ## 0.29.1
 
@@ -1371,7 +722,7 @@
 - [#1489](https://github.com/FuelLabs/fuels-wallet/pull/1489) [`9f4334cd`](https://github.com/FuelLabs/fuels-wallet/commit/9f4334cd2c8d7f56bc2f101ddd3c052e0d1a4303) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: add db versioning
 
 - Updated dependencies [[`9f4334cd`](https://github.com/FuelLabs/fuels-wallet/commit/9f4334cd2c8d7f56bc2f101ddd3c052e0d1a4303)]:
-  - @fuel-wallet/connections@0.29.1
+  - @nelitow-fuel/connections@0.29.1
 
 ## 0.29.0
 
@@ -1394,7 +745,7 @@
 - [#1479](https://github.com/FuelLabs/fuels-wallet/pull/1479) [`14e63852`](https://github.com/FuelLabs/fuels-wallet/commit/14e63852efc57f2ee02106b784ec9b500f5b9f65) Thanks [@helciofranco](https://github.com/helciofranco)! - Allow dApps to pass account owner with `0x` address.
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.29.0
+  - @nelitow-fuel/connections@0.29.0
 
 ## 0.28.0
 
@@ -1413,7 +764,7 @@
 - [#1442](https://github.com/FuelLabs/fuels-wallet/pull/1442) [`32abae8c`](https://github.com/FuelLabs/fuels-wallet/commit/32abae8cc4cdd7c5e91db37dd2475c18f2bc5df0) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Refactored Service Worker and Content Scripts to close running processes and listeners correctly. Fixes memory leaks.
 
 - Updated dependencies [[`32abae8c`](https://github.com/FuelLabs/fuels-wallet/commit/32abae8cc4cdd7c5e91db37dd2475c18f2bc5df0)]:
-  - @fuel-wallet/connections@0.28.0
+  - @nelitow-fuel/connections@0.28.0
 
 ## 0.27.4
 
@@ -1424,7 +775,7 @@
 - [#1459](https://github.com/FuelLabs/fuels-wallet/pull/1459) [`00234c0a`](https://github.com/FuelLabs/fuels-wallet/commit/00234c0aecf1255f173bbe4387dd8d08546c55b5) Thanks [@arthurgeron](https://github.com/arthurgeron)! - Fixed extension freezing when validating a specifically malformed network URL
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.27.4
+  - @nelitow-fuel/connections@0.27.4
 
 ## 0.27.3
 
@@ -1433,7 +784,7 @@
 - [#1455](https://github.com/FuelLabs/fuels-wallet/pull/1455) [`f386ff86`](https://github.com/FuelLabs/fuels-wallet/commit/f386ff8625f0592017371f88852833da6078162f) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Update to `fuels@0.94.4` and `fuel-core@0.35.0`
 
 - Updated dependencies [[`f386ff86`](https://github.com/FuelLabs/fuels-wallet/commit/f386ff8625f0592017371f88852833da6078162f)]:
-  - @fuel-wallet/connections@0.27.3
+  - @nelitow-fuel/connections@0.27.3
 
 ## 0.27.2
 
@@ -1444,7 +795,7 @@
 - [#1449](https://github.com/FuelLabs/fuels-wallet/pull/1449) [`875c38b6`](https://github.com/FuelLabs/fuels-wallet/commit/875c38b65080926bed0e06a3594865aef239fd0b) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - update to `fuel-core@0.34.0` , `forc@0.63.3` , `fuels@0.94.3`
 
 - Updated dependencies [[`69c2765b`](https://github.com/FuelLabs/fuels-wallet/commit/69c2765b8bc85faa1934832144b2d76fb067e08a), [`875c38b6`](https://github.com/FuelLabs/fuels-wallet/commit/875c38b65080926bed0e06a3594865aef239fd0b)]:
-  - @fuel-wallet/connections@0.27.2
+  - @nelitow-fuel/connections@0.27.2
 
 ## 0.27.1
 
@@ -1459,7 +810,7 @@
 - [#1438](https://github.com/FuelLabs/fuels-wallet/pull/1438) [`d5c61dea`](https://github.com/FuelLabs/fuels-wallet/commit/d5c61dea3228ad8d2d0109b3a059abacc4e50bfa) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Fix text of error not breaking line on transaction screen
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.27.1
+  - @nelitow-fuel/connections@0.27.1
 
 ## 0.27.0
 
@@ -1480,7 +831,7 @@
 - [#1429](https://github.com/FuelLabs/fuels-wallet/pull/1429) [`3486bee0`](https://github.com/FuelLabs/fuels-wallet/commit/3486bee0cd249939833f00809dc27fe7260e3a1f) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Improve flow of network URL to wait for click to "Test connection", instead of load automatically
 
 - Updated dependencies [[`737652ba`](https://github.com/FuelLabs/fuels-wallet/commit/737652badce501292fad509ebadda751ea8792df)]:
-  - @fuel-wallet/connections@0.27.0
+  - @nelitow-fuel/connections@0.27.0
 
 ## 0.26.0
 
@@ -1495,7 +846,7 @@
 - [#1427](https://github.com/FuelLabs/fuels-wallet/pull/1427) [`7ba78a86`](https://github.com/FuelLabs/fuels-wallet/commit/7ba78a867f9202c10faac204a00a8efd3360aaf0) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Added `web_accessible_resources` to manifest due to error in extension setup for playwright test
 
 - Updated dependencies [[`7ba78a86`](https://github.com/FuelLabs/fuels-wallet/commit/7ba78a867f9202c10faac204a00a8efd3360aaf0)]:
-  - @fuel-wallet/connections@0.26.0
+  - @nelitow-fuel/connections@0.26.0
 
 ## 0.25.0
 
@@ -1508,7 +859,7 @@
 - [#1424](https://github.com/FuelLabs/fuels-wallet/pull/1424) [`abfad2e6`](https://github.com/FuelLabs/fuels-wallet/commit/abfad2e6f134795a62ffb68ef2f7ca7e1ca42ccb) Thanks [@arthurgeron](https://github.com/arthurgeron)! - - Audit check now ignores vulnerabilities with no known patched version
   - Test utils using act methods deprecated in React 18.3
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.25.0
+  - @nelitow-fuel/connections@0.25.0
 
 ## 0.24.0
 
@@ -1521,7 +872,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`a715ad6a`](https://github.com/FuelLabs/fuels-wallet/commit/a715ad6a9652e477cd7143493bd5ab3af63dbcfd)]:
-  - @fuel-wallet/connections@0.24.0
+  - @nelitow-fuel/connections@0.24.0
 
 ## 0.23.0
 
@@ -1540,7 +891,7 @@
 - [#1408](https://github.com/FuelLabs/fuels-wallet/pull/1408) [`24840bfe`](https://github.com/FuelLabs/fuels-wallet/commit/24840bfe38cda3a45b1dc43b4e4f8c8890b3ebaf) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - TransactionList breaking when have a failed transaction
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.23.0
+  - @nelitow-fuel/connections@0.23.0
 
 ## 0.22.0
 
@@ -1555,7 +906,7 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.22.0
+  - @nelitow-fuel/connections@0.22.0
 
 ## 0.21.3
 
@@ -1566,7 +917,7 @@
 - [#1361](https://github.com/FuelLabs/fuels-wallet/pull/1361) [`d4e39790`](https://github.com/FuelLabs/fuels-wallet/commit/d4e397902e7bcc09e2b1c7a8f20087a538efbedf) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - update fuels to get fix from contract operation
 
 - Updated dependencies [[`d4e39790`](https://github.com/FuelLabs/fuels-wallet/commit/d4e397902e7bcc09e2b1c7a8f20087a538efbedf), [`d4e39790`](https://github.com/FuelLabs/fuels-wallet/commit/d4e397902e7bcc09e2b1c7a8f20087a538efbedf)]:
-  - @fuel-wallet/connections@0.21.3
+  - @nelitow-fuel/connections@0.21.3
 
 ## 0.21.2
 
@@ -1575,7 +926,7 @@
 - [#1349](https://github.com/FuelLabs/fuels-wallet/pull/1349) [`adfd3523`](https://github.com/FuelLabs/fuels-wallet/commit/adfd3523a6415ce9bc1825308e584fe54ad0c333) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Update tests to use new @fuels/react 0.21.0
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.21.2
+  - @nelitow-fuel/connections@0.21.2
 
 ## 0.21.1
 
@@ -1584,7 +935,7 @@
 - [#1340](https://github.com/FuelLabs/fuels-wallet/pull/1340) [`7c2ad248`](https://github.com/FuelLabs/fuels-wallet/commit/7c2ad248cf65060710e1b540b73f5f6c1cdb5c05) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Fix balances not showing for some accounts that have many assets in balance
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.21.1
+  - @nelitow-fuel/connections@0.21.1
 
 ## 0.21.0
 
@@ -1598,7 +949,7 @@
   - IndexedDB + extension Reset only triggers if: An IndexedDB restart event is triggered, the DB can be accessed, and has no vaults or accounts data (corrupted or cleared)
   - The flag used to show the Welcome Screen after a reset no longer depends on React's Scope to be set
 - Updated dependencies [[`6e5330e2`](https://github.com/FuelLabs/fuels-wallet/commit/6e5330e2067cb5f8831d7c6c04fac1421f61d717)]:
-  - @fuel-wallet/connections@0.21.0
+  - @nelitow-fuel/connections@0.21.0
 
 ## 0.20.0
 
@@ -1625,7 +976,7 @@
   - Fixed NODE_ENV being set to default (production) on local E2E tests, leading to the wrong version (i.e. production) being installed
   - Fixed bug where only the first test file in a suite run would use the local CRX build, it'd then download and use a production build of the Wallet for the rest
 - Updated dependencies [[`f1dab207`](https://github.com/FuelLabs/fuels-wallet/commit/f1dab20703785086e81d39c3cef140c54956b29f)]:
-  - @fuel-wallet/connections@0.20.0
+  - @nelitow-fuel/connections@0.20.0
 
 ## 0.19.0
 
@@ -1636,7 +987,7 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.19.0
+  - @nelitow-fuel/connections@0.19.0
 
 ## 0.18.1
 
@@ -1645,7 +996,7 @@
 - [#1286](https://github.com/FuelLabs/fuels-wallet/pull/1286) [`a6e3d75a`](https://github.com/FuelLabs/fuels-wallet/commit/a6e3d75af2ab2ade059e99f65cef5317378019fa) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - chore: Auto-upgrade to devnet network
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.18.1
+  - @nelitow-fuel/connections@0.18.1
 
 ## 0.18.0
 
@@ -1658,7 +1009,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`b4f52e09`](https://github.com/FuelLabs/fuels-wallet/commit/b4f52e09af0952600ddcdf818632d8328d8fac8f)]:
-  - @fuel-wallet/connections@0.18.0
+  - @nelitow-fuel/connections@0.18.0
 
 ## 0.17.0
 
@@ -1671,7 +1022,7 @@
 - [#1276](https://github.com/FuelLabs/fuels-wallet/pull/1276) [`a796df4f`](https://github.com/FuelLabs/fuels-wallet/commit/a796df4f5c76f69ebd5c22173d4b3513a44d7734) Thanks [@arthurgeron](https://github.com/arthurgeron)! - restore DB connection on close, removed interval
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.17.0
+  - @nelitow-fuel/connections@0.17.0
 
 ## 0.16.6
 
@@ -1680,7 +1031,7 @@
 - [#1270](https://github.com/FuelLabs/fuels-wallet/pull/1270) [`27520126`](https://github.com/FuelLabs/fuels-wallet/commit/27520126e252a28272d80b51f6eff879049149ae) Thanks [@arthurgeron](https://github.com/arthurgeron)! - fix: database not recovering from error/closed state
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.16.6
+  - @nelitow-fuel/connections@0.16.6
 
 ## 0.16.5
 
@@ -1689,14 +1040,14 @@
 - [#1255](https://github.com/FuelLabs/fuels-wallet/pull/1255) [`4b7d4bd3`](https://github.com/FuelLabs/fuels-wallet/commit/4b7d4bd398448259a8eeb21bf7268df92891ad39) Thanks [@luizstacio](https://github.com/luizstacio)! - fix: auto-update in background to wait for update to be downloaded
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.16.5
+  - @nelitow-fuel/connections@0.16.5
 
 ## 0.16.4
 
 ### Patch Changes
 
 - Updated dependencies [[`32ee2272`](https://github.com/FuelLabs/fuels-wallet/commit/32ee227254b1491a7ec8fc532f10517367f78013)]:
-  - @fuel-wallet/connections@0.16.4
+  - @nelitow-fuel/connections@0.16.4
 
 ## 0.16.3
 
@@ -1713,7 +1064,7 @@
 - [#1243](https://github.com/FuelLabs/fuels-wallet/pull/1243) [`06e2bf1a`](https://github.com/FuelLabs/fuels-wallet/commit/06e2bf1a3ca6f5b5780794dd4b6ce71a9648c186) Thanks [@luizstacio](https://github.com/luizstacio)! - feat: add auto-update wallet in the background
 
 - Updated dependencies [[`4fbc8e78`](https://github.com/FuelLabs/fuels-wallet/commit/4fbc8e78ad7609ca0cf5902e8ac05b858a430042)]:
-  - @fuel-wallet/connections@0.16.3
+  - @nelitow-fuel/connections@0.16.3
 
 ## 0.16.2
 
@@ -1758,7 +1109,7 @@
 - [#1182](https://github.com/FuelLabs/fuels-wallet/pull/1182) [`ddb2440`](https://github.com/FuelLabs/fuels-wallet/commit/ddb2440258fb7ba115e139ee61ead9f3e5284352) Thanks [@helciofranco](https://github.com/helciofranco)! - fix: disable autocomplete from the private key input.
 
 - Updated dependencies [[`3c5d91d`](https://github.com/FuelLabs/fuels-wallet/commit/3c5d91d04262c492253fc3c06388a0d155e54861), [`aa684b3`](https://github.com/FuelLabs/fuels-wallet/commit/aa684b3d965400f4c0c769840bb70559c9751ee6), [`a0e5cbf`](https://github.com/FuelLabs/fuels-wallet/commit/a0e5cbfbcf5eed61f7a2e2c9871b7e02f0c281b2), [`ec58815`](https://github.com/FuelLabs/fuels-wallet/commit/ec588156afaad39f41886d96ebfbb17653216482), [`0fa1abc`](https://github.com/FuelLabs/fuels-wallet/commit/0fa1abc02712109879cdc27e2eca6fb877393399), [`96faa7f`](https://github.com/FuelLabs/fuels-wallet/commit/96faa7f0f6d6d7fea6ab0b26495dc32f5a86b4b8), [`c0d8def`](https://github.com/FuelLabs/fuels-wallet/commit/c0d8deff8a3241444baef5e6b3a01e02073fe7ae)]:
-  - @fuel-wallet/connections@0.16.2
+  - @nelitow-fuel/connections@0.16.2
 
 ## 0.16.1
 
@@ -1767,9 +1118,9 @@
 - [#1123](https://github.com/FuelLabs/fuels-wallet/pull/1123) [`e18231a`](https://github.com/FuelLabs/fuels-wallet/commit/e18231abf779d11e468ecf57b5805bc646609bfe) Thanks [@bethatguyad](https://github.com/bethatguyad)! - perf: eliminating asset avatar flashing
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.16.1
+  - @nelitow-fuel/connections@0.16.1
   - @fuel-wallet/sdk@0.16.1
-  - @fuel-wallet/types@0.16.1
+  - @nelitow-fuel/types@0.16.1
 
 ## 0.16.0
 
@@ -1784,9 +1135,9 @@
 - [#1118](https://github.com/FuelLabs/fuels-wallet/pull/1118) [`6585923`](https://github.com/FuelLabs/fuels-wallet/commit/65859237475addf90cc60b1b75567a3692271c7e) Thanks [@helciofranco](https://github.com/helciofranco)! - truncates long account name correctly
 
 - Updated dependencies []:
-  - @fuel-wallet/connections@0.16.0
+  - @nelitow-fuel/connections@0.16.0
   - @fuel-wallet/sdk@0.16.0
-  - @fuel-wallet/types@0.16.0
+  - @nelitow-fuel/types@0.16.0
 
 ## 0.15.2
 
@@ -1797,8 +1148,8 @@
 - [#1074](https://github.com/FuelLabs/fuels-wallet/pull/1074) [`cbd64ae`](https://github.com/FuelLabs/fuels-wallet/commit/cbd64ae5b433ee7964e934a016765db5d7756196) Thanks [@matt-user](https://github.com/matt-user)! - Update the fuels dependency to 0.73.0
 
 - Updated dependencies [[`cbd64ae`](https://github.com/FuelLabs/fuels-wallet/commit/cbd64ae5b433ee7964e934a016765db5d7756196)]:
-  - @fuel-wallet/connections@0.15.2
-  - @fuel-wallet/types@0.15.2
+  - @nelitow-fuel/connections@0.15.2
+  - @nelitow-fuel/types@0.15.2
   - @fuel-wallet/sdk@0.15.2
 
 ## 0.15.1
@@ -1810,9 +1161,9 @@
 - [#1063](https://github.com/FuelLabs/fuels-wallet/pull/1063) [`bdfb2fa`](https://github.com/FuelLabs/fuels-wallet/commit/bdfb2fa6094e49372109170ea8c60cef2ad2b2fa) Thanks [@matt-user](https://github.com/matt-user)! - Add an error message for a failed simulated tx
 
 - Updated dependencies [[`b81704c`](https://github.com/FuelLabs/fuels-wallet/commit/b81704c6b2175444c4b4a815a6b5cd7618fcb139)]:
-  - @fuel-wallet/types@0.15.1
+  - @nelitow-fuel/types@0.15.1
   - @fuel-wallet/sdk@0.15.1
-  - @fuel-wallet/connections@0.15.1
+  - @nelitow-fuel/connections@0.15.1
 
 ## 0.15.0
 
@@ -1826,8 +1177,8 @@
 
 - Updated dependencies [[`fdfa7d7`](https://github.com/FuelLabs/fuels-wallet/commit/fdfa7d7c74608071c41b1a36a44d42a49c13ee97), [`fdfa7d7`](https://github.com/FuelLabs/fuels-wallet/commit/fdfa7d7c74608071c41b1a36a44d42a49c13ee97), [`fdfa7d7`](https://github.com/FuelLabs/fuels-wallet/commit/fdfa7d7c74608071c41b1a36a44d42a49c13ee97)]:
   - @fuel-wallet/sdk@0.15.0
-  - @fuel-wallet/connections@0.15.0
-  - @fuel-wallet/types@0.15.0
+  - @nelitow-fuel/connections@0.15.0
+  - @nelitow-fuel/types@0.15.0
 
 ## 0.14.3
 
@@ -1841,7 +1192,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.14.3
-  - @fuel-wallet/types@0.14.3
+  - @nelitow-fuel/types@0.14.3
 
 ## 0.14.2
 
@@ -1855,7 +1206,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.14.2
-  - @fuel-wallet/types@0.14.2
+  - @nelitow-fuel/types@0.14.2
 
 ## 0.14.1
 
@@ -1864,7 +1215,7 @@
 - [#1041](https://github.com/FuelLabs/fuels-wallet/pull/1041) [`4c222bf`](https://github.com/FuelLabs/fuels-wallet/commit/4c222bf16b4626a8ec11cc14bce6a19d8649cbd4) Thanks [@luizstacio](https://github.com/luizstacio)! - Update fuels to version 0.71.1
 
 - Updated dependencies [[`4c222bf`](https://github.com/FuelLabs/fuels-wallet/commit/4c222bf16b4626a8ec11cc14bce6a19d8649cbd4)]:
-  - @fuel-wallet/types@0.14.1
+  - @nelitow-fuel/types@0.14.1
   - @fuel-wallet/sdk@0.14.1
 
 ## 0.14.0
@@ -1880,7 +1231,7 @@
 - [#1034](https://github.com/FuelLabs/fuels-wallet/pull/1034) [`020dc09`](https://github.com/FuelLabs/fuels-wallet/commit/020dc09150dbc67b3b8274365162edf29542082d) Thanks [@luizstacio](https://github.com/luizstacio)! - Clean assets from database when reseting wallet
 
 - Updated dependencies [[`9458253`](https://github.com/FuelLabs/fuels-wallet/commit/94582534fb7303d88ef2523c54ae3d336ab693a8)]:
-  - @fuel-wallet/types@0.14.0
+  - @nelitow-fuel/types@0.14.0
   - @fuel-wallet/sdk@0.14.0
 
 ## 0.13.11
@@ -1891,17 +1242,17 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.13.11
-  - @fuel-wallet/types@0.13.11
+  - @nelitow-fuel/types@0.13.11
 
 ## 0.13.10
 
 ### Patch Changes
 
-- [#978](https://github.com/FuelLabs/fuels-wallet/pull/978) [`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197) Thanks [@luizstacio](https://github.com/luizstacio)! - chore: fix icons on Jason Wallet development attachment
+- [#978](https://github.com/FuelLabs/fuels-wallet/pull/978) [`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197) Thanks [@luizstacio](https://github.com/luizstacio)! - chore: fix icons on fuel wallet development attachment
 
 - Updated dependencies [[`1f34e67`](https://github.com/FuelLabs/fuels-wallet/commit/1f34e67b36ef94a8164f6cabfea143ac4d92f197)]:
   - @fuel-wallet/sdk@0.13.10
-  - @fuel-wallet/types@0.13.10
+  - @nelitow-fuel/types@0.13.10
 
 ## 0.13.9
 
@@ -1911,7 +1262,7 @@
 
 - Updated dependencies [[`217f04d`](https://github.com/FuelLabs/fuels-wallet/commit/217f04dc918c547b9922a7403a12f5fb4b59f74f)]:
   - @fuel-wallet/sdk@0.13.9
-  - @fuel-wallet/types@0.13.9
+  - @nelitow-fuel/types@0.13.9
 
 ## 0.13.8
 
@@ -1922,7 +1273,7 @@
 - [#973](https://github.com/FuelLabs/fuels-wallet/pull/973) [`208b955`](https://github.com/FuelLabs/fuels-wallet/commit/208b95563a9bfb4cd6700ee6abc315d82f5fc3e5) Thanks [@luizstacio](https://github.com/luizstacio)! - feat: update fuels sdk to version 0.67.0
 
 - Updated dependencies [[`208b955`](https://github.com/FuelLabs/fuels-wallet/commit/208b95563a9bfb4cd6700ee6abc315d82f5fc3e5)]:
-  - @fuel-wallet/types@0.13.8
+  - @nelitow-fuel/types@0.13.8
   - @fuel-wallet/sdk@0.13.8
 
 ## 0.13.7
@@ -1931,7 +1282,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.13.7
-  - @fuel-wallet/types@0.13.7
+  - @nelitow-fuel/types@0.13.7
 
 ## 0.13.6
 
@@ -1940,7 +1291,7 @@
 - [#940](https://github.com/FuelLabs/fuels-wallet/pull/940) [`bb05d1d`](https://github.com/FuelLabs/fuels-wallet/commit/bb05d1daefbb50d371bc56b7c7fedc458169ae5a) Thanks [@matt-user](https://github.com/matt-user)! - fix: showing assets with amount 0
 
 - Updated dependencies [[`c2baa3c`](https://github.com/FuelLabs/fuels-wallet/commit/c2baa3c5a4bc5212bce5275390dd71c111aa83c5)]:
-  - @fuel-wallet/types@0.13.6
+  - @nelitow-fuel/types@0.13.6
   - @fuel-wallet/sdk@0.13.6
 
 ## 0.13.5
@@ -1949,7 +1300,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.13.5
-  - @fuel-wallet/types@0.13.5
+  - @nelitow-fuel/types@0.13.5
 
 ## 0.13.4
 
@@ -1962,7 +1313,7 @@
 - [#939](https://github.com/FuelLabs/fuels-wallet/pull/939) [`9939298`](https://github.com/FuelLabs/fuels-wallet/commit/9939298ba935ef30f79e1f47405451cfa34ff4b6) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: upgrade fuel-core
 
 - Updated dependencies [[`f683bae`](https://github.com/FuelLabs/fuels-wallet/commit/f683baeb6efbcc75561ac53c9c0d9d05f3bbae29)]:
-  - @fuel-wallet/types@0.13.4
+  - @nelitow-fuel/types@0.13.4
   - @fuel-wallet/sdk@0.13.4
 
 ## 0.13.3
@@ -1973,7 +1324,7 @@
 
 - Updated dependencies [[`7ef4fac`](https://github.com/FuelLabs/fuels-wallet/commit/7ef4facf3e61c409ad5e7b794700f90c62cbf865)]:
   - @fuel-wallet/sdk@0.13.3
-  - @fuel-wallet/types@0.13.3
+  - @nelitow-fuel/types@0.13.3
 
 ## 0.13.2
 
@@ -1981,7 +1332,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.13.2
-  - @fuel-wallet/types@0.13.2
+  - @nelitow-fuel/types@0.13.2
 
 ## 0.13.1
 
@@ -1998,7 +1349,7 @@
 - [#895](https://github.com/FuelLabs/fuels-wallet/pull/895) [`f4b07b7`](https://github.com/FuelLabs/fuels-wallet/commit/f4b07b7f67f162d283ac5d782680e4afa90f9bd5) Thanks [@luizstacio](https://github.com/luizstacio)! - fix: permissions popup background color
 
 - Updated dependencies [[`09fa482`](https://github.com/FuelLabs/fuels-wallet/commit/09fa4824384d5fdd33df3a762462bab228fa13b5), [`91d71f5`](https://github.com/FuelLabs/fuels-wallet/commit/91d71f581514f93bc5c5dc19425e5654f1dc7450)]:
-  - @fuel-wallet/types@0.13.1
+  - @nelitow-fuel/types@0.13.1
   - @fuel-wallet/sdk@0.13.1
 
 ## 0.13.0
@@ -2021,7 +1372,7 @@
 
 - Updated dependencies [[`2a0282e`](https://github.com/FuelLabs/fuels-wallet/commit/2a0282eff86def9a45a394320f15c5eeecc140f9), [`86b72b9`](https://github.com/FuelLabs/fuels-wallet/commit/86b72b98fbe8441d6327f7283bf27b6603664821), [`b13f13a`](https://github.com/FuelLabs/fuels-wallet/commit/b13f13a4ee1db41610fcca1f4deed7a9e509ca54), [`7696757`](https://github.com/FuelLabs/fuels-wallet/commit/76967574d628bc0f96fb8df56afd920440f24815), [`e446225`](https://github.com/FuelLabs/fuels-wallet/commit/e446225d39772b3615a923d01539559940f085f0), [`c6e3069`](https://github.com/FuelLabs/fuels-wallet/commit/c6e3069d633e25bbf52dc9ee9257c36d0bf6a9bb)]:
   - @fuel-wallet/sdk@0.13.0
-  - @fuel-wallet/types@0.13.0
+  - @nelitow-fuel/types@0.13.0
 
 ## 0.12.3
 
@@ -2030,7 +1381,7 @@
 - [#853](https://github.com/FuelLabs/fuels-wallet/pull/853) [`1382e00`](https://github.com/FuelLabs/fuels-wallet/commit/1382e00a849ee1b8d013c16e6cd6db82b33b343e) Thanks [@luizstacio](https://github.com/luizstacio)! - Update CRX deps and permissions
 
 - Updated dependencies [[`1382e00`](https://github.com/FuelLabs/fuels-wallet/commit/1382e00a849ee1b8d013c16e6cd6db82b33b343e)]:
-  - @fuel-wallet/types@0.12.3
+  - @nelitow-fuel/types@0.12.3
   - @fuel-wallet/sdk@0.12.3
 
 ## 0.12.2
@@ -2041,7 +1392,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.12.2
-  - @fuel-wallet/types@0.12.2
+  - @nelitow-fuel/types@0.12.2
 
 ## 0.12.1
 
@@ -2065,7 +1416,7 @@
 
 - Updated dependencies [[`09258e1`](https://github.com/FuelLabs/fuels-wallet/commit/09258e19898865071f43eebcc07251c40f2a4d0e), [`badd641`](https://github.com/FuelLabs/fuels-wallet/commit/badd6419880b0cf9b53afb36bca1b27c111b5614), [`7851c3e`](https://github.com/FuelLabs/fuels-wallet/commit/7851c3e42d1ba289d0854c8cbfce74b400a8d8b6)]:
   - @fuel-wallet/sdk@0.12.1
-  - @fuel-wallet/types@0.12.1
+  - @nelitow-fuel/types@0.12.1
 
 ## 0.12.0
 
@@ -2080,7 +1431,7 @@
 - [#830](https://github.com/FuelLabs/fuels-wallet/pull/830) [`e206fc8`](https://github.com/FuelLabs/fuels-wallet/commit/e206fc8ec5c64e41284319d3fc343f54f194cb8a) Thanks [@luizstacio](https://github.com/luizstacio)! - Fix scroll on assets page
 
 - Updated dependencies [[`2ded832`](https://github.com/FuelLabs/fuels-wallet/commit/2ded832b4930b1be847e56a1f2da1c085606da1b)]:
-  - @fuel-wallet/types@0.12.0
+  - @nelitow-fuel/types@0.12.0
   - @fuel-wallet/sdk@0.12.0
 
 ## 0.11.2
@@ -2090,7 +1441,7 @@
 - [#821](https://github.com/FuelLabs/fuels-wallet/pull/821) [`4e08bc0`](https://github.com/FuelLabs/fuels-wallet/commit/4e08bc0edd74210de03d9e5481180641bbcc8803) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - Upgrade to fuel-core 0.19.1
 
 - Updated dependencies [[`4e08bc0`](https://github.com/FuelLabs/fuels-wallet/commit/4e08bc0edd74210de03d9e5481180641bbcc8803)]:
-  - @fuel-wallet/types@0.11.2
+  - @nelitow-fuel/types@0.11.2
   - @fuel-wallet/sdk@0.11.2
 
 ## 0.11.1
@@ -2100,7 +1451,7 @@
 - [#811](https://github.com/FuelLabs/fuels-wallet/pull/811) [`a674406`](https://github.com/FuelLabs/fuels-wallet/commit/a67440640db8840f4c199a0bba47f6e82d46829a) Thanks [@matt-user](https://github.com/matt-user)! - Add support for fuel-core 0.19.0
 
 - Updated dependencies [[`a674406`](https://github.com/FuelLabs/fuels-wallet/commit/a67440640db8840f4c199a0bba47f6e82d46829a)]:
-  - @fuel-wallet/types@0.11.1
+  - @nelitow-fuel/types@0.11.1
   - @fuel-wallet/sdk@0.11.1
 
 ## 0.11.0
@@ -2125,7 +1476,7 @@
 
 - Updated dependencies [[`98c8184`](https://github.com/FuelLabs/fuels-wallet/commit/98c818480789ead39b498a9768f989a64ff8c583), [`e94d273`](https://github.com/FuelLabs/fuels-wallet/commit/e94d27341158991679108a1d53cdb7d4864e3dec), [`7e7300f`](https://github.com/FuelLabs/fuels-wallet/commit/7e7300fb3a3e2b3170e100a12845e1e0856aaa56), [`1cdb147`](https://github.com/FuelLabs/fuels-wallet/commit/1cdb1478b34ad331daf5d9a34f5904d1083c3531), [`144d722`](https://github.com/FuelLabs/fuels-wallet/commit/144d722fb70d13aaf8cfb17fe97aa0e1719fe65e), [`f79897d`](https://github.com/FuelLabs/fuels-wallet/commit/f79897df28b0d6e63aeedc3af45ea7ad838f1803), [`98c8184`](https://github.com/FuelLabs/fuels-wallet/commit/98c818480789ead39b498a9768f989a64ff8c583)]:
   - @fuel-wallet/sdk@0.11.0
-  - @fuel-wallet/types@0.11.0
+  - @nelitow-fuel/types@0.11.0
 
 ## 0.10.0
 
@@ -2140,7 +1491,7 @@
 - [#786](https://github.com/FuelLabs/fuels-wallet/pull/786) [`3b82e52`](https://github.com/FuelLabs/fuels-wallet/commit/3b82e526b7b732ef5dd07791ef59246f9725cf05) Thanks [@luizstacio](https://github.com/luizstacio)! - Fix wallet home scroll
 
 - Updated dependencies [[`c9cd111`](https://github.com/FuelLabs/fuels-wallet/commit/c9cd1110a26e56f9f7e1fbf3a0db0873cdd043d0)]:
-  - @fuel-wallet/types@0.10.0
+  - @nelitow-fuel/types@0.10.0
   - @fuel-wallet/sdk@0.10.0
 
 ## 0.9.5
@@ -2153,7 +1504,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.9.5
-  - @fuel-wallet/types@0.9.5
+  - @nelitow-fuel/types@0.9.5
 
 ## 0.9.4
 
@@ -2163,7 +1514,7 @@
 
 - Updated dependencies [[`c475816`](https://github.com/FuelLabs/fuels-wallet/commit/c475816fc5feca629e2a0cdab668a397c833ce23)]:
   - @fuel-wallet/sdk@0.9.4
-  - @fuel-wallet/types@0.9.4
+  - @nelitow-fuel/types@0.9.4
 
 ## 0.9.3
 
@@ -2172,7 +1523,7 @@
 - [#766](https://github.com/FuelLabs/fuels-wallet/pull/766) [`6e2accf`](https://github.com/FuelLabs/fuels-wallet/commit/6e2accfa97d84239161040d37fcfc4d5aaedaabc) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - chore: upgrade sdk to 0.43.0
 
 - Updated dependencies [[`6e2accf`](https://github.com/FuelLabs/fuels-wallet/commit/6e2accfa97d84239161040d37fcfc4d5aaedaabc)]:
-  - @fuel-wallet/types@0.9.3
+  - @nelitow-fuel/types@0.9.3
   - @fuel-wallet/sdk@0.9.3
 
 ## 0.9.2
@@ -2181,7 +1532,7 @@
 
 - Updated dependencies [[`bad48d1`](https://github.com/FuelLabs/fuels-wallet/commit/bad48d1b3036bca6ae28ddcc0f97cf921c6c0ab7)]:
   - @fuel-wallet/sdk@0.9.2
-  - @fuel-wallet/types@0.9.2
+  - @nelitow-fuel/types@0.9.2
 
 ## 0.9.1
 
@@ -2191,7 +1542,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.9.1
-  - @fuel-wallet/types@0.9.1
+  - @nelitow-fuel/types@0.9.1
 
 ## 0.9.0
 
@@ -2212,7 +1563,7 @@
 - [#748](https://github.com/FuelLabs/fuels-wallet/pull/748) [`372dc88`](https://github.com/FuelLabs/fuels-wallet/commit/372dc8828ab0777cc5bed139cebe5ba39c5d3817) Thanks [@LuizAsFight](https://github.com/LuizAsFight)! - feat: upgrade fuels
 
 - Updated dependencies [[`372dc88`](https://github.com/FuelLabs/fuels-wallet/commit/372dc8828ab0777cc5bed139cebe5ba39c5d3817)]:
-  - @fuel-wallet/types@0.9.0
+  - @nelitow-fuel/types@0.9.0
   - @fuel-wallet/sdk@0.9.0
 
 ## 0.8.0
@@ -2251,7 +1602,7 @@
 
 - Updated dependencies []:
   - @fuel-wallet/sdk@0.8.0
-  - @fuel-wallet/types@0.8.0
+  - @nelitow-fuel/types@0.8.0
 
 ## 0.7.2
 
@@ -2261,7 +1612,7 @@
 
 - Updated dependencies [[`a48fb2b`](https://github.com/FuelLabs/fuels-wallet/commit/a48fb2b86e97e4b2176e5adfee2fa9ff8e629eeb)]:
   - @fuel-wallet/sdk@0.7.2
-  - @fuel-wallet/types@0.7.2
+  - @nelitow-fuel/types@0.7.2
 
 ## 0.7.1
 
@@ -2272,7 +1623,7 @@
 - [#600](https://github.com/FuelLabs/fuels-wallet/pull/600) [`eb41aed`](https://github.com/FuelLabs/fuels-wallet/commit/eb41aed79bb0e3636d1b23e85c3269763dcc09d7) Thanks [@matt-user](https://github.com/matt-user)! - Update network compatibility to fuel-core v0.17.3
 
 - Updated dependencies [[`8419f7d`](https://github.com/FuelLabs/fuels-wallet/commit/8419f7ddd8faf8a793012cbe93b88ff4b3c1d554), [`eb41aed`](https://github.com/FuelLabs/fuels-wallet/commit/eb41aed79bb0e3636d1b23e85c3269763dcc09d7)]:
-  - @fuel-wallet/types@0.7.1
+  - @nelitow-fuel/types@0.7.1
   - @fuel-wallet/sdk@0.7.1
 
 ## 0.7.0
@@ -2287,7 +1638,7 @@
 
 - Updated dependencies [[`f4bd2d5`](https://github.com/FuelLabs/fuels-wallet/commit/f4bd2d563b457de221de46b14cb0cae2ccbe9feb), [`ac3e822`](https://github.com/FuelLabs/fuels-wallet/commit/ac3e822ec0900e73602b760656f097cdd46e90df), [`83ccac3`](https://github.com/FuelLabs/fuels-wallet/commit/83ccac333d36b8a286832cdc0f6576b8f088965d)]:
   - @fuel-wallet/sdk@0.7.0
-  - @fuel-wallet/types@0.7.0
+  - @nelitow-fuel/types@0.7.0
 
 ## 0.7.0
 
@@ -2301,4 +1652,4 @@
 
 - Updated dependencies [[`f4bd2d5`](https://github.com/FuelLabs/fuels-wallet/commit/f4bd2d563b457de221de46b14cb0cae2ccbe9feb), [`ac3e822`](https://github.com/FuelLabs/fuels-wallet/commit/ac3e822ec0900e73602b760656f097cdd46e90df), [`83ccac3`](https://github.com/FuelLabs/fuels-wallet/commit/83ccac333d36b8a286832cdc0f6576b8f088965d)]:
   - @fuel-wallet/sdk@0.7.0
-  - @fuel-wallet/types@0.7.0
+  - @nelitow-fuel/types@0.7.0

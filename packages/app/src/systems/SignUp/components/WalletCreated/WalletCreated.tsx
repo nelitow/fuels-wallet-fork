@@ -28,7 +28,7 @@ export function WalletCreated({ account }: WalletCreatedProps) {
       <Stepper steps={steps} active={5} />
       <Header
         title="Wallet created successfully"
-        subtitle="Below is your first Jason Wallet account"
+        subtitle="Below is your first Fuel wallet account"
       />
       <MotionStack {...animations.slideInRight()} gap="$6">
         {IS_CRX ? (
